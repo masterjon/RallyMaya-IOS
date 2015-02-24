@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0vP-8a-Xvh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="joL-MW-Mif">
+            <objects>
+                <navigationController id="0vP-8a-Xvh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UQs-eX-WgO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Wd-8P-VgO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rk2-ah-fGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1358" y="-263"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,426 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="qC5-M8-fdx">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hgq-la-Wvo">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WDM-F5-1Ih">
+                                    <size key="itemSize" width="165" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menuCell" id="joJ-ej-EZC">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pj2-eI-tlf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bFy-F8-fYp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nA5-Zv-0U4"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hgq-la-Wvo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LIm-Hd-u5o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qC5-M8-fdx" secondAttribute="trailing" constant="-16" id="LWB-5S-znu"/>
+                            <constraint firstItem="qC5-M8-fdx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OBy-BU-qpJ"/>
+                            <constraint firstItem="qC5-M8-fdx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="StK-C6-ljY"/>
+                            <constraint firstItem="Hgq-la-Wvo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="USp-Ei-Ib9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hgq-la-Wvo" secondAttribute="bottom" id="cqG-e8-aFN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hgq-la-Wvo" secondAttribute="trailing" constant="-16" id="iRi-qB-Olc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qC5-M8-fdx" secondAttribute="bottom" id="lkF-oZ-BYd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GQB-wl-5Kq"/>
+                    <connections>
+                        <outlet property="menuCollectionview" destination="Hgq-la-Wvo" id="pdb-x2-Oea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-648" y="-251"/>
+        </scene>
+        <!--Rally View Controller-->
+        <scene sceneID="k6B-GB-8o1">
+            <objects>
+                <viewController storyboardIdentifier="RallyView" id="tWe-fi-aCC" customClass="RallyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Foc-XO-0nL"/>
+                        <viewControllerLayoutGuide type="bottom" id="x16-JQ-AiL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="faH-zj-EQH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto" translatesAutoresizingMaskIntoConstraints="NO" id="u7c-Iq-q2u">
+                                <rect key="frame" x="0.0" y="15" width="600" height="226"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjM-lp-cvj">
+                                <rect key="frame" x="0.0" y="241" width="600" height="359"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="L4d-cV-SPu">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="359"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información General Rally Maya México 2015" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-6R-eDC">
+                                                <rect key="frame" x="6" y="0.0" width="588" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="mc7-pE-B1N"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="szD-Lu-qMw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="szD-Lu-qMw"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" minimumZoomScale="0.0" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OH4-yd-Xm3">
+                                                <rect key="frame" x="10" y="28" width="580" height="1556"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="136" id="yds-nW-5X1"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">RALLY MAYA MEXICO 2015 a realizarse del 4 al 9 de Mayo de 2015, en la Península de Yucatán. Rally Maya en su 2ª Edición, dará inicio en la ciudad de Mérida Yucatán, y finalizara en la Ciudad de Cancun Q. Roo. Un museo rodante de autos antiguos de 1915 a 1975,  en  un recorrido de 1,200 Km  durante 6 días.   Un Rally Tour inolvidable en una tenaz  carrera de regularidad. 
+La Pernocta será en  5 lugares específicos que son MERIDA, CAMPECHE, UXMAL, MERIDA, CHICHEN ITZA Y CANCUN  donde nos darán la bienvenida y podremos conocer de las costumbres de cada lugar, además  visitaremos más de 22 lugares intermedios que sin duda serán toda una experiencia. Este recorrido que  tendrá un abanico de matices Históricos, Culturales, Arqueológicos,  Gastronómicos, Deportivos  y Altruista. Serán 110 automóviles  de colección con un 90% de originalidad   y 220 participantes entre piloto y copiloto, gustosos del mundo del automovilismo. 
+El Rally Maya México en su segunda edición, es creado por el Lic. Benjamin de la Peña Mora. Es uno de los eventos de mayor importancia de autos históricos a nivel nacional e internacional. Comenzando una nueva etapa con el aval de La Federación Internacional de Vehículos Ancestros, la Federación Mexicana de Automóviles Antiguos y de Colección A.C., Comisión Nacional de Rallies México, Rally Automóvil Club, Organización Mexicana del Deporte Automovilístico Internacional, Federación Mexicana de Automóviles Deportivos A.C, Museo del Automóvil del Sureste y el Museo Iconográfico de la Carrera Panamericana, que realiza el culto por el automovilismo histórico en un marco, de hospitalidad y cordialidad en el sureste de México. 
+Es una competición NO DE VELOCIDAD, entre automóviles cuyo único requisito común es que tengan más de 40 años, distinguiéndose varias categorías de antigüedad (1915-1930 / 1931-1945 / 1946-1960 / 1961- 1975) a los solos efectos de clasificación MEDIA CONSTANTE significa que durante todo el tramo cronometrado y durante el mayor tiempo posible deberemos intentar llevar esa velocidad.  
+CONTROL DE LA MEDIA POR EL PARTICIPANTE: El tramo de regularidad se inicia en el punto indicado por el organizador, habitualmente por el sistema de auto-salida, a la hora, minuto y segundo que habremos deducido del carnet de ruta, es decir, sin que haya persona alguna de la organización que controle nuestra salida. A partir de ese momento, deberemos alcanzar la media y mantenerla durante todo el tramo.   Explicado esto, veamos qué elementos necesitamos:   
+1.- </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="HORA RALLY.">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">- La hora rally se exhibirá por la organización al inicio de la prueba y con ella deberemos sincronizar nuestro reloj de a bordo. Suele coincidir con RNE. Es la hora oficial por la que se guiarán las salidas y los controles. En consecuencia será la referencia para determinar los puntos de penalización por nuestro desajuste, en más o en menos, por los controles de paso (secretos o no) y los horarios.  
+2.- </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="CALIBRACION DE LA DISTANCIA.">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">- De la misma manera que sincronizamos con la organización nuestro reloj de a bordo, deberemos hacer lo mismo con el medidor de distancia, de tal manera que a igualdad de distancia, el nuestro mida lo mismo que el suyo. Para ello, el organizador nos indicará un tramo de calibración en una carretera poco virada y nos dirá cuánto mide exactamente ese tramo, tanto en el sentido de ida como en el de regreso.   
+3.- </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="CARNET DE RUTA.">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">- El carnet de ruta nos será facilitado por la organización y en él nos indicará los puntos de auto-salida de cada uno de los tramos de regularidad y los controles horarios donde nos deben marcar la hora de paso.  
+4.- </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="LIBRETA DE RUTA.">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">- Nos lo facilitará el organizador y es la guía del recorrido de la prueba, los cruces que deberemos tomar, el inicio y fin de los tramos de regularidad y su media. Mediante unas viñetas con símbolos, leyendas y distancias totales y parciales podremos orientarnos en el seguimiento de la ruta impuesta por el organizador.  
+5.-</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="COMPOSICION DE CADA EQUIPO">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">.- 
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="A.- ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="MATERIAL O VEHÍCULO:">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> Placas y tarjeta de Circulación, Seguro Vigente contra terceros, Aparatos de medición de tiempo: Cronómetro Reloj de a bordo o Aparatos de medición de distancia Odómetro (mínimo, no es recomendable el del coche).Y cierta habilidad para su montaje, o…. Terra Trip o Retro trip (más específicos).  
+B.- </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="PILOTO:">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> Su misión esencial es obedecer al copiloto. Conducirá observando las normas de circulación, dentro de su carril, sin acortar el recorrido mediante trazadas, pues la distancia recorrida no coincidirá con la medida por el organizador, tratará de seguir una línea paralela al eje o al borde de la carretera, sin deslizar ni hacer derrapar el coche, sobre todo, la rueda que lleve la sonda del medidor de distancia.  
+C.- </string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="COPILOTO:">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content"> .- Es la computadora humana del equipo, en definitiva, su elemento primordial.
+Tiene TRES misiones fundamentales: 
+-Llevar la navegación siguiendo el libro de ruta;  -El control de tiempos de auto-salida y paso por los controles horarios; y 
+-El control de la velocidad media indicando lo pertinente al piloto. Llevará a cabo la comprobación de niveles y las reparaciones de mantenimiento del coche y procurará el bienestar del piloto atendiéndole en todo lo que precise o desee (excepto bebidas alcohólicas). 
+-Respetar el reglamento de Tránsito de cada lugar. 
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="yds-nW-5X1"/>
+                                                    </mask>
+                                                </variation>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="trailing" secondItem="0ML-6R-eDC" secondAttribute="trailing" id="GEA-nM-dUB"/>
+                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="trailing" secondItem="0ML-6R-eDC" secondAttribute="trailing" id="Wia-Y7-yzt"/>
+                                            <constraint firstAttribute="centerX" secondItem="0ML-6R-eDC" secondAttribute="centerX" id="YGW-sW-9oB"/>
+                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="leading" secondItem="L4d-cV-SPu" secondAttribute="leading" constant="10" id="a7c-hG-r7q"/>
+                                            <constraint firstAttribute="trailing" secondItem="0ML-6R-eDC" secondAttribute="trailing" constant="6" id="ghH-4H-Ucj"/>
+                                            <constraint firstItem="0ML-6R-eDC" firstAttribute="top" secondItem="L4d-cV-SPu" secondAttribute="top" id="h51-u9-dZr"/>
+                                            <constraint firstAttribute="bottom" secondItem="OH4-yd-Xm3" secondAttribute="bottom" constant="198" id="knY-1g-Kb1"/>
+                                            <constraint firstItem="0ML-6R-eDC" firstAttribute="leading" secondItem="L4d-cV-SPu" secondAttribute="leading" constant="6" id="q7t-Fg-53V"/>
+                                            <constraint firstAttribute="centerX" secondItem="OH4-yd-Xm3" secondAttribute="centerX" id="qkw-HI-0eI"/>
+                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="top" secondItem="0ML-6R-eDC" secondAttribute="bottom" constant="8" symbolic="YES" id="x79-qH-XSE"/>
+                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="top" secondItem="0ML-6R-eDC" secondAttribute="bottom" constant="2" id="xjV-z8-Sl8"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="GEA-nM-dUB"/>
+                                                <exclude reference="Wia-Y7-yzt"/>
+                                                <exclude reference="x79-qH-XSE"/>
+                                            </mask>
+                                        </variation>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="L4d-cV-SPu" secondAttribute="bottom" id="2Hg-ph-9be"/>
+                                    <constraint firstItem="L4d-cV-SPu" firstAttribute="leading" secondItem="JjM-lp-cvj" secondAttribute="leading" id="GEf-pV-064"/>
+                                    <constraint firstItem="L4d-cV-SPu" firstAttribute="top" secondItem="JjM-lp-cvj" secondAttribute="top" id="M8x-h1-lMg"/>
+                                    <constraint firstAttribute="trailing" secondItem="L4d-cV-SPu" secondAttribute="trailing" id="NEB-SX-zsu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x16-JQ-AiL" firstAttribute="top" secondItem="JjM-lp-cvj" secondAttribute="bottom" id="6jB-Ld-1fY"/>
+                            <constraint firstItem="JjM-lp-cvj" firstAttribute="top" secondItem="u7c-Iq-q2u" secondAttribute="bottom" id="BR9-8P-doU"/>
+                            <constraint firstItem="JjM-lp-cvj" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-16" id="GQ4-6b-40t"/>
+                            <constraint firstItem="u7c-Iq-q2u" firstAttribute="top" secondItem="faH-zj-EQH" secondAttribute="topMargin" constant="15" id="gAW-z0-6HL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u7c-Iq-q2u" secondAttribute="trailing" constant="-16" id="kdD-qA-f8T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JjM-lp-cvj" secondAttribute="trailing" constant="-16" id="niw-l2-Ext"/>
+                            <constraint firstItem="u7c-Iq-q2u" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-16" id="pcK-dH-yfB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myText" destination="OH4-yd-Xm3" id="Dw8-lI-iz4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-ZN-8Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27" y="-81"/>
+        </scene>
+        <!--Participantes-->
+        <scene sceneID="BRm-23-CtC">
+            <objects>
+                <viewController storyboardIdentifier="ParticipantesView" title="Participantes" id="Gly-vI-4q0" customClass="ParticipantesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oRX-B2-YKS"/>
+                        <viewControllerLayoutGuide type="bottom" id="oC7-2F-MfX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxI-ad-2h6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8SH-cg-cWz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AX8-Cp-bBh">
+                                    <size key="itemSize" width="165" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menuCell" id="OBZ-xp-rqx">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4u-CP-314">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="Tog-B3-Xna" kind="push" id="Oou-bE-Jbz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gly-vI-4q0" id="Qym-iQ-08i"/>
+                                    <outlet property="delegate" destination="Gly-vI-4q0" id="Slv-zz-VwZ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8SH-cg-cWz" firstAttribute="leading" secondItem="fxI-ad-2h6" secondAttribute="leadingMargin" constant="-16" id="70e-1R-fXL"/>
+                            <constraint firstItem="oC7-2F-MfX" firstAttribute="top" secondItem="8SH-cg-cWz" secondAttribute="bottom" id="FKa-6k-Jiq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8SH-cg-cWz" secondAttribute="trailing" constant="-16" id="abH-tk-Gpx"/>
+                            <constraint firstItem="8SH-cg-cWz" firstAttribute="top" secondItem="fxI-ad-2h6" secondAttribute="topMargin" id="vLj-qP-uGa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuCollectionView" destination="8SH-cg-cWz" id="mYa-9O-9bs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7Q-yn-kpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="473"/>
+        </scene>
+        <!--Participante View Controller-->
+        <scene sceneID="u6k-R3-rSP">
+            <objects>
+                <viewController id="Tog-B3-Xna" customClass="ParticipanteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dmR-4g-uvB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ctf-fa-1J9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SLS-AB-X9V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q65-9c-Vcy">
+                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q65-9c-Vcy" firstAttribute="top" secondItem="SLS-AB-X9V" secondAttribute="topMargin" constant="50" id="FNl-Zk-x8c"/>
+                            <constraint firstItem="ctf-fa-1J9" firstAttribute="top" secondItem="Q65-9c-Vcy" secondAttribute="bottom" id="hd7-gK-DdF"/>
+                            <constraint firstItem="Q65-9c-Vcy" firstAttribute="leading" secondItem="SLS-AB-X9V" secondAttribute="leadingMargin" constant="-16" id="kLS-0Z-Rse"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q65-9c-Vcy" secondAttribute="trailing" constant="-16" id="lse-6M-XCp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l05-sG-mWM"/>
+                    <connections>
+                        <outlet property="imageView" destination="Q65-9c-Vcy" id="Cxm-jW-Gkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dT3-Og-yU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="473"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fondo" width="640" height="960"/>
+        <image name="foto" width="640" height="226"/>
+    </resources>
 </document>

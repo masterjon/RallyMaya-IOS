@@ -1,55 +1,59 @@
 //
-//  ViewController.m
+//  ParticipantesViewController.m
 //  Rally Maya
 //
 //  Created by Jonathan Horta on 2/23/15.
 //  Copyright (c) 2015 Jonathan Horta. All rights reserved.
 //
 
-#import "ViewController.h"
-
-@interface ViewController ()
+#import "ParticipantesViewController.h"
+#import "ParticipanteViewController.h"
+@interface ParticipantesViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ParticipantesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.menuItems = [[NSMutableArray alloc] init];
     NSArray *menu = @[
                       @{
-                          @"image":@"rally-maya",
-                          @"target":@"RallyView",
-                        },
-                      @{
-                          @"image":@"participantes",
-                          @"target":@"ParticipantesView",
-                        },
-                      @{
-                          @"image":@"ruta",
-                          @"target":@"",
-                        },
-                      @{
-                          @"image":@"tips",
-                          @"target":@"",
-                        },
-                      @{
-                          @"image":@"patrocinadores",
-                          @"target":@"",
-                        },
-                      
-                      @{
-                          @"image":@"directorio",
-                          @"target":@"",
-                        },
-                      @{
-                          @"image":@"diabetes",
-                          @"target":@"",
+                          @"image":@"ALFA-ROMEO-TOURING-SPIDER-1960",
+                          @"bigImg":@"1",
                           },
                       @{
-                          @"image":@"cronometro",
-                          @"target":@"",
+                          @"image":@"AUSTIN-COOPER-1964",
+                          @"bigImg":@"2",
+                          },
+                      @{
+                          @"image":@"CHRYSLER-DODGE-PLYMOUTH-BELVEREDE-1966",
+                          @"bigImg":@"3",
+                          },
+                      @{
+                          @"image":@"CHRYSLER-IMPERIAL-AIRFLOW-1936",
+                          @"bigImg":@"4",
+                          },
+                      @{
+                          @"image":@"CORVAIR-1963",
+                          @"bigImg":@"5",
+                          },
+                      
+                      @{
+                          @"image":@"FAIRLINE--1957",
+                          @"bigImg":@"6",
+                          },
+                      @{
+                          @"image":@"FERRARI-308-GTS-1972",
+                          @"bigImg":@"7",
+                          },
+                      @{
+                          @"image":@"FORD-ROADSTER-1931",
+                          @"bigImg":@"8",
+                          },
+                      @{
+                          @"image":@"JAGUAR-E-TYPE-1961",
+                          @"bigImg":@"9",
                           },
                       
                       ];
@@ -58,7 +62,7 @@
         [self.menuItems addObject:dataDictionary];
         
     }
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.menuItems count];
@@ -75,15 +79,13 @@
     }
     return cell;
 }
-
--(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
-    
-    ViewController *viewC = [self.storyboard instantiateViewControllerWithIdentifier:menuItemDictionary[@"target"]];
-    [self.navigationController pushViewController:viewC animated:YES];
-
-
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ParticipanteViewController *View = [[ParticipanteViewController alloc] init];
+    View = [segue destinationViewController];
+    NSArray *arrayOfIndexPaths = [self.menuCollectionView  indexPathsForSelectedItems];
+    NSIndexPath *path = [arrayOfIndexPaths firstObject];
+    NSDictionary *itemdictionary = [self.menuItems objectAtIndex:path.row];
+    View.imagenUrl = itemdictionary[@"bigImg"];
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -109,9 +111,20 @@
     }
     return UIEdgeInsetsMake(top, left, bottom, right);
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

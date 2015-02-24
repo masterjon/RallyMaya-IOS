@@ -14,6 +14,9 @@
 		FCC2C4E31A9B8E4200A6AA89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC2C4E21A9B8E4200A6AA89 /* Images.xcassets */; };
 		FCC2C4E61A9B8E4200A6AA89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC2C4E41A9B8E4200A6AA89 /* LaunchScreen.xib */; };
 		FCC2C4F21A9B8E4200A6AA89 /* Rally_MayaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4F11A9B8E4200A6AA89 /* Rally_MayaTests.m */; };
+		FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */; };
+		FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */; };
+		FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		FCC2C4EB1A9B8E4200A6AA89 /* Rally MayaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rally MayaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2C4F01A9B8E4200A6AA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2C4F11A9B8E4200A6AA89 /* Rally_MayaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rally_MayaTests.m; sourceTree = "<group>"; };
+		FCC2C4FE1A9BAC5700A6AA89 /* ParticipantesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantesViewController.h; sourceTree = "<group>"; };
+		FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantesViewController.m; sourceTree = "<group>"; };
+		FCC2C5011A9BC11800A6AA89 /* ParticipanteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipanteViewController.h; sourceTree = "<group>"; };
+		FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipanteViewController.m; sourceTree = "<group>"; };
+		FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RallyViewController.h; sourceTree = "<group>"; };
+		FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RallyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,12 @@
 				FCC2C4E21A9B8E4200A6AA89 /* Images.xcassets */,
 				FCC2C4E41A9B8E4200A6AA89 /* LaunchScreen.xib */,
 				FCC2C4D51A9B8E4200A6AA89 /* Supporting Files */,
+				FCC2C4FE1A9BAC5700A6AA89 /* ParticipantesViewController.h */,
+				FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */,
+				FCC2C5011A9BC11800A6AA89 /* ParticipanteViewController.h */,
+				FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */,
+				FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */,
+				FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */,
 			);
 			path = "Rally Maya";
 			sourceTree = "<group>";
@@ -219,8 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */,
+				FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */,
 				FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */,
 				FCC2C4DB1A9B8E4200A6AA89 /* AppDelegate.m in Sources */,
+				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
