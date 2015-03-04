@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rk2-ah-fGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1358" y="-263"/>
+            <point key="canvasLocation" x="-1606" y="-251"/>
         </scene>
         <!--Rally Maya-->
         <scene sceneID="tne-QT-ifu">
@@ -36,11 +36,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="qC5-M8-fdx">
-                                <rect key="frame" x="-4" y="64" width="608" height="536"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="qC5-M8-fdx">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="536"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hgq-la-Wvo">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hgq-la-Wvo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WDM-F5-1Ih">
                                     <size key="itemSize" width="165" height="165"/>
@@ -352,7 +352,7 @@ Tiene TRES misiones fundamentales: 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeg-ZN-8Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-27" y="-81"/>
+            <point key="canvasLocation" x="68" y="-633"/>
         </scene>
         <!--TIPS-->
         <scene sceneID="MRa-f6-7bA">
@@ -371,7 +371,7 @@ Tiene TRES misiones fundamentales: 
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohz-Az-uBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2334" y="827"/>
+            <point key="canvasLocation" x="68" y="871"/>
         </scene>
         <!--PARTICIPANTES-->
         <scene sceneID="BRm-23-CtC">
@@ -433,7 +433,7 @@ Tiene TRES misiones fundamentales: 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7Q-yn-kpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-648" y="473"/>
+            <point key="canvasLocation" x="68" y="125"/>
         </scene>
         <!--TIPS-->
         <scene sceneID="7ga-1m-sbN">
@@ -963,7 +963,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEz-jt-AmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1546" y="247"/>
+            <point key="canvasLocation" x="-670" y="1726"/>
         </scene>
         <!--LUGARES-->
         <scene sceneID="Vv0-tf-HDp">
@@ -985,7 +985,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCg-RG-V3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1517" y="922"/>
+            <point key="canvasLocation" x="68" y="1726"/>
         </scene>
         <!--DICCIONARIO MAYA-->
         <scene sceneID="Hrn-la-b3U">
@@ -3229,7 +3229,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htb-TI-Zo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1509" y="1694"/>
+            <point key="canvasLocation" x="800" y="1726"/>
         </scene>
         <!--DIABETES-->
         <scene sceneID="Hxf-eW-UNF">
@@ -3408,7 +3408,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dT3-Og-yU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="583"/>
+            <point key="canvasLocation" x="808" y="125"/>
         </scene>
         <!--PATROCINADORES-->
         <scene sceneID="OHH-Af-Z42">
@@ -3467,7 +3467,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WY-0u-gbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628" y="1297"/>
+            <point key="canvasLocation" x="-1028" y="871"/>
         </scene>
         <!--DIRECTORIO-->
         <scene sceneID="UZ8-Ec-k7Z">
@@ -3486,7 +3486,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVf-gM-ggR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-572" y="2212"/>
+            <point key="canvasLocation" x="-1472" y="1760"/>
         </scene>
         <!--CAMPECHE-->
         <scene sceneID="acY-UC-yWK">
@@ -3505,7 +3505,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lz-XW-Opo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224" y="1813"/>
+            <point key="canvasLocation" x="580" y="2641"/>
         </scene>
         <!--YUCATÁN-->
         <scene sceneID="Kp6-mF-vbk">
@@ -3527,7 +3527,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Si0-Nk-wmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="2689"/>
+            <point key="canvasLocation" x="-48" y="3057"/>
         </scene>
         <!--QUINTANA ROO-->
         <scene sceneID="7Ix-dx-nE5">
