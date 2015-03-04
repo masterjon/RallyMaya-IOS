@@ -1,23 +1,21 @@
 //
-//  RallyViewController.m
+//  CronometroViewController.m
 //  Rally Maya
 //
-//  Created by Jonathan Horta on 2/23/15.
+//  Created by Jonathan Horta on 2/26/15.
 //  Copyright (c) 2015 Jonathan Horta. All rights reserved.
 //
 
-#import "RallyViewController.h"
-#define MAX_HEIGHT 2000
-@interface RallyViewController ()
+#import "CronometroViewController.h"
+
+@interface CronometroViewController ()
 
 @end
 
-@implementation RallyViewController
+@implementation CronometroViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     // Do any additional setup after loading the view.
 }
 
@@ -36,4 +34,8 @@
 }
 */
 
+- (IBAction)downloadButton:(UIButton *)sender {
+    NSString *iTunesLink = @"itms://itunes.apple.com/gb/app/id348836721";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+}
 @end

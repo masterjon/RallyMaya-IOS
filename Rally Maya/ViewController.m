@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //self.navigationItem.title = @"INICIO";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
     self.menuItems = [[NSMutableArray alloc] init];
     NSArray *menu = @[
                       @{
@@ -28,28 +32,28 @@
                         },
                       @{
                           @"image":@"ruta",
-                          @"target":@"",
+                          @"target":@"tabView",
                         },
                       @{
                           @"image":@"tips",
-                          @"target":@"",
+                          @"target":@"TipsView",
                         },
                       @{
                           @"image":@"patrocinadores",
-                          @"target":@"",
+                          @"target":@"PatrocinadoresView",
                         },
                       
                       @{
                           @"image":@"directorio",
-                          @"target":@"",
+                          @"target":@"DirectoriosView",
                         },
                       @{
                           @"image":@"diabetes",
-                          @"target":@"",
+                          @"target":@"DiabetesView",
                           },
                       @{
                           @"image":@"cronometro",
-                          @"target":@"",
+                          @"target":@"CronometroView",
                           },
                       
                       ];

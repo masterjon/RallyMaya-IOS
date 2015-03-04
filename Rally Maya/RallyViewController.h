@@ -10,6 +10,5 @@
 
 @interface RallyViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextView *myText;
 
 @end

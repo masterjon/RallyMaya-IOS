@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC43EA3C1A9E5E9800F414DB /* CampecheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */; };
+		FC43EA3F1AA01CFB00F414DB /* YucatanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */; };
+		FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA411AA01D6700F414DB /* QRooViewController.m */; };
+		FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA441AA02F3000F414DB /* CronometroViewController.m */; };
+		FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */; };
+		FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */; };
+		FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */; };
+		FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA27E221AA5030300B16B1B /* DirectorioViewController.m */; };
 		FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4D71A9B8E4200A6AA89 /* main.m */; };
 		FCC2C4DB1A9B8E4200A6AA89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4DA1A9B8E4200A6AA89 /* AppDelegate.m */; };
 		FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4DD1A9B8E4200A6AA89 /* ViewController.m */; };
@@ -17,6 +25,12 @@
 		FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */; };
 		FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */; };
 		FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */; };
+		FCC2D6031A9CECF200A6AA89 /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5F71A9CECF200A6AA89 /* KMAccordionTableViewController.m */; };
+		FCC2D6041A9CECF200A6AA89 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5F91A9CECF200A6AA89 /* MyViewController.m */; };
+		FCC2D6051A9CECF200A6AA89 /* KMAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5FC1A9CECF200A6AA89 /* KMAppearence.m */; };
+		FCC2D6061A9CECF200A6AA89 /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5FE1A9CECF200A6AA89 /* KMSection.m */; };
+		FCC2D6071A9CECF200A6AA89 /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D6011A9CECF200A6AA89 /* KMSectionHeaderView.m */; };
+		FCC2D6081A9CECF200A6AA89 /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC2D6021A9CECF200A6AA89 /* KMSectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +44,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC43EA3A1A9E5E9800F414DB /* CampecheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampecheViewController.h; sourceTree = "<group>"; };
+		FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampecheViewController.m; sourceTree = "<group>"; };
+		FC43EA3D1AA01CFB00F414DB /* YucatanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YucatanViewController.h; sourceTree = "<group>"; };
+		FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YucatanViewController.m; sourceTree = "<group>"; };
+		FC43EA401AA01D6700F414DB /* QRooViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRooViewController.h; sourceTree = "<group>"; };
+		FC43EA411AA01D6700F414DB /* QRooViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRooViewController.m; sourceTree = "<group>"; };
+		FC43EA431AA02F3000F414DB /* CronometroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CronometroViewController.h; sourceTree = "<group>"; };
+		FC43EA441AA02F3000F414DB /* CronometroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CronometroViewController.m; sourceTree = "<group>"; };
+		FC4B68101A9CFE2D009FDEB2 /* TipsLugaresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsLugaresViewController.h; sourceTree = "<group>"; };
+		FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsLugaresViewController.m; sourceTree = "<group>"; };
+		FC4B68131A9D43DE009FDEB2 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
+		FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		FC4B68161A9D481F009FDEB2 /* PatrocinadoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrocinadoresViewController.h; sourceTree = "<group>"; };
+		FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrocinadoresViewController.m; sourceTree = "<group>"; };
+		FCA27E211AA5030300B16B1B /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
+		FCA27E221AA5030300B16B1B /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
 		FCC2C4D21A9B8E4200A6AA89 /* Rally Maya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rally Maya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2C4D61A9B8E4200A6AA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2C4D71A9B8E4200A6AA89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +79,17 @@
 		FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipanteViewController.m; sourceTree = "<group>"; };
 		FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RallyViewController.h; sourceTree = "<group>"; };
 		FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RallyViewController.m; sourceTree = "<group>"; };
+		FCC2D5F61A9CECF200A6AA89 /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
+		FCC2D5F71A9CECF200A6AA89 /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
+		FCC2D5F81A9CECF200A6AA89 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		FCC2D5F91A9CECF200A6AA89 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		FCC2D5FB1A9CECF200A6AA89 /* KMAppearence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAppearence.h; sourceTree = "<group>"; };
+		FCC2D5FC1A9CECF200A6AA89 /* KMAppearence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAppearence.m; sourceTree = "<group>"; };
+		FCC2D5FD1A9CECF200A6AA89 /* KMSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSection.h; sourceTree = "<group>"; };
+		FCC2D5FE1A9CECF200A6AA89 /* KMSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSection.m; sourceTree = "<group>"; };
+		FCC2D6001A9CECF200A6AA89 /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
+		FCC2D6011A9CECF200A6AA89 /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
+		FCC2D6021A9CECF200A6AA89 /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +131,9 @@
 		FCC2C4D41A9B8E4200A6AA89 /* Rally Maya */ = {
 			isa = PBXGroup;
 			children = (
+				FCC2D5FA1A9CECF200A6AA89 /* Model */,
+				FCC2D5F51A9CECF200A6AA89 /* ViewController */,
+				FCC2D5FF1A9CECF200A6AA89 /* Header */,
 				FCC2C4D91A9B8E4200A6AA89 /* AppDelegate.h */,
 				FCC2C4DA1A9B8E4200A6AA89 /* AppDelegate.m */,
 				FCC2C4DC1A9B8E4200A6AA89 /* ViewController.h */,
@@ -104,6 +148,22 @@
 				FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */,
 				FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */,
 				FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */,
+				FC4B68101A9CFE2D009FDEB2 /* TipsLugaresViewController.h */,
+				FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */,
+				FC4B68131A9D43DE009FDEB2 /* TipsViewController.h */,
+				FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */,
+				FC4B68161A9D481F009FDEB2 /* PatrocinadoresViewController.h */,
+				FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */,
+				FC43EA3A1A9E5E9800F414DB /* CampecheViewController.h */,
+				FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */,
+				FC43EA3D1AA01CFB00F414DB /* YucatanViewController.h */,
+				FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */,
+				FC43EA401AA01D6700F414DB /* QRooViewController.h */,
+				FC43EA411AA01D6700F414DB /* QRooViewController.m */,
+				FC43EA431AA02F3000F414DB /* CronometroViewController.h */,
+				FC43EA441AA02F3000F414DB /* CronometroViewController.m */,
+				FCA27E211AA5030300B16B1B /* DirectorioViewController.h */,
+				FCA27E221AA5030300B16B1B /* DirectorioViewController.m */,
 			);
 			path = "Rally Maya";
 			sourceTree = "<group>";
@@ -132,6 +192,38 @@
 				FCC2C4F01A9B8E4200A6AA89 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCC2D5F51A9CECF200A6AA89 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCC2D5F61A9CECF200A6AA89 /* KMAccordionTableViewController.h */,
+				FCC2D5F71A9CECF200A6AA89 /* KMAccordionTableViewController.m */,
+				FCC2D5F81A9CECF200A6AA89 /* MyViewController.h */,
+				FCC2D5F91A9CECF200A6AA89 /* MyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FCC2D5FA1A9CECF200A6AA89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCC2D5FB1A9CECF200A6AA89 /* KMAppearence.h */,
+				FCC2D5FC1A9CECF200A6AA89 /* KMAppearence.m */,
+				FCC2D5FD1A9CECF200A6AA89 /* KMSection.h */,
+				FCC2D5FE1A9CECF200A6AA89 /* KMSection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCC2D5FF1A9CECF200A6AA89 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				FCC2D6001A9CECF200A6AA89 /* KMSectionHeaderView.h */,
+				FCC2D6011A9CECF200A6AA89 /* KMSectionHeaderView.m */,
+				FCC2D6021A9CECF200A6AA89 /* KMSectionHeaderView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +289,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-MX",
+				es,
+				pt,
 			);
 			mainGroup = FCC2C4C91A9B8E4200A6AA89;
 			productRefGroup = FCC2C4D31A9B8E4200A6AA89 /* Products */;
@@ -215,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC2C4E11A9B8E4200A6AA89 /* Main.storyboard in Resources */,
+				FCC2D6081A9CECF200A6AA89 /* KMSectionHeaderView.xib in Resources */,
 				FCC2C4E61A9B8E4200A6AA89 /* LaunchScreen.xib in Resources */,
 				FCC2C4E31A9B8E4200A6AA89 /* Images.xcassets in Resources */,
 			);
@@ -234,12 +330,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC2D6031A9CECF200A6AA89 /* KMAccordionTableViewController.m in Sources */,
+				FCC2D6071A9CECF200A6AA89 /* KMSectionHeaderView.m in Sources */,
+				FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */,
 				FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */,
+				FCC2D6041A9CECF200A6AA89 /* MyViewController.m in Sources */,
 				FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */,
+				FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */,
+				FC43EA3F1AA01CFB00F414DB /* YucatanViewController.m in Sources */,
 				FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */,
+				FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */,
+				FCC2D6061A9CECF200A6AA89 /* KMSection.m in Sources */,
+				FC43EA3C1A9E5E9800F414DB /* CampecheViewController.m in Sources */,
 				FCC2C4DB1A9B8E4200A6AA89 /* AppDelegate.m in Sources */,
+				FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */,
+				FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */,
 				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
+				FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */,
+				FCC2D6051A9CECF200A6AA89 /* KMAppearence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +472,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jon/Punk/MAC/KMAccordionTableViewController/Pods/Reveal-iOS-SDK/Reveal-Framework-1.0.4",
+				);
 				INFOPLIST_FILE = "Rally Maya/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,6 +486,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jon/Punk/MAC/KMAccordionTableViewController/Pods/Reveal-iOS-SDK/Reveal-Framework-1.0.4",
+				);
 				INFOPLIST_FILE = "Rally Maya/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +549,7 @@
 				FCC2C4F71A9B8E4200A6AA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCC2C4F81A9B8E4200A6AA89 /* Build configuration list for PBXNativeTarget "Rally MayaTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +558,7 @@
 				FCC2C4FA1A9B8E4200A6AA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
