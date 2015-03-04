@@ -16,6 +16,10 @@
 		FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */; };
 		FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */; };
 		FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA27E221AA5030300B16B1B /* DirectorioViewController.m */; };
+		FCA6B06F1AA7CB6200F2A945 /* PGFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B0681AA7CB6200F2A945 /* PGFirstViewController.m */; };
+		FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06A1AA7CB6200F2A945 /* PGSecondViewController.m */; };
+		FCA6B0711AA7CB6200F2A945 /* PGSideDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06C1AA7CB6200F2A945 /* PGSideDrawerController.m */; };
+		FCA6B0721AA7CB6200F2A945 /* PGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06E1AA7CB6200F2A945 /* PGViewController.m */; };
 		FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4D71A9B8E4200A6AA89 /* main.m */; };
 		FCC2C4DB1A9B8E4200A6AA89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4DA1A9B8E4200A6AA89 /* AppDelegate.m */; };
 		FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4DD1A9B8E4200A6AA89 /* ViewController.m */; };
@@ -64,6 +68,14 @@
 		FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrocinadoresViewController.m; sourceTree = "<group>"; };
 		FCA27E211AA5030300B16B1B /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
 		FCA27E221AA5030300B16B1B /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
+		FCA6B0671AA7CB6200F2A945 /* PGFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFirstViewController.h; sourceTree = "<group>"; };
+		FCA6B0681AA7CB6200F2A945 /* PGFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGFirstViewController.m; sourceTree = "<group>"; };
+		FCA6B0691AA7CB6200F2A945 /* PGSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSecondViewController.h; sourceTree = "<group>"; };
+		FCA6B06A1AA7CB6200F2A945 /* PGSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSecondViewController.m; sourceTree = "<group>"; };
+		FCA6B06B1AA7CB6200F2A945 /* PGSideDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSideDrawerController.h; sourceTree = "<group>"; };
+		FCA6B06C1AA7CB6200F2A945 /* PGSideDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSideDrawerController.m; sourceTree = "<group>"; };
+		FCA6B06D1AA7CB6200F2A945 /* PGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewController.h; sourceTree = "<group>"; };
+		FCA6B06E1AA7CB6200F2A945 /* PGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewController.m; sourceTree = "<group>"; };
 		FCC2C4D21A9B8E4200A6AA89 /* Rally Maya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rally Maya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2C4D61A9B8E4200A6AA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2C4D71A9B8E4200A6AA89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +147,14 @@
 		BCA164401AA7D13D00EFF32E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCA6B0671AA7CB6200F2A945 /* PGFirstViewController.h */,
+				FCA6B0681AA7CB6200F2A945 /* PGFirstViewController.m */,
+				FCA6B0691AA7CB6200F2A945 /* PGSecondViewController.h */,
+				FCA6B06A1AA7CB6200F2A945 /* PGSecondViewController.m */,
+				FCA6B06B1AA7CB6200F2A945 /* PGSideDrawerController.h */,
+				FCA6B06C1AA7CB6200F2A945 /* PGSideDrawerController.m */,
+				FCA6B06D1AA7CB6200F2A945 /* PGViewController.h */,
+				FCA6B06E1AA7CB6200F2A945 /* PGViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -399,13 +419,16 @@
 			files = (
 				FCC2D6031A9CECF200A6AA89 /* KMAccordionTableViewController.m in Sources */,
 				FCC2D6071A9CECF200A6AA89 /* KMSectionHeaderView.m in Sources */,
+				FCA6B0721AA7CB6200F2A945 /* PGViewController.m in Sources */,
 				FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */,
 				FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */,
 				FCC2D6041A9CECF200A6AA89 /* MyViewController.m in Sources */,
 				FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */,
 				FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */,
 				FC43EA3F1AA01CFB00F414DB /* YucatanViewController.m in Sources */,
+				FCA6B06F1AA7CB6200F2A945 /* PGFirstViewController.m in Sources */,
 				FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */,
+				FCA6B0711AA7CB6200F2A945 /* PGSideDrawerController.m in Sources */,
 				FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */,
 				FCC2D6061A9CECF200A6AA89 /* KMSection.m in Sources */,
 				FC43EA3C1A9E5E9800F414DB /* CampecheViewController.m in Sources */,
@@ -413,6 +436,7 @@
 				FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */,
 				FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */,
 				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
+				FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
 				FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */,
 				FCC2D6051A9CECF200A6AA89 /* KMAppearence.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EBB-Md-XO8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EBB-Md-XO8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -984,7 +984,7 @@ Cg
         <!--Root View Controller-->
         <scene sceneID="teZ-zA-Gxy">
             <objects>
-                <viewController id="QRG-t4-Wd3" sceneMemberID="viewController">
+                <viewController id="QRG-t4-Wd3" customClass="PGViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U5W-B8-Xo1"/>
                         <viewControllerLayoutGuide type="bottom" id="Uaw-6I-G9X"/>
@@ -996,7 +996,7 @@ Cg
                     </view>
                     <navigationItem key="navigationItem" title="Root View Controller" id="6Kt-QR-uTb"/>
                     <connections>
-                        <segue destination="Wrg-Iy-q5N" kind="modal" id="0rX-ng-cRS"/>
+                        <segue destination="Wrg-Iy-q5N" kind="modal" identifier="DRAWER_SEGUE" id="0rX-ng-cRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42E-xB-OhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1036,12 +1036,12 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9se-9E-Rk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-908" y="3404"/>
+            <point key="canvasLocation" x="-1080" y="3504"/>
         </scene>
         <!--FIRST VIEW CONTROLLER-->
         <scene sceneID="1bI-sR-fTl">
             <objects>
-                <viewController id="nlK-8L-Gjf" sceneMemberID="viewController">
+                <viewController id="nlK-8L-Gjf" customClass="PGFirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6SX-og-MyH"/>
                         <viewControllerLayoutGuide type="bottom" id="v5R-KD-iZV"/>
@@ -1076,7 +1076,6 @@ Cg
         <!--FIRST VIEW CONTROLLER -2 -->
         <scene sceneID="WQU-Em-W4o">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="deg-cK-3sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bmH-Tj-nJI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yEj-oL-cZ5"/>
@@ -1089,13 +1088,14 @@ Cg
                     </view>
                     <navigationItem key="navigationItem" title="FIRST VIEW CONTROLLER -2 " id="tRK-RH-nto"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deg-cK-3sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1170" y="3483"/>
         </scene>
         <!--SECOND VIEW CONTROLLER-->
         <scene sceneID="VMX-lC-Vhr">
             <objects>
-                <viewController id="Dvn-Kl-eDg" sceneMemberID="viewController">
+                <viewController id="Dvn-Kl-eDg" customClass="PGSecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yCv-vc-A38"/>
                         <viewControllerLayoutGuide type="bottom" id="grD-4a-KkX"/>
@@ -1111,10 +1111,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="622" y="4289"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Side Drawer Controller-->
         <scene sceneID="Zxn-5b-MP7">
             <objects>
-                <tableViewController storyboardIdentifier="SIDE_DRAWER_CONTROLLER" id="gqI-YD-sbo" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SIDE_DRAWER_CONTROLLER" id="gqI-YD-sbo" customClass="PGSideDrawerController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="S03-tQ-97a">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
