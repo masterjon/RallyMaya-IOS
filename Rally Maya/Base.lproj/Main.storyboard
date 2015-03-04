@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0vP-8a-Xvh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0vP-8a-Xvh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rk2-ah-fGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1606" y="-251"/>
+            <point key="canvasLocation" x="-1028" y="-1267"/>
         </scene>
         <!--Rally Maya-->
         <scene sceneID="tne-QT-ifu">
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-648" y="-251"/>
+            <point key="canvasLocation" x="-1028" y="-203"/>
         </scene>
         <!--RALLY MAYA-->
         <scene sceneID="k6B-GB-8o1">
@@ -3324,7 +3324,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5d-P7-HiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1940" y="2487"/>
+            <point key="canvasLocation" x="-2132" y="103"/>
         </scene>
         <!--CRONÓMETRO-->
         <scene sceneID="N9E-3a-8X0">
@@ -3368,7 +3368,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bId-Gr-3h5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1168" y="3096"/>
+            <point key="canvasLocation" x="-2132" y="-664"/>
         </scene>
         <!--Participante View Controller-->
         <scene sceneID="u6k-R3-rSP">
@@ -3486,7 +3486,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVf-gM-ggR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1472" y="1760"/>
+            <point key="canvasLocation" x="-2132" y="900"/>
         </scene>
         <!--CAMPECHE-->
         <scene sceneID="acY-UC-yWK">
@@ -3505,7 +3505,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lz-XW-Opo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="2641"/>
+            <point key="canvasLocation" x="-1412" y="1726"/>
         </scene>
         <!--YUCATÁN-->
         <scene sceneID="Kp6-mF-vbk">
@@ -3527,7 +3527,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Si0-Nk-wmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="3057"/>
+            <point key="canvasLocation" x="-2884" y="1726"/>
         </scene>
         <!--QUINTANA ROO-->
         <scene sceneID="7Ix-dx-nE5">
@@ -3549,7 +3549,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Op-pz-BvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="3378"/>
+            <point key="canvasLocation" x="-2132" y="1726"/>
         </scene>
     </scenes>
     <resources>
