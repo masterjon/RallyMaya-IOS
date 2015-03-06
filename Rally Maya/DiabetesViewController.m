@@ -1,25 +1,25 @@
 //
-//  TipsViewController.m
+//  DiabetesViewController.m
 //  Rally Maya
 //
-//  Created by Jonathan Horta on 2/24/15.
+//  Created by Andrea on 05/03/15.
 //  Copyright (c) 2015 Jonathan Horta. All rights reserved.
 //
 
-#import "TipsViewController.h"
+#import "DiabetesViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 
-@interface TipsViewController ()
+@interface DiabetesViewController ()
 
 @end
 
-@implementation TipsViewController
+@implementation DiabetesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     //NavigatrionDrawer
-    self.navigationItem.title = @"TIPS";
+    self.navigationItem.title = @"DIABETES";
     NSArray *viewControllers = self.navigationController.viewControllers;
     UIViewController *vc = [viewControllers objectAtIndex:0];
     NSLog(@"%@",vc.title);
@@ -28,18 +28,6 @@
         
         [self setupLeftMenuButton];
     }
-    
-    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateNormal];
-    
-    
-    // Change StateSelected
-    UIColor *titleHighlightedColor = [UIColor colorWithRed:0.855 green:0.694 blue:0.502 alpha:1];
-    
-    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : titleHighlightedColor} forState:UIControlStateSelected];
-    
-    [[UITabBar appearance] setTintColor:titleHighlightedColor];
-    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:12.0/255.0 green:12.0/255.0 blue:10.0/255.0 alpha:1]];
-    //[[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     // Do any additional setup after loading the view.
 }
 
@@ -64,6 +52,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 
 @end

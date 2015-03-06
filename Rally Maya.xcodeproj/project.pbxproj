@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6574216A1AA9060D00F94CD4 /* DiabetesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657421691AA9060D00F94CD4 /* DiabetesViewController.m */; };
 		D4F161FC634554CB72FC9FDB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B067FA1E09EAACDF3BEA3F8C /* libPods.a */; };
 		FC43EA3C1A9E5E9800F414DB /* CampecheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */; };
 		FC43EA3F1AA01CFB00F414DB /* YucatanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */; };
@@ -50,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		5BFB734E0B7F4A90E94E2AA5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		657421681AA9060D00F94CD4 /* DiabetesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiabetesViewController.h; sourceTree = "<group>"; };
+		657421691AA9060D00F94CD4 /* DiabetesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiabetesViewController.m; sourceTree = "<group>"; };
 		6902086B8BFB5B535481A67D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B067FA1E09EAACDF3BEA3F8C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC43EA3A1A9E5E9800F414DB /* CampecheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampecheViewController.h; sourceTree = "<group>"; };
@@ -194,28 +197,30 @@
 				FCC2C4E21A9B8E4200A6AA89 /* Images.xcassets */,
 				FCC2C4E41A9B8E4200A6AA89 /* LaunchScreen.xib */,
 				FCC2C4D51A9B8E4200A6AA89 /* Supporting Files */,
+				FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */,
+				FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */,
 				FCC2C4FE1A9BAC5700A6AA89 /* ParticipantesViewController.h */,
 				FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */,
 				FCC2C5011A9BC11800A6AA89 /* ParticipanteViewController.h */,
 				FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */,
-				FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */,
-				FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */,
-				FC4B68101A9CFE2D009FDEB2 /* TipsLugaresViewController.h */,
-				FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */,
 				FC4B68131A9D43DE009FDEB2 /* TipsViewController.h */,
 				FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */,
+				FC4B68101A9CFE2D009FDEB2 /* TipsLugaresViewController.h */,
+				FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */,
 				FC4B68161A9D481F009FDEB2 /* PatrocinadoresViewController.h */,
 				FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */,
+				FCA27E211AA5030300B16B1B /* DirectorioViewController.h */,
+				FCA27E221AA5030300B16B1B /* DirectorioViewController.m */,
 				FC43EA3A1A9E5E9800F414DB /* CampecheViewController.h */,
 				FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */,
 				FC43EA3D1AA01CFB00F414DB /* YucatanViewController.h */,
 				FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */,
 				FC43EA401AA01D6700F414DB /* QRooViewController.h */,
 				FC43EA411AA01D6700F414DB /* QRooViewController.m */,
+				657421681AA9060D00F94CD4 /* DiabetesViewController.h */,
+				657421691AA9060D00F94CD4 /* DiabetesViewController.m */,
 				FC43EA431AA02F3000F414DB /* CronometroViewController.h */,
 				FC43EA441AA02F3000F414DB /* CronometroViewController.m */,
-				FCA27E211AA5030300B16B1B /* DirectorioViewController.h */,
-				FCA27E221AA5030300B16B1B /* DirectorioViewController.m */,
 			);
 			path = "Rally Maya";
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */,
 				FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */,
 				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
+				6574216A1AA9060D00F94CD4 /* DiabetesViewController.m in Sources */,
 				FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
 				FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */,

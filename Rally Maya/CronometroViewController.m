@@ -7,6 +7,8 @@
 //
 
 #import "CronometroViewController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface CronometroViewController ()
 
@@ -16,6 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //NavigatrionDrawer
+    self.navigationItem.title = @"CRONOMETRO";
+    NSArray *viewControllers = self.navigationController.viewControllers;
+    UIViewController *vc = [viewControllers objectAtIndex:0];
+    NSLog(@"%@",vc.title);
+    //If there are not other views it show the menu button, else the defalut back button is shown
+    if([viewControllers count] <= 1){
+        
+        [self setupLeftMenuButton];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -23,7 +35,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)setupLeftMenuButton {
+    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton];
+}
 
+- (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

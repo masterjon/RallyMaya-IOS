@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
 @interface ViewController ()
 
 @end
@@ -16,10 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.navigationItem.title = @"INICIO";
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-
+    [self setupLeftMenuButton];
+    self.navigationItem.title = @"INICIO";
     self.menuItems = [[NSMutableArray alloc] init];
     NSArray *menu = @[
                       @{
@@ -63,6 +62,14 @@
         
     }
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (void)setupLeftMenuButton {
+    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton];
+}
+
+- (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.menuItems count];

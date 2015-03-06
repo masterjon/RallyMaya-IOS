@@ -8,6 +8,7 @@
 
 #import "PGViewController.h"
 #import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
 
 @interface PGViewController ()
 
@@ -25,12 +26,14 @@
         MMDrawerController *destinationViewController = (MMDrawerController *) segue.destinationViewController;
 
         // Instantitate and set the center view controller.
-        UIViewController *centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FIRST_TOP_VIEW_CONTROLLER"];
+        UIViewController *centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"InicioViewNavigation"];
         [destinationViewController setCenterViewController:centerViewController];
 
         // Instantiate and set the left drawer controller.
         UIViewController *leftDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SIDE_DRAWER_CONTROLLER"];
         [destinationViewController setLeftDrawerViewController:leftDrawerViewController];
+        [destinationViewController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+        
 
     }
 }
