@@ -99,30 +99,64 @@
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     int top = 10;
-    int left = 10;
+    int left = 0;
     int bottom = 10;
-    int right = 10;
+    int right = 0;
     NSLog(@"%i",(int)screenBounds.size.width);
     switch ((int) screenBounds.size.width) {
+        case 320:
+            NSLog(@"--5--");
+            left = 5;
+            right = 5;
+            break;
+        case 375:
+            NSLog(@"--6--");
+            left = 20;
+            right = 20;
+            break;
+        case 414:
+            NSLog(@"--6+--");
+            left = 30;
+            right = 30;
+            break;
         case 768:
             NSLog(@"--Ipad Portrait");
             left = 50;
             right = 50;
-            
+            top = 50;
             break;
         case 1024:
             NSLog(@"--Ipad Landscape");
             left = 50;
             right = 50;
+            top = 50;
             break;
         default:
             break;
+
     }
     return UIEdgeInsetsMake(top, left, bottom, right);
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    // Adjust cell size for orientation
+    int screenSize = (int) screenBounds.size.width;
+    //Size of cells for ipad
+    if(screenSize == 768 || screenSize == 1024){
+        return CGSizeMake(267.f, 284.f);
+    }
+    
+    //Size of cells for iphones
+    return CGSizeMake(150.f,150.f);
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

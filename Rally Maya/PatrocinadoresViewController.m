@@ -135,23 +135,29 @@
     int right = 10;
     NSLog(@"%i",(int)screenBounds.size.width);
     switch ((int) screenBounds.size.width) {
+        case 320:
+            NSLog(@"--5--");
+            left = 25;
+            right = 25;
+            break;
         case 768:
             NSLog(@"--Ipad Portrait");
             left = 50;
             right = 50;
-            
+            top = 50;
             break;
         case 1024:
             NSLog(@"--Ipad Landscape");
             left = 50;
             right = 50;
+            top = 50;
             break;
         default:
             break;
+            
     }
     return UIEdgeInsetsMake(top, left, bottom, right);
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
