@@ -10,8 +10,11 @@
 #import "ParticipanteViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-@interface ParticipantesViewController ()
+#import "MBProgressHUD.h"
 
+@interface ParticipantesViewController ()
+@property (strong, nonatomic) NSURLSession *session;
+@property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
 @end
 
 @implementation ParticipantesViewController
@@ -31,53 +34,33 @@
     }
     
     self.menuItems = [[NSMutableArray alloc] init];
-    NSArray *menu = @[
-                      @{
-                          @"image":@"ALFA-ROMEO-TOURING-SPIDER-1960",
-                          @"bigImg":@"1",
-                          },
-                      @{
-                          @"image":@"AUSTIN-COOPER-1964",
-                          @"bigImg":@"2",
-                          },
-                      @{
-                          @"image":@"CHRYSLER-DODGE-PLYMOUTH-BELVEREDE-1966",
-                          @"bigImg":@"3",
-                          },
-                      @{
-                          @"image":@"CHRYSLER-IMPERIAL-AIRFLOW-1936",
-                          @"bigImg":@"4",
-                          },
-                      @{
-                          @"image":@"CORVAIR-1963",
-                          @"bigImg":@"5",
-                          },
-                      
-                      @{
-                          @"image":@"FAIRLINE--1957",
-                          @"bigImg":@"6",
-                          },
-                      @{
-                          @"image":@"FERRARI-308-GTS-1972",
-                          @"bigImg":@"7",
-                          },
-                      @{
-                          @"image":@"FORD-ROADSTER-1931",
-                          @"bigImg":@"8",
-                          },
-                      @{
-                          @"image":@"JAGUAR-E-TYPE-1961",
-                          @"bigImg":@"9",
-                          },
-                      
-                      ];
-    
-    for (NSArray *dataDictionary in menu){
-        [self.menuItems addObject:dataDictionary];
-        
-    }
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [NSURL URLWithString:@"http://punklabs.ninja/rallymaya/api/v1/cars/?format=json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
+    self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
+    NSURLSessionDataTask * task = [self.session dataTaskWithRequest:request  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+        if(urlResponse.statusCode==200){
+            NSLog(@"It Came to 200 status");
+            
+            //este metodo llena el arreglo con los datos obtenidos de nuestro request
+            [self handleResults:data];
+        }
+        else{
+            [message show];
+        }
+    }];
+    [task resume];
+
     // Do any additional setup after loading the view.
 }
+
 - (void)setupLeftMenuButton {
     MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton];
@@ -86,7 +69,28 @@
 - (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
-
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+- (void) handleResults:(NSData *)data{
+    
+    //la respuesta viene serializada en json por lo tanto lo tenemos que deserializar
+    NSError *jsonError;
+    NSDictionary *response= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+    if (response){
+        for (NSDictionary *dataDictionary in response[@"objects"]){
+            
+            [self.menuItems addObject:dataDictionary];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+            [self.menuCollectionView reloadData];
+        });
+    }
+}
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.menuItems count];
 }
@@ -96,8 +100,28 @@
     UIImageView *menuImage = (UIImageView *) [cell viewWithTag:10];
     if([self.menuItems count] >0){
         NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
-        NSString *imageItem =[cellDictionary objectForKey:@"image"];
+        NSString *imageItem =[cellDictionary objectForKey:@"picture"];
+        NSURL *imageUrl = [NSURL URLWithString:imageItem];
+        NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
+        //menuImage.image = [UIImage imageNamed:@"fondofotos"];
+        
         menuImage.image = [UIImage imageNamed:imageItem];
+        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+            if(urlResponse.statusCode==200){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    menuImage.image=[UIImage imageWithData:data];
+                    
+                });
+            }
+            else{
+                //NSLog(@"Error fetching remote data");
+            }
+            
+            
+        }];
+        [task resume];
+        
         
     }
     return cell;
@@ -108,7 +132,9 @@
     NSArray *arrayOfIndexPaths = [self.menuCollectionView  indexPathsForSelectedItems];
     NSIndexPath *path = [arrayOfIndexPaths firstObject];
     NSDictionary *itemdictionary = [self.menuItems objectAtIndex:path.row];
-    View.imagenUrl = itemdictionary[@"bigImg"];
+    View.imagenUrl = itemdictionary[@"picture"];
+    View.name = itemdictionary[@"name"];
+    View.year = itemdictionary[@"year"];
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -135,8 +161,8 @@
             break;
         case 768:
             NSLog(@"--Ipad Portrait");
-            left = 50;
-            right = 50;
+            left = 60;
+            right = 60;
             top = 50;
             break;
         case 1024:
@@ -160,7 +186,7 @@
     int screenSize = (int) screenBounds.size.width;
     //Size of cells for ipad
     if(screenSize == 768 || screenSize == 1024){
-        return CGSizeMake(267.f, 284.f);
+        return CGSizeMake(282.f, 282.f);
     }
     
     //Size of cells for iphones
@@ -173,13 +199,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

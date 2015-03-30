@@ -9,9 +9,11 @@
 #import "PatrocinadoresViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
+#import "MBProgressHUD.h"
 
 @interface PatrocinadoresViewController ()
-
+@property (strong, nonatomic) NSURLSession *session;
+@property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
 @end
 
 @implementation PatrocinadoresViewController
@@ -32,75 +34,34 @@
     
     
     self.menuItems = [[NSMutableArray alloc] init];
-    NSArray *menu = @[
-                      
-                      
-                      @{
-                          @"image":@"asur",
-                          },
-                      @{
-                          @"image":@"aicm",
-                          },
-                      @{
-                          @"image":@"hertz",
-                          },
-                      @{
-                          @"image":@"interjet",
-                          },
-                      @{
-                          @"image":@"infinitum",
-                          },
-                      @{
-                          @"image":@"clarovideo",
-                          },
-                      @{
-                          @"image":@"fullgas",
-                          },
-                      @{
-                          @"image":@"5m2",
-                          },
-                      @{
-                          @"image":@"mayaland",
-                          },
-                      @{
-                          @"image":@"oasis",
-                          },
-                      
-                      @{
-                          @"image":@"scappino",
-                          },
-                      @{
-                          @"image":@"ultramar",
-                          },
-                      @{
-                          @"image":@"donm",
-                          },
-                      @{
-                          @"image":@"cancun",
-                          },
-                      @{
-                          @"image":@"deiman",
-                          },
-                      @{
-                          @"image":@"sct",
-                          },
-                      @{
-                          @"image":@"mediacorp",
-                          },
-                      @{
-                          @"image":@"campeche",
-                          },
-                      
-                      @{
-                          @"image":@"yucatan",
-                          },
-                      
-                      ];
     
-    for (NSArray *dataDictionary in menu){
-        [self.menuItems addObject:dataDictionary];
-        
-    }
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [NSURL URLWithString:@"http://punklabs.ninja/rallymaya/api/v1/sponsors/?format=json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
+    self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
+    NSURLSessionDataTask * task = [self.session dataTaskWithRequest:request  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+        if(urlResponse.statusCode==200){
+            NSLog(@"It Came to 200 status");
+            
+            //este metodo llena el arreglo con los datos obtenidos de nuestro request
+            [self handleResults:data];
+        }
+        else{
+            [message show];
+        }
+    }];
+    [task resume];
+
+  
+    
+
     // Do any additional setup after loading the view.
 }
 - (void)setupLeftMenuButton {
@@ -111,6 +72,28 @@
 - (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+- (void) handleResults:(NSData *)data{
+    
+    //la respuesta viene serializada en json por lo tanto lo tenemos que deserializar
+    NSError *jsonError;
+    NSDictionary *response= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+    if (response){
+        for (NSDictionary *dataDictionary in response[@"objects"]){
+            
+            [self.menuItems addObject:dataDictionary];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+            [self.menuCollectionView reloadData];
+        });
+    }
+}
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [self.menuItems count];
 }
@@ -120,11 +103,40 @@
     UIImageView *menuImage = (UIImageView *) [cell viewWithTag:10];
     if([self.menuItems count] >0){
         NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
-        NSString *imageItem =[cellDictionary objectForKey:@"image"];
+        NSString *imageItem =[cellDictionary objectForKey:@"picture"];
+        NSURL *imageUrl = [NSURL URLWithString:imageItem];
+        NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
         menuImage.image = [UIImage imageNamed:imageItem];
         
+        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+            if(urlResponse.statusCode==200){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    menuImage.image=[UIImage imageWithData:data];
+                    
+                });
+            }
+            else{
+                //NSLog(@"Error fetching remote data");
+            }
+            
+            
+        }];
+        [task resume];
     }
     return cell;
+}
+
+-(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
+
+    NSLog(@"%@",menuItemDictionary[@"link"]);
+    if ([menuItemDictionary[@"link"] length] != 0) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:menuItemDictionary[@"link"]]];
+    }
+    
+    
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{

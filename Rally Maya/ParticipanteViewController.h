@@ -11,4 +11,7 @@
 @interface ParticipanteViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong,nonatomic) NSString *imagenUrl;
+@property (strong,nonatomic) NSString *name;
+@property (strong,nonatomic) NSString *year;
+
 @end
