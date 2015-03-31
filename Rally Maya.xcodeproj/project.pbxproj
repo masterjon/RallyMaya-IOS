@@ -17,6 +17,7 @@
 		FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */; };
 		FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */; };
 		FC5C84FE1AC9F37600AF91A8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */; };
+		FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */; };
 		FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA27E221AA5030300B16B1B /* DirectorioViewController.m */; };
 		FCA6B06F1AA7CB6200F2A945 /* PGFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B0681AA7CB6200F2A945 /* PGFirstViewController.m */; };
 		FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06A1AA7CB6200F2A945 /* PGSecondViewController.m */; };
@@ -72,6 +73,8 @@
 		FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrocinadoresViewController.m; sourceTree = "<group>"; };
 		FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FC5C84FD1AC9F37600AF91A8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramaViewController.h; sourceTree = "<group>"; };
+		FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramaViewController.m; sourceTree = "<group>"; };
 		FCA27E211AA5030300B16B1B /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
 		FCA27E221AA5030300B16B1B /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
 		FCA6B0671AA7CB6200F2A945 /* PGFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFirstViewController.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				657421691AA9060D00F94CD4 /* DiabetesViewController.m */,
 				FC43EA431AA02F3000F414DB /* CronometroViewController.h */,
 				FC43EA441AA02F3000F414DB /* CronometroViewController.m */,
+				FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */,
+				FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */,
 			);
 			path = "Rally Maya";
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */,
 				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
 				6574216A1AA9060D00F94CD4 /* DiabetesViewController.m in Sources */,
+				FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */,
 				FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
 				FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */,

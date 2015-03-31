@@ -26,12 +26,16 @@
                           @"target":@"RallyView",
                           },
                       @{
+                          @"image":@"programa",
+                          @"target":@"ProgramaView",
+                          },
+                      @{
                           @"image":@"participantes",
                           @"target":@"ParticipantesView",
                           },
                       @{
                           @"image":@"ruta",
-                          @"target":@"TipsView",
+                          @"target":@"ProgramaView",
                           },
                       @{
                           @"image":@"tips",
@@ -46,10 +50,7 @@
                           @"image":@"directorio",
                           @"target":@"DirectoriosView",
                           },
-                      @{
-                          @"image":@"diabetes",
-                          @"target":@"DiabetesView",
-                          },
+                      
                       @{
                           @"image":@"cronometro",
                           @"target":@"CronometroView",
