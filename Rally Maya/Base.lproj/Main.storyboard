@@ -62,6 +62,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pj2-eI-tlf">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -199,251 +202,248 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto" translatesAutoresizingMaskIntoConstraints="NO" id="Xvy-po-aLA">
-                                <rect key="frame" x="0.0" y="-60" width="600" height="226"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjM-lp-cvj">
-                                <rect key="frame" x="0.0" y="126" width="600" height="410"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="L4d-cV-SPu">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="410"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información General Rally Maya México 2015" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-6R-eDC">
-                                                <rect key="frame" x="6" y="0.0" width="588" height="26"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="26" id="mc7-pE-B1N"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="szD-Lu-qMw"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="szD-Lu-qMw"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" minimumZoomScale="0.0" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OH4-yd-Xm3">
-                                                <rect key="frame" x="10" y="28" width="580" height="1556"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="136" id="yds-nW-5X1"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment>
-                                                        <string key="content">RALLY MAYA MEXICO 2015 a realizarse del 4 al 9 de Mayo de 2015, en la Península de Yucatán. Rally Maya en su 2ª Edición, dará inicio en la ciudad de Mérida Yucatán, y finalizara en la Ciudad de Cancun Q. Roo. Un museo rodante de autos antiguos de 1915 a 1975,  en  un recorrido de 1,200 Km  durante 6 días.   Un Rally Tour inolvidable en una tenaz  carrera de regularidad. 
-La Pernocta será en  5 lugares específicos que son MERIDA, CAMPECHE, UXMAL, MERIDA, CHICHEN ITZA Y CANCUN  donde nos darán la bienvenida y podremos conocer de las costumbres de cada lugar, además  visitaremos más de 22 lugares intermedios que sin duda serán toda una experiencia. Este recorrido que  tendrá un abanico de matices Históricos, Culturales, Arqueológicos,  Gastronómicos, Deportivos  y Altruista. Serán 110 automóviles  de colección con un 90% de originalidad   y 220 participantes entre piloto y copiloto, gustosos del mundo del automovilismo. 
-El Rally Maya México en su segunda edición, es creado por el Lic. Benjamin de la Peña Mora. Es uno de los eventos de mayor importancia de autos históricos a nivel nacional e internacional. Comenzando una nueva etapa con el aval de La Federación Internacional de Vehículos Ancestros, la Federación Mexicana de Automóviles Antiguos y de Colección A.C., Comisión Nacional de Rallies México, Rally Automóvil Club, Organización Mexicana del Deporte Automovilístico Internacional, Federación Mexicana de Automóviles Deportivos A.C, Museo del Automóvil del Sureste y el Museo Iconográfico de la Carrera Panamericana, que realiza el culto por el automovilismo histórico en un marco, de hospitalidad y cordialidad en el sureste de México. 
-Es una competición NO DE VELOCIDAD, entre automóviles cuyo único requisito común es que tengan más de 40 años, distinguiéndose varias categorías de antigüedad (1915-1930 / 1931-1945 / 1946-1960 / 1961- 1975) a los solos efectos de clasificación MEDIA CONSTANTE significa que durante todo el tramo cronometrado y durante el mayor tiempo posible deberemos intentar llevar esa velocidad.  
-CONTROL DE LA MEDIA POR EL PARTICIPANTE: El tramo de regularidad se inicia en el punto indicado por el organizador, habitualmente por el sistema de auto-salida, a la hora, minuto y segundo que habremos deducido del carnet de ruta, es decir, sin que haya persona alguna de la organización que controle nuestra salida. A partir de ese momento, deberemos alcanzar la media y mantenerla durante todo el tramo.   Explicado esto, veamos qué elementos necesitamos:   
-1.- </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="HORA RALLY.">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content">- La hora rally se exhibirá por la organización al inicio de la prueba y con ella deberemos sincronizar nuestro reloj de a bordo. Suele coincidir con RNE. Es la hora oficial por la que se guiarán las salidas y los controles. En consecuencia será la referencia para determinar los puntos de penalización por nuestro desajuste, en más o en menos, por los controles de paso (secretos o no) y los horarios.  
-2.- </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="CALIBRACION DE LA DISTANCIA.">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content">- De la misma manera que sincronizamos con la organización nuestro reloj de a bordo, deberemos hacer lo mismo con el medidor de distancia, de tal manera que a igualdad de distancia, el nuestro mida lo mismo que el suyo. Para ello, el organizador nos indicará un tramo de calibración en una carretera poco virada y nos dirá cuánto mide exactamente ese tramo, tanto en el sentido de ida como en el de regreso.   
-3.- </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="CARNET DE RUTA.">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content">- El carnet de ruta nos será facilitado por la organización y en él nos indicará los puntos de auto-salida de cada uno de los tramos de regularidad y los controles horarios donde nos deben marcar la hora de paso.  
-4.- </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="LIBRETA DE RUTA.">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content">- Nos lo facilitará el organizador y es la guía del recorrido de la prueba, los cruces que deberemos tomar, el inicio y fin de los tramos de regularidad y su media. Mediante unas viñetas con símbolos, leyendas y distancias totales y parciales podremos orientarnos en el seguimiento de la ruta impuesta por el organizador.  
-5.-</string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="COMPOSICION DE CADA EQUIPO">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content">.- 
-</string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="A.- ">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="MATERIAL O VEHÍCULO:">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content"> Placas y tarjeta de Circulación, Seguro Vigente contra terceros, Aparatos de medición de tiempo: Cronómetro Reloj de a bordo o Aparatos de medición de distancia Odómetro (mínimo, no es recomendable el del coche).Y cierta habilidad para su montaje, o…. Terra Trip o Retro trip (más específicos).  
-B.- </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="PILOTO:">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content"> Su misión esencial es obedecer al copiloto. Conducirá observando las normas de circulación, dentro de su carril, sin acortar el recorrido mediante trazadas, pues la distancia recorrida no coincidirá con la medida por el organizador, tratará de seguir una línea paralela al eje o al borde de la carretera, sin deslizar ni hacer derrapar el coche, sobre todo, la rueda que lleve la sonda del medidor de distancia.  
-C.- </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="COPILOTO:">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment>
-                                                        <string key="content"> .- Es la computadora humana del equipo, en definitiva, su elemento primordial.
-Tiene TRES misiones fundamentales: 
--Llevar la navegación siguiendo el libro de ruta;  -El control de tiempos de auto-salida y paso por los controles horarios; y 
--El control de la velocidad media indicando lo pertinente al piloto. Llevará a cabo la comprobación de niveles y las reparaciones de mantenimiento del coche y procurará el bienestar del piloto atendiéndole en todo lo que precise o desee (excepto bebidas alcohólicas). 
--Respetar el reglamento de Tránsito de cada lugar. 
-</string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content=" ">
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="yds-nW-5X1"/>
-                                                    </mask>
-                                                </variation>
-                                            </textView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="trailing" secondItem="0ML-6R-eDC" secondAttribute="trailing" id="GEA-nM-dUB"/>
-                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="trailing" secondItem="0ML-6R-eDC" secondAttribute="trailing" id="Wia-Y7-yzt"/>
-                                            <constraint firstAttribute="centerX" secondItem="0ML-6R-eDC" secondAttribute="centerX" id="YGW-sW-9oB"/>
-                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="leading" secondItem="L4d-cV-SPu" secondAttribute="leading" constant="10" id="a7c-hG-r7q"/>
-                                            <constraint firstAttribute="trailing" secondItem="0ML-6R-eDC" secondAttribute="trailing" constant="6" id="ghH-4H-Ucj"/>
-                                            <constraint firstItem="0ML-6R-eDC" firstAttribute="top" secondItem="L4d-cV-SPu" secondAttribute="top" id="h51-u9-dZr"/>
-                                            <constraint firstAttribute="bottom" secondItem="OH4-yd-Xm3" secondAttribute="bottom" constant="198" id="knY-1g-Kb1"/>
-                                            <constraint firstItem="0ML-6R-eDC" firstAttribute="leading" secondItem="L4d-cV-SPu" secondAttribute="leading" constant="6" id="q7t-Fg-53V"/>
-                                            <constraint firstAttribute="centerX" secondItem="OH4-yd-Xm3" secondAttribute="centerX" id="qkw-HI-0eI"/>
-                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="top" secondItem="0ML-6R-eDC" secondAttribute="bottom" constant="8" symbolic="YES" id="x79-qH-XSE"/>
-                                            <constraint firstItem="OH4-yd-Xm3" firstAttribute="top" secondItem="0ML-6R-eDC" secondAttribute="bottom" constant="2" id="xjV-z8-Sl8"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="GEA-nM-dUB"/>
-                                                <exclude reference="Wia-Y7-yzt"/>
-                                                <exclude reference="x79-qH-XSE"/>
-                                            </mask>
-                                        </variation>
-                                    </scrollView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-ji-LVX">
+                                <rect key="frame" x="-4" y="-60" width="608" height="226"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="L4d-cV-SPu" secondAttribute="bottom" id="2Hg-ph-9be"/>
-                                    <constraint firstItem="L4d-cV-SPu" firstAttribute="leading" secondItem="JjM-lp-cvj" secondAttribute="leading" id="GEf-pV-064"/>
-                                    <constraint firstItem="L4d-cV-SPu" firstAttribute="top" secondItem="JjM-lp-cvj" secondAttribute="top" id="M8x-h1-lMg"/>
-                                    <constraint firstAttribute="trailing" secondItem="L4d-cV-SPu" secondAttribute="trailing" id="NEB-SX-zsu"/>
+                                    <constraint firstAttribute="height" id="yXV-dh-s2y"/>
                                 </constraints>
-                            </view>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yXV-dh-s2y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="yXV-dh-s2y"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3F-vV-ROr">
+                                <rect key="frame" x="3" y="136" width="593" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Información General Rally Maya México 2015 ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+RALLY MAYA MEXICO 2015 a realizarse del 4 al 9 de Mayo de 2015, en la Península de Yucatán. Rally Maya en su 2ª Edición, dará inicio en la ciudad de Mérida Yucatán, y finalizara en la Ciudad de Cancun Q. Roo. Un museo rodante de autos antiguos de 1915 a 1975,  en  un recorrido de 1,200 Km  durante 6 días.   Un Rally Tour inolvidable en una tenaz  carrera de regularidad.
+
+La Pernocta será en  5 lugares específicos que son MERIDA, CAMPECHE, UXMAL, MERIDA, CHICHEN ITZA Y CANCUN  donde nos darán la bienvenida y podremos conocer de las costumbres de cada lugar, además  visitaremos más de 22 lugares intermedios que sin duda serán toda una experiencia. Este recorrido que  tendrá un abanico de matices Históricos, Culturales, Arqueológicos,  Gastronómicos, Deportivos  y Altruista. Serán 110 automóviles  de colección con un 90% de originalidad   y 220 participantes entre piloto y copiloto, gustosos del mundo del automovilismo.
+
+El Rally Maya México en su segunda edición, es creado por el Lic. Benjamin de la Peña Mora. Es uno de los eventos de mayor importancia de autos históricos a nivel nacional e internacional. Comenzando una nueva etapa con el aval de La Federación Internacional de Vehículos Ancestros, la Federación Mexicana de Automóviles Antiguos y de Colección A.C., Comisión Nacional de Rallies México, Rally Automóvil Club, Organización Mexicana del Deporte Automovilístico Internacional, Federación Mexicana de Automóviles Deportivos A.C, Museo del Automóvil del Sureste y el Museo Iconográfico de la Carrera Panamericana, que realiza el culto por el automovilismo histórico en un marco, de hospitalidad y cordialidad en el sureste de México.
+
+Es una competición NO DE VELOCIDAD, entre automóviles cuyo único requisito común es que tengan más de 40 años, distinguiéndose varias categorías de antigüedad (1915-1930 / 1931-1945 / 1946-1960 / 1961- 1975) a los solos efectos de clasificación MEDIA CONSTANTE significa que durante todo el tramo cronometrado y durante el mayor tiempo posible deberemos intentar llevar esa velocidad.
+
+CONTROL DE LA MEDIA POR EL PARTICIPANTE: El tramo de regularidad se inicia en el punto indicado por el organizador, habitualmente por el sistema de auto-salida, a la hora, minuto y segundo que habremos deducido del carnet de ruta, es decir, sin que haya persona alguna de la organización que controle nuestra salida. A partir de ese momento, deberemos alcanzar la media y mantenerla durante todo el tramo.
+
+Explicado esto, veamos qué elementos necesitamos:
+
+
+1.- </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="HORA RALLY.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- La hora rally se exhibirá por la organización al inicio de la prueba y con ella deberemos sincronizar nuestro reloj de a bordo. Suele coincidir con RNE. Es la hora oficial por la que se guiarán las salidas y los controles. En consecuencia será la referencia para determinar los puntos de penalización por nuestro desajuste, en más o en menos, por los controles de paso (secretos o no) y los horarios.
+
+
+2.- </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CALIBRACION DE LA DISTANCIA.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- De la misma manera que sincronizamos con la organización nuestro reloj de a bordo, deberemos hacer lo mismo con el medidor de distancia, de tal manera que a igualdad de distancia, el nuestro mida lo mismo que el suyo. Para ello, el organizador nos indicará un tramo de calibración en una carretera poco virada y nos dirá cuánto mide exactamente ese tramo, tanto en el sentido de ida como en el de regreso.
+
+
+3.- </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CARNET DE RUTA.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- El carnet de ruta nos será facilitado por la organización y en él nos indicará los puntos de auto-salida de cada uno de los tramos de regularidad y los controles horarios donde nos deben marcar la hora de paso.
+
+4.- </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="LIBRETA DE RUTA.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">- Nos lo facilitará el organizador y es la guía del recorrido de la prueba, los cruces que deberemos tomar, el inicio y fin de los tramos de regularidad y su media. Mediante unas viñetas con símbolos, leyendas y distancias totales y parciales podremos orientarnos en el seguimiento de la ruta impuesta por el organizador.
+
+5.-</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="COMPOSICION DE CADA EQUIPO">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">.-
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="A.- ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="MATERIAL O VEHÍCULO:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Placas y tarjeta de Circulación, Seguro Vigente contra terceros, Aparatos de medición de tiempo: Cronómetro Reloj de a bordo o Aparatos de medición de distancia Odómetro (mínimo, no es recomendable el del coche).Y cierta habilidad para su montaje, o…. Terra Trip o Retro trip (más específicos).
+
+B.- </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="PILOTO:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Su misión esencial es obedecer al copiloto. Conducirá observando las normas de circulación, dentro de su carril, sin acortar el recorrido mediante trazadas, pues la distancia recorrida no coincidirá con la medida por el organizador, tratará de seguir una línea paralela al eje o al borde de la carretera, sin deslizar ni hacer derrapar el coche, sobre todo, la rueda que lleve la sonda del medidor de distancia.
+
+C.- </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="COPILOTO:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> .- Es la computadora humana del equipo, en definitiva, su elemento primordial.
+Tiene TRES misiones fundamentales:
+
+-Llevar la navegación siguiendo el libro de ruta;
+
+-El control de tiempos de auto-salida y paso por los controles horarios; y
+
+-El control de la velocidad media indicando lo pertinente al piloto. Llevará a cabo la comprobación de niveles y las reparaciones de mantenimiento del coche y procurará el bienestar del piloto atendiéndole en todo lo que precise o desee (excepto bebidas alcohólicas).
+
+-Respetar el reglamento de Tránsito de cada lugar.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="3" y="186" width="593" height="150"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="x16-JQ-AiL" firstAttribute="top" secondItem="JjM-lp-cvj" secondAttribute="bottom" id="6jB-Ld-1fY"/>
-                            <constraint firstItem="JjM-lp-cvj" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-16" id="GQ4-6b-40t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xvy-po-aLA" secondAttribute="trailing" constant="-16" id="HnS-AA-CHI"/>
-                            <constraint firstItem="Xvy-po-aLA" firstAttribute="top" secondItem="Foc-XO-0nL" secondAttribute="bottom" constant="-60" id="Qg3-wp-Q7H"/>
-                            <constraint firstItem="Xvy-po-aLA" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-16" id="VWM-uj-J9C"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JjM-lp-cvj" secondAttribute="trailing" constant="-16" id="niw-l2-Ext"/>
-                            <constraint firstItem="JjM-lp-cvj" firstAttribute="top" secondItem="Xvy-po-aLA" secondAttribute="bottom" constant="-40" id="rb1-Iq-vXH"/>
+                            <constraint firstItem="n3F-vV-ROr" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-13" id="446-gr-sCs"/>
+                            <constraint firstItem="x16-JQ-AiL" firstAttribute="top" secondItem="n3F-vV-ROr" secondAttribute="bottom" id="4v7-Wj-cCP"/>
+                            <constraint firstItem="n3F-vV-ROr" firstAttribute="top" secondItem="l9w-ji-LVX" secondAttribute="bottom" constant="10" id="7F5-gG-AkQ"/>
+                            <constraint firstItem="l9w-ji-LVX" firstAttribute="top" secondItem="faH-zj-EQH" secondAttribute="topMargin" id="7mR-e1-7av"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n3F-vV-ROr" secondAttribute="trailing" constant="-12" id="8Hg-C3-uec"/>
+                            <constraint firstItem="l9w-ji-LVX" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-20" id="8bA-9N-wSw"/>
+                            <constraint firstItem="n3F-vV-ROr" firstAttribute="top" secondItem="l9w-ji-LVX" secondAttribute="bottom" constant="-30" id="ByW-4c-0cq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l9w-ji-LVX" secondAttribute="trailing" constant="-20" id="TH6-qp-jwE"/>
+                            <constraint firstItem="l9w-ji-LVX" firstAttribute="top" secondItem="Foc-XO-0nL" secondAttribute="bottom" constant="-60" id="gqA-8O-lfX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7mR-e1-7av"/>
+                                <exclude reference="7F5-gG-AkQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="7mR-e1-7av"/>
+                                <exclude reference="gqA-8O-lfX"/>
+                                <include reference="7F5-gG-AkQ"/>
+                                <exclude reference="ByW-4c-0cq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ubl-ad-dVk"/>
                 </viewController>
@@ -454,7 +454,7 @@ Tiene TRES misiones fundamentales: 
         <!--TIPS-->
         <scene sceneID="MRa-f6-7bA">
             <objects>
-                <tabBarController storyboardIdentifier="TipsView" title="TIPS" extendedLayoutIncludesOpaqueBars="YES" modalTransitionStyle="flipHorizontal" modalPresentationStyle="overCurrentContext" hidesBottomBarWhenPushed="YES" id="hM1-r8-E0A" customClass="TipsViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TipsView" title="TIPS" id="hM1-r8-E0A" customClass="TipsViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pIi-wO-a8I"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="uHE-zK-lyO">
@@ -502,6 +502,9 @@ Tiene TRES misiones fundamentales: 
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4u-CP-314">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="282" height="282"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -546,8 +549,8 @@ Tiene TRES misiones fundamentales: 
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crc-go-ZO6">
-                                <rect key="frame" x="-4" y="20" width="608" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crc-go-ZO6">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="50"/>
                                 <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VXy-G1-ecW"/>
@@ -563,8 +566,8 @@ Tiene TRES misiones fundamentales: 
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-uK-Qhu">
-                                <rect key="frame" x="0.0" y="70" width="600" height="481"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-uK-Qhu">
+                                <rect key="frame" x="0.0" y="50" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -586,7 +589,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" ">
+                                    <fragment content=" ">
                                         <attributes>
                                             <font key="NSFont" size="15" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -600,7 +603,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Agua 
+                                        <string key="content">Agua
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -753,7 +756,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Abanico 
+                                        <string key="content">Abanico
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -770,7 +773,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Nevera portátil 
+                                        <string key="content">Nevera portátil
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -804,7 +807,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Extinguidor 
+                                        <string key="content">Extinguidor
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1017,7 +1020,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" ">
+                                    <fragment content=" ">
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="HelveticaNeue"/>
@@ -1119,7 +1122,7 @@ Cg
                     <view key="view" contentMode="scaleToFill" id="chM-H5-NWQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="gip-5S-0fw"/>
                 </viewController>
@@ -1153,9 +1156,9 @@ Cg
                                                         <constraint firstAttribute="width" constant="32" id="A6S-sz-osN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INICIO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-fh-1sJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="INICIO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-fh-1sJ">
                                                     <rect key="frame" x="48" y="11" width="52" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1482,7 +1485,7 @@ Cg
         <!--LUGARES-->
         <scene sceneID="Vv0-tf-HDp">
             <objects>
-                <tableViewController storyboardIdentifier="TipsLugaresView" title="LUGARES" modalTransitionStyle="partialCurl" hidesBottomBarWhenPushed="YES" id="apZ-m5-PIy" customClass="TipsLugaresViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TipsLugaresView" title="LUGARES" id="apZ-m5-PIy" customClass="TipsLugaresViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="af2-O3-Y2B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1513,8 +1516,8 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2i-N4-Ia9">
-                                <rect key="frame" x="-4" y="20" width="608" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2i-N4-Ia9">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="50"/>
                                 <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5fc-CX-Tp3"/>
@@ -1530,8 +1533,8 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-Hi-grs">
-                                <rect key="frame" x="0.0" y="70" width="600" height="481"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-Hi-grs">
+                                <rect key="frame" x="0.0" y="50" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Agua:">
@@ -1601,7 +1604,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Taakil Jaanal 
+                                        <string key="content"> Taakil Jaanal
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1720,7 +1723,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Óok’ot.
+                                        <string key="content"> Óok’ot.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1737,7 +1740,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ichkíil
+                                        <string key="content"> Ichkíil
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1754,7 +1757,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Nak
+                                        <string key="content"> Nak
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1771,7 +1774,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ki’ichpanil, Jats’utsil
+                                        <string key="content"> Ki’ichpanil, Jats’utsil
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1788,7 +1791,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ts’u’uts’.
+                                        <string key="content"> Ts’u’uts’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1805,7 +1808,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Me’ex.
+                                        <string key="content"> Me’ex.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1822,7 +1825,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Kul Eex.
+                                        <string key="content"> Kul Eex.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1839,7 +1842,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chi’
+                                        <string key="content"> Chi’
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1856,7 +1859,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Jaayab.
+                                        <string key="content"> Jaayab.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1873,7 +1876,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Báaxal
+                                        <string key="content"> Báaxal
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1890,7 +1893,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Tsíimin.
+                                        <string key="content"> Tsíimin.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1907,7 +1910,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Tso’otsel Pool
+                                        <string key="content"> Tso’otsel Pool
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1924,7 +1927,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Pool
+                                        <string key="content"> Pool
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1941,7 +1944,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> P’u’uk.
+                                        <string key="content"> P’u’uk.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1958,7 +1961,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Káapej.
+                                        <string key="content"> Káapej.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1975,7 +1978,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Lot’
+                                        <string key="content"> Lot’
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1992,7 +1995,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chokoj.
+                                        <string key="content"> Chokoj.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2009,7 +2012,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ooxol.
+                                        <string key="content"> Ooxol.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2026,7 +2029,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’olis, T’ooroch.
+                                        <string key="content"> K’olis, T’ooroch.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2043,7 +2046,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Eex.
+                                        <string key="content"> Eex.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2060,7 +2063,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Beel.
+                                        <string key="content"> Beel.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2077,7 +2080,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’aay.
+                                        <string key="content"> K’aay.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2094,7 +2097,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ich.
+                                        <string key="content"> Ich.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2111,7 +2114,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ook’in Janal.
+                                        <string key="content"> Ook’in Janal.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2128,7 +2131,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ts’ono’ot
+                                        <string key="content"> Ts’ono’ot
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2145,7 +2148,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Noj Kaaj, Nojoch Kaaj
+                                        <string key="content"> Noj Kaaj, Nojoch Kaaj
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2179,7 +2182,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Maan.
+                                        <string key="content"> Maan.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2196,7 +2199,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xuuxub.
+                                        <string key="content"> Xuuxub.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2204,7 +2207,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Chile: ">
+                                    <fragment content="Chile: ">
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
@@ -2230,7 +2233,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Báaxal T’aan.
+                                        <string key="content"> Báaxal T’aan.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2247,7 +2250,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xunáan, Ko’olel.
+                                        <string key="content"> Xunáan, Ko’olel.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2264,7 +2267,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Uk’ul.
+                                        <string key="content"> Uk’ul.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2281,7 +2284,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chaanbéel,
+                                        <string key="content"> Chaanbéel,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2298,7 +2301,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xa’axak’ Pool.
+                                        <string key="content"> Xa’axak’ Pool.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2315,7 +2318,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’iin.
+                                        <string key="content"> K’iin.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2332,7 +2335,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ch’ujuk K’i’ik,
+                                        <string key="content"> Ch’ujuk K’i’ik,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2349,7 +2352,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Wenel, Wenej.
+                                        <string key="content"> Wenel, Wenej.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2366,7 +2369,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ch’ujuk.
+                                        <string key="content"> Ch’ujuk.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2383,7 +2386,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Bot: Nal.
+                                        <string key="content"> Bot: Nal.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2400,7 +2403,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’áat Chi’.
+                                        <string key="content"> K’áat Chi’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2417,7 +2420,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ts’íib.
+                                        <string key="content"> Ts’íib.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2434,7 +2437,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Lak’in.
+                                        <string key="content"> Lak’in.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2451,7 +2454,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Tsuuk
+                                        <string key="content"> Tsuuk
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2468,7 +2471,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Eek’
+                                        <string key="content"> Eek’
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2485,7 +2488,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ch’i’ibalil, Láak’tsilil
+                                        <string key="content"> Ch’i’ibalil, Láak’tsilil
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2502,7 +2505,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Cha’an,
+                                        <string key="content"> Cha’an,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2519,7 +2522,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ts’ook, Xuul.
+                                        <string key="content"> Ts’ook, Xuul.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2536,7 +2539,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Wakax.
+                                        <string key="content"> Wakax.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2553,7 +2556,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Máako’ob, Wíiniko’ob
+                                        <string key="content"> Máako’ob, Wíiniko’ob
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2570,7 +2573,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Múuch’.
+                                        <string key="content"> Múuch’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2587,7 +2590,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Náajal.
+                                        <string key="content"> Náajal.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2604,7 +2607,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xuup.
+                                        <string key="content"> Xuup.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2621,7 +2624,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Naj, Otoch, Taanaj.
+                                        <string key="content"> Naj, Otoch, Taanaj.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2638,7 +2641,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> T’aan.
+                                        <string key="content"> T’aan.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2655,7 +2658,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’áan.
+                                        <string key="content"> K’áan.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2672,7 +2675,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Láak’
+                                        <string key="content"> Láak’
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2689,7 +2692,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xiib,
+                                        <string key="content"> Xiib,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2706,7 +2709,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Naj Tu’ux Ku K’uchul U’ulabo’ob.
+                                        <string key="content"> Naj Tu’ux Ku K’uchul U’ulabo’ob.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2723,7 +2726,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> U’ulab.
+                                        <string key="content"> U’ulab.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2740,7 +2743,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chúunpajal,
+                                        <string key="content"> Chúunpajal,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2757,7 +2760,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Na’at
+                                        <string key="content"> Na’at
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2774,7 +2777,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Síit’ Óok’ot.
+                                        <string key="content"> Síit’ Óok’ot.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2791,7 +2794,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Luuch
+                                        <string key="content"> Luuch
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2825,7 +2828,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> U P’iisil Mil Meetroso’ob.
+                                        <string key="content"> U P’iisil Mil Meetroso’ob.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2842,7 +2845,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Aak’.
+                                        <string key="content"> Aak’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2859,7 +2862,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Jalachil,
+                                        <string key="content"> Jalachil,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2876,7 +2879,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Uj.
+                                        <string key="content"> Uj.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2893,7 +2896,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Sáas, Sáasil.
+                                        <string key="content"> Sáas, Sáasil.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2910,7 +2913,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ch’otob.
+                                        <string key="content"> Ch’otob.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2927,7 +2930,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Cháak.
+                                        <string key="content"> Cháak.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2944,7 +2947,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Biis.
+                                        <string key="content"> Biis.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2961,7 +2964,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chuup,
+                                        <string key="content"> Chuup,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2978,7 +2981,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ixi’im, 
+                                        <string key="content"> Ixi’im,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2995,7 +2998,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Na’.
+                                        <string key="content"> Na’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3012,7 +3015,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’áak’náab.
+                                        <string key="content"> K’áak’náab.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3020,7 +3023,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Médico: ">
+                                    <fragment content="Médico: ">
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
@@ -3080,7 +3083,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ch’up, Ko’olel, 
+                                        <string key="content"> Ch’up, Ko’olel,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3114,7 +3117,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Báab.
+                                        <string key="content"> Báab.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3131,7 +3134,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’aaba’.
+                                        <string key="content"> K’aaba’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3148,7 +3151,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xaman.
+                                        <string key="content"> Xaman.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3165,7 +3168,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xook.
+                                        <string key="content"> Xook.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3182,7 +3185,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> U’uy T’aan.
+                                        <string key="content"> U’uy T’aan.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3199,7 +3202,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chik’in.
+                                        <string key="content"> Chik’in.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3216,7 +3219,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> U’uy
+                                        <string key="content"> U’uy
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3233,7 +3236,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ich
+                                        <string key="content"> Ich
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3250,7 +3253,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Tuuch.
+                                        <string key="content"> Tuuch.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3267,7 +3270,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Tsool.
+                                        <string key="content"> Tsool.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3284,7 +3287,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Lak’in.
+                                        <string key="content"> Lak’in.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3301,7 +3304,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Yuum, Taat, Taatáa.
+                                        <string key="content"> Yuum, Taat, Taatáa.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3309,7 +3312,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Pasear: ">
+                                    <fragment content="Pasear: ">
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
@@ -3335,7 +3338,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Peek’,
+                                        <string key="content"> Peek’,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3352,7 +3355,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Jáal Ja’
+                                        <string key="content"> Jáal Ja’
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3369,7 +3372,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Kaaj, Kajtalil.
+                                        <string key="content"> Kaaj, Kajtalil.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3386,7 +3389,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chik’in.
+                                        <string key="content"> Chik’in.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3403,7 +3406,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Tojol.
+                                        <string key="content"> Tojol.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3420,7 +3423,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ba’ax.
+                                        <string key="content"> Ba’ax.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3437,7 +3440,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Bej, Beel, Bejil.
+                                        <string key="content"> Bej, Beel, Bejil.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3454,7 +3457,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Uk’aj.
+                                        <string key="content"> Uk’aj.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3471,7 +3474,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Kutal,
+                                        <string key="content"> Kutal,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3488,7 +3491,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Yuum, Taat, Nojoch Máak; 
+                                        <string key="content"> Yuum, Taat, Nojoch Máak;
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3505,7 +3508,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Ch’úupal,
+                                        <string key="content"> Ch’úupal,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3522,7 +3525,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Beey, Beyo’,
+                                        <string key="content"> Beey, Beyo’,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3539,7 +3542,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’iin.
+                                        <string key="content"> K’iin.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3556,7 +3559,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> P’óok.
+                                        <string key="content"> P’óok.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3573,7 +3576,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Sak Che’ej,
+                                        <string key="content"> Sak Che’ej,
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3590,7 +3593,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Nojol.
+                                        <string key="content"> Nojol.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3607,7 +3610,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> K’úuts.
+                                        <string key="content"> K’úuts.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3624,7 +3627,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Chúunk’in.
+                                        <string key="content"> Chúunk’in.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3641,7 +3644,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Waaj
+                                        <string key="content"> Waaj
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3658,7 +3661,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Meyaj
+                                        <string key="content"> Meyaj
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3675,7 +3678,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Xóot’.
+                                        <string key="content"> Xóot’.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3692,7 +3695,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Séeb, Péekla’an, Séeba’an.
+                                        <string key="content"> Séeb, Péekla’an, Séeba’an.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -3708,7 +3711,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" Xíimbaj,">
+                                    <fragment content=" Xíimbaj,">
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
@@ -3757,17 +3760,6 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5E-EI-pwn">
-                                <rect key="frame" x="10" y="28" width="590" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="a2O-Cj-U99"/>
-                                </constraints>
-                                <string key="text">Información sobre la Diabetes T1
-</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-Ng-vC4">
                                 <rect key="frame" x="10" y="446" width="580" height="90"/>
                                 <subviews>
@@ -3807,32 +3799,45 @@ Cg
                                     <constraint firstItem="3Ye-g0-Z2K" firstAttribute="top" secondItem="Ztp-Ng-vC4" secondAttribute="top" id="w31-vL-HTm"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YY-Pi-qEc">
-                                <rect key="frame" x="10" y="56" width="580" height="454"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YY-Pi-qEc">
+                                <rect key="frame" x="10" y="0.0" width="580" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Rally Maya México es una Asociación Civil que surge a partir de la idea de trasladarse al pasado a través de automotores antiguos y clásicos de cuatro ruedas para recorrer una hermosa península que se compone de tres Estados; Campeche, Quintana Roo y Yucatán que muestra una rica variedad Cultural, Gastronómica, Turística y una Naturaleza única y primorosa, que invita a todas aquellas personas que desean aventurarse a una experiencia inolvidable juntamente con sus familias. No obstante esto no sería una A.C. si no tuviera un fin que es; Regalar Sonrisas a niños con Diabetes tipo 1 que surge a partir de la organización conjunta de padres cuyos hijos padecen de esta Enfermedad y con la necesidad de luchar en contra de las complicaciones, del aumento de los factores de riesgo, pero sobre todo en la prevención de este padecimiento.
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Información sobre la Diabetes T1
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Rally Maya México es una Asociación Civil que surge a partir de la idea de trasladarse al pasado a través de automotores antiguos y clásicos de cuatro ruedas para recorrer una hermosa península que se compone de tres Estados; Campeche, Quintana Roo y Yucatán que muestra una rica variedad Cultural, Gastronómica, Turística y una Naturaleza única y primorosa, que invita a todas aquellas personas que desean aventurarse a una experiencia inolvidable juntamente con sus familias. No obstante esto no sería una A.C. si no tuviera un fin que es; Regalar Sonrisas a niños con Diabetes tipo 1 que surge a partir de la organización conjunta de padres cuyos hijos padecen de esta Enfermedad y con la necesidad de luchar en contra de las complicaciones, del aumento de los factores de riesgo, pero sobre todo en la prevención de este padecimiento.
 
 Por lo que Rally Maya México en su afán de ayudar a estos pequeños, brinda y logra una vía de apoyo a tres asociaciones civiles de la Península; Asociación Mexicana de Diabetes en el Sureste A.C., Asociación Mexicana de Diabetes Capitulo Campeche A.C. y al Centro de Ayuda a Pacientes con Enfermedades Crónico Degenerativas Quintana Roo y otras organizaciones civiles sin fines de lucro cuyo objetivo es brindar alternativas de educación, atención y prevención orientadas a mejorar su calidad de vida de las personas de bajos recursos con diabetes tipo1 en el Sureste Mexicano.
 
 En su segunda edición Rally Maya México pretende causar un impacto notable a esta causa promoviéndolo a los participantes nacionales e internacionales para que se sumen apadrinando a un niño o niña con estos padecimientos, además de estar al pendiente y buscando todas aquellas alternativas que apoyen la causa.</string>
-                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ztp-Ng-vC4" firstAttribute="top" secondItem="4YY-Pi-qEc" secondAttribute="bottom" id="0X5-S5-pK2"/>
-                            <constraint firstItem="4YY-Pi-qEc" firstAttribute="top" secondItem="j5E-EI-pwn" secondAttribute="bottom" constant="2" id="37O-EK-UgN"/>
-                            <constraint firstItem="4YY-Pi-qEc" firstAttribute="top" secondItem="j5E-EI-pwn" secondAttribute="bottom" constant="2" id="3pR-ga-TeN"/>
                             <constraint firstItem="5Sj-Sc-4j1" firstAttribute="top" secondItem="Ztp-Ng-vC4" secondAttribute="bottom" id="4Ox-U9-MwT"/>
-                            <constraint firstAttribute="trailing" secondItem="j5E-EI-pwn" secondAttribute="trailing" id="AMq-4S-ECs"/>
                             <constraint firstAttribute="trailing" secondItem="4YY-Pi-qEc" secondAttribute="trailing" constant="10" id="Kz7-qT-96x"/>
                             <constraint firstAttribute="trailing" secondItem="Ztp-Ng-vC4" secondAttribute="trailing" constant="10" id="LMQ-Jn-5w4"/>
                             <constraint firstItem="Ztp-Ng-vC4" firstAttribute="leading" secondItem="gGu-6s-J0g" secondAttribute="leading" constant="10" id="PuY-ei-eTY"/>
-                            <constraint firstItem="j5E-EI-pwn" firstAttribute="top" secondItem="0He-w3-Hxe" secondAttribute="bottom" constant="8" id="sb3-lF-QTG"/>
+                            <constraint firstItem="4YY-Pi-qEc" firstAttribute="top" secondItem="0He-w3-Hxe" secondAttribute="bottom" id="QCl-8d-j91"/>
                             <constraint firstItem="4YY-Pi-qEc" firstAttribute="leading" secondItem="gGu-6s-J0g" secondAttribute="leading" constant="10" id="ydP-cJ-S4A"/>
-                            <constraint firstItem="j5E-EI-pwn" firstAttribute="leading" secondItem="gGu-6s-J0g" secondAttribute="leading" constant="10" id="zbv-Sd-2wa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ryf-5k-fB4"/>
@@ -3899,7 +3904,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="auv-ra-XmI">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="-4" y="0.0" width="608" height="536"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q65-9c-Vcy">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
@@ -3908,13 +3913,13 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ctf-fa-1J9" firstAttribute="top" secondItem="auv-ra-XmI" secondAttribute="bottom" id="1dF-In-YDG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="auv-ra-XmI" secondAttribute="trailing" constant="-16" id="Cs3-vW-uIh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="auv-ra-XmI" secondAttribute="trailing" constant="-20" id="Cs3-vW-uIh"/>
                             <constraint firstItem="Q65-9c-Vcy" firstAttribute="top" secondItem="SLS-AB-X9V" secondAttribute="topMargin" id="FNl-Zk-x8c"/>
                             <constraint firstItem="ctf-fa-1J9" firstAttribute="top" secondItem="Q65-9c-Vcy" secondAttribute="bottom" id="hd7-gK-DdF"/>
                             <constraint firstItem="Q65-9c-Vcy" firstAttribute="leading" secondItem="SLS-AB-X9V" secondAttribute="leadingMargin" constant="-16" id="kLS-0Z-Rse"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q65-9c-Vcy" secondAttribute="trailing" constant="-16" id="lse-6M-XCp"/>
                             <constraint firstItem="auv-ra-XmI" firstAttribute="top" secondItem="dmR-4g-uvB" secondAttribute="bottom" id="tqQ-hZ-cAZ"/>
-                            <constraint firstItem="auv-ra-XmI" firstAttribute="leading" secondItem="SLS-AB-X9V" secondAttribute="leadingMargin" constant="-16" id="ysU-uk-Gg1"/>
+                            <constraint firstItem="auv-ra-XmI" firstAttribute="leading" secondItem="SLS-AB-X9V" secondAttribute="leadingMargin" constant="-20" id="ysU-uk-Gg1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l05-sG-mWM"/>

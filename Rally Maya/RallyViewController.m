@@ -31,7 +31,7 @@
         [self setupLeftMenuButton];
     }
     
-    
+    _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width,_scrollView.frame.size.height);
     // Do any additional setup after loading the view.
 }
 - (void)setupLeftMenuButton {

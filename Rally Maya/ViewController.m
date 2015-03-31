@@ -24,28 +24,28 @@
                       @{
                           @"image":@"rally-maya",
                           @"target":@"RallyView",
-                        },
+                          },
                       @{
                           @"image":@"participantes",
                           @"target":@"ParticipantesView",
-                        },
+                          },
                       @{
                           @"image":@"ruta",
-                          @"target":@"tabView",
-                        },
+                          @"target":@"TipsView",
+                          },
                       @{
                           @"image":@"tips",
                           @"target":@"TipsView",
-                        },
+                          },
                       @{
                           @"image":@"patrocinadores",
                           @"target":@"PatrocinadoresView",
-                        },
+                          },
                       
                       @{
                           @"image":@"directorio",
                           @"target":@"DirectoriosView",
-                        },
+                          },
                       @{
                           @"image":@"diabetes",
                           @"target":@"DiabetesView",
@@ -88,13 +88,13 @@
 }
 
 -(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
     
     ViewController *viewC = [self.storyboard instantiateViewControllerWithIdentifier:menuItemDictionary[@"target"]];
     [self.navigationController pushViewController:viewC animated:YES];
-
-
+    
+    
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
@@ -133,7 +133,7 @@
             break;
         default:
             break;
-
+            
     }
     return UIEdgeInsetsMake(top, left, bottom, right);
 }
@@ -146,7 +146,7 @@
     int screenSize = (int) screenBounds.size.width;
     //Size of cells for ipad
     if(screenSize == 768 || screenSize == 1024){
-        return CGSizeMake(267.f, 284.f);
+        return CGSizeMake(282.f, 282.f);
     }
     
     //Size of cells for iphones
@@ -157,6 +157,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

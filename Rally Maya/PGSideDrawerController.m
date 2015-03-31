@@ -18,9 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.currentIndex = 0;
 }
+
 
 #pragma mark - Table View Delegate
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -39,6 +40,8 @@
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
+    UIImage *pattern = [UIImage imageNamed:@"fondo_row.png"];
+    [cell setBackgroundColor:[UIColor colorWithPatternImage:pattern]];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.currentIndex == indexPath.row) {
@@ -46,7 +49,7 @@
         
         return;
     }
-
+    
     UIViewController *centerViewController;
     switch (indexPath.row) {
         case 0:
@@ -59,7 +62,7 @@
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ParticipantesViewNavigation"];
             break;
         case 3:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RutaViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TipsViewNavigation"];
             break;
         case 4:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TipsViewNavigation"];
@@ -84,9 +87,9 @@
             break;
         default:
             break;
-        
+            
     }
-
+    
     if (centerViewController) {
         self.currentIndex = indexPath.row;
         [self.mm_drawerController setCenterViewController:centerViewController withCloseAnimation:YES completion:nil];
@@ -94,5 +97,6 @@
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
     }
 }
+
 
 @end
