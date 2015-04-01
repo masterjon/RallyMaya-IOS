@@ -695,9 +695,9 @@
                   @{
                       @"location":@"Mérida",
                       @"name":@"Fiesta Americana Mérida",
-                      @"date":@"02 al 04 de Mayo",
+                      @"date":@"01 al 04 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"01 999 942 1111"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Paseo Montejo No. 451, Esq. Av. Colón Col. Centro, 97000, Mérida, Yucatán, México"
                       },
@@ -706,7 +706,7 @@
                       @"name":@"The Logde Uxmal Mayaland",
                       @"date":@"05 al 06 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"998 887 2495"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Km. 20 Carret. 180, C.P. 97844 Uxmal, Yucatán"
                       },
@@ -721,10 +721,10 @@
                       },
                   @{
                       @"location":@"Mérida",
-                      @"name":@"Fiesta Americana Mérid",
+                      @"name":@"Fiesta Americana Mérida",
                       @"date":@"06 al 07 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"01 999 942 1111"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Paseo Montejo No. 451, Esq. Av. Colón Col. Centro, 97000, Mérida, Yucatán, México"
                       },
@@ -733,7 +733,7 @@
                       @"name":@"The Lodge Chichen Itzá",
                       @"date":@"07 al 08 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"998 887 2495"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Carretera Mérida- Cancun, Km 120, C.P. 97751 Chichen-Itzá, Yucatán"
                       },
@@ -742,7 +742,7 @@
                       @"name":@"Mayaland",
                       @"date":@"07 al 08 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"998 887 2495"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Carretera Mérida- Cancun, Km 120, C.P. 97751 Chichen-Itzá, Yucatán"
                       },
@@ -751,91 +751,118 @@
                       @"name":@"Oka’an Villas",
                       @"date":@"07 al 08 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"985 858 7857"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Carretera Mérida- Cancun, Km 120, C.P. 97751 Chichen-Itzá, Yucatán"
                       },
                   @{
-                      @"location":@"Mérida",
-                      @"name":@"Fiesta Americana Mérida",
-                      @"date":@"",
-                      @"emails":@[@"ventasfamd@posadas.com"],
-                      @"phones":@[@"999 942 1111"],
-                      @"desayuno":@"",
-                      @"address":@"Paseo Montejo No. 451, Esq. Av. Colón Col. Centro, 97000, Mérida, Yucatán, México"
-                      },
-                  @{
-                      @"location":@"Mérida",
-                      @"name":@"Gran Real Mérida",
-                      @"date":@"",
-                      @"emails":@[@"reservaciones@granrealyucatan.com"],
-                      @"phones":@[@"999 928 6081/82/83"],
-                      @"desayuno":@"",
-                      @"address":@"Calle 56 No. 474 Por 55 Centro, C.P. 97000 Mérida, Yucatán, México."
-                      },
-                  @{
-                      @"location":@"Mérida",
-                      @"name":@"Misión Express Mérida Altabrisa",
-                      @"date":@"",
-                      @"emails":@[@"ventasmeridaexpress@hotelesmision.com.mx"],
-                      @"phones":@[@"01 999 942 3600"],
-                      @"desayuno":@"",
-                      @"address":@"Calle 20, Entre calles 15 y 19, 255, Fracc. Altabrisa, 97130 Mérida, Yucatán"
-                      },
-                  @{
-                      @"location":@"Mérida",
-                      @"name":@"Misión Panamericana Mérida",
-                      @"date":@"",
-                      @"emails":@[@"ejecutivomerida3@hotelesmision.com.mx"],
-                      @"phones":@[@"01 999 923 9407"],
-                      @"desayuno":@"",
-                      @"address":@"Calle 59 #455, Centro, C.P. 97000 Mérida, Yucatán"
-                      },
-                  @{
-                      @"location":@"Mérida",
-                      @"name":@"Fiesta Inn Mérida",
-                      @"date":@"",
-                      @"emails":@[@"ventasfimer@posadas.com"],
-                      @"phones":@[@"(999) 964 35 00 "],
-                      @"desayuno":@"",
-                      @"address":@"Calle 5 B No. 290 A x 20 A y 60, Col Revolución. México C.P. 97115, Mérida, Yucatán"
-                      },
-                  @{
-                      @"location":@"Mérida",
-                      @"name":@"Holiday Inn Mérida",
-                      @"date":@"",
-                      @"emails":@[@"reservaciones@hiexmerida.com"],
-                      @"phones":@[@"999 964 2200"],
-                      @"desayuno":@"",
-                      @"address":@"Calle 20A No 300A por 3C y 5ª, Colonia Xcumpich C.P. 97204, Mérida, Yucatán"
-                      },
-                  @{
-                      @"location":@"Mérida",
-                      @"name":@"Hotel los Aluxes",
-                      @"date":@"",
-                      @"emails":@[@"mary-dc-21@hotmail.com"],
-                      @"phones":@[@"01 999 924 2199"],
-                      @"desayuno":@"",
-                      @"address":@"Calle 60 444 X 49 51, Centro, 97000 Mérida, YUC"
-                      },
-                  @{
-                      @"location":@"Uxmal",
-                      @"name":@"The Flycatcher Inn",
-                      @"date":@"",
-                      @"emails":@[@"info@flycatcherinn.com"],
-                      @"phones":@[@"01 997 978 5350"],
-                      @"desayuno":@"",
-                      @"address":@"Calle 20 S/N, San Marcos, 97841 Santa Elena, Yucatán"
-                      },
-                  @{
                       @"location":@"Chichen Itzá",
-                      @"name":@"Villas Arqueológicas Chichen Itzá",
-                      @"date":@"",
-                      @"emails":@[@"reservas@villasmex.com"],
-                      @"phones":@[@"019858510187"],
-                      @"desayuno":@"",
-                      @"address":@"Km. 120 Carretera Mérida Valladolid Piste Tinúm Chichén Itzá, Yucatán CP 97751"
+                      @"name":@"Hacienda Chichen Resort and Yaxkin Spa",
+                      @"date":@"07 al 08 de Mayo",
+                      @"emails":@[],
+                      @"phones":@[@"999 920 8407"],
+                      @"desayuno":@"Desayuno: Si",
+                      @"address":@"Carretera Mérida- Cancun, Km 120, C.P. 97751 Chichen-Itzá, Yucatán"
                       },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Fiesta Americana Mérida",
+//                      @"date":@"",
+//                      @"emails":@[@"ventasfamd@posadas.com"],
+//                      @"phones":@[@"999 942 1111"],
+//                      @"desayuno":@"",
+//                      @"address":@"Paseo Montejo No. 451, Esq. Av. Colón Col. Centro, 97000, Mérida, Yucatán, México"
+//                      },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Gran Real Mérida",
+//                      @"date":@"",
+//                      @"emails":@[@"reservaciones@granrealyucatan.com"],
+//                      @"phones":@[@"999 928 6081/82/83"],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 56 No. 474 Por 55 Centro, C.P. 97000 Mérida, Yucatán, México."
+//                      },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Misión Express Mérida Altabrisa",
+//                      @"date":@"",
+//                      @"emails":@[@"ventasmeridaexpress@hotelesmision.com.mx"],
+//                      @"phones":@[@"01 999 942 3600"],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 20, Entre calles 15 y 19, 255, Fracc. Altabrisa, 97130 Mérida, Yucatán"
+//                      },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Misión Panamericana Mérida",
+//                      @"date":@"",
+//                      @"emails":@[@"ejecutivomerida3@hotelesmision.com.mx"],
+//                      @"phones":@[@"01 999 923 9407"],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 59 #455, Centro, C.P. 97000 Mérida, Yucatán"
+//                      },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Fiesta Inn Mérida",
+//                      @"date":@"",
+//                      @"emails":@[@"ventasfimer@posadas.com"],
+//                      @"phones":@[@"(999) 964 35 00 "],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 5 B No. 290 A x 20 A y 60, Col Revolución. México C.P. 97115, Mérida, Yucatán"
+//                      },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Holiday Inn Mérida",
+//                      @"date":@"",
+//                      @"emails":@[@"reservaciones@hiexmerida.com"],
+//                      @"phones":@[@"999 964 2200"],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 20A No 300A por 3C y 5ª, Colonia Xcumpich C.P. 97204, Mérida, Yucatán"
+//                      },
+//                  @{
+//                      @"location":@"Mérida",
+//                      @"name":@"Hotel los Aluxes",
+//                      @"date":@"",
+//                      @"emails":@[@"mary-dc-21@hotmail.com"],
+//                      @"phones":@[@"01 999 924 2199"],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 60 444 X 49 51, Centro, 97000 Mérida, YUC"
+//                      },
+//                  @{
+//                      @"location":@"Uxmal",
+//                      @"name":@"The Flycatcher Inn",
+//                      @"date":@"",
+//                      @"emails":@[@"info@flycatcherinn.com"],
+//                      @"phones":@[@"01 997 978 5350"],
+//                      @"desayuno":@"",
+//                      @"address":@"Calle 20 S/N, San Marcos, 97841 Santa Elena, Yucatán"
+//                      },
+//                  @{
+//                      @"location":@"Chichen Itzá",
+//                      @"name":@"Villas Arqueológicas Chichen Itzá",
+//                      @"date":@"",
+//                      @"emails":@[@"reservas@villasmex.com"],
+//                      @"phones":@[@"019858510187"],
+//                      @"desayuno":@"",
+//                      @"address":@"Km. 120 Carretera Mérida Valladolid Piste Tinúm Chichén Itzá, Yucatán CP 97751"
+//                      },
+                  
+                  
+                  ]
+          },
+      @{
+          @"section":@"Centro de Convenciones",
+          @"content":
+              @[
+                  @{
+                      @"location":@"Mérida",
+                      @"name":@"Centro de Convenciones",
+                      @"date":@"Lic. Carlos Ariel Franco Osorno",
+                      @"emails":@[],
+                      @"phones":@[@"(999) 9-42-19-00 ext 106"],
+                      @"desayuno":@"",
+                      @"address":@"Calle 60Nte. No. 299-E Col Revolución ExCordemex, Mérida, Yucatán. México. CP 97118"
+                      },
+                  
                   
                   ]
           },

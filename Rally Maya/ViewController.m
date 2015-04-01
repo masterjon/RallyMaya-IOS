@@ -35,7 +35,7 @@
                           },
                       @{
                           @"image":@"ruta",
-                          @"target":@"ProgramaView",
+                          @"target":@"RutaView",
                           },
                       @{
                           @"image":@"tips",

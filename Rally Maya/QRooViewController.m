@@ -664,19 +664,19 @@
                       @"name":@"Grand Oasis Cancún",
                       @"date":@"08 al 10 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"998 283 3249"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Blvd Kukulkán, Km 16.5, Zona Hotelera, Cancún, Quintana Roo, México C.P. 77500"
                       },
-                  @{
-                      @"location":@"Cancún",
-                      @"name":@"Grand Oasis Cancún",
-                      @"date":@"05 al 06 de Mayo",
-                      @"emails":@[],
-                      @"phones":@[@"01 800 837-8069"],
-                      @"desayuno":@"",
-                      @"address":@"Blvd Kukulkán, Km 16.5, Zona Hotelera, Cancún, Quintana Roo, México C.P. 77500 "
-                      },
+//                  @{
+//                      @"location":@"Cancún",
+//                      @"name":@"Grand Oasis Cancún",
+//                      @"date":@"05 al 06 de Mayo",
+//                      @"emails":@[],
+//                      @"phones":@[@"01 800 837-8069"],
+//                      @"desayuno":@"",
+//                      @"address":@"Blvd Kukulkán, Km 16.5, Zona Hotelera, Cancún, Quintana Roo, México C.P. 77500 "
+//                      },
                   
                   
                   ]

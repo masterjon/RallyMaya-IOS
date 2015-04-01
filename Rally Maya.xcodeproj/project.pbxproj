@@ -18,6 +18,9 @@
 		FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */; };
 		FC5C84FE1AC9F37600AF91A8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */; };
 		FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */; };
+		FC5C85041ACB54A000AF91A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85031ACB54A000AF91A8 /* WebViewController.m */; };
+		FC5C85071ACB821800AF91A8 /* RutaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85061ACB821800AF91A8 /* RutaViewController.m */; };
+		FC5C85091ACB832700AF91A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5C85081ACB832700AF91A8 /* MapKit.framework */; };
 		FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA27E221AA5030300B16B1B /* DirectorioViewController.m */; };
 		FCA6B06F1AA7CB6200F2A945 /* PGFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B0681AA7CB6200F2A945 /* PGFirstViewController.m */; };
 		FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06A1AA7CB6200F2A945 /* PGSecondViewController.m */; };
@@ -75,6 +78,11 @@
 		FC5C84FD1AC9F37600AF91A8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramaViewController.h; sourceTree = "<group>"; };
 		FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramaViewController.m; sourceTree = "<group>"; };
+		FC5C85021ACB54A000AF91A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FC5C85031ACB54A000AF91A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		FC5C85051ACB821800AF91A8 /* RutaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RutaViewController.h; sourceTree = "<group>"; };
+		FC5C85061ACB821800AF91A8 /* RutaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RutaViewController.m; sourceTree = "<group>"; };
+		FC5C85081ACB832700AF91A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FCA27E211AA5030300B16B1B /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
 		FCA27E221AA5030300B16B1B /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
 		FCA6B0671AA7CB6200F2A945 /* PGFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFirstViewController.h; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5C85091ACB832700AF91A8 /* MapKit.framework in Frameworks */,
 				D4F161FC634554CB72FC9FDB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +148,7 @@
 		16B20C2913CC8C48FAED9C41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC5C85081ACB832700AF91A8 /* MapKit.framework */,
 				B067FA1E09EAACDF3BEA3F8C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -231,6 +241,10 @@
 				FC43EA441AA02F3000F414DB /* CronometroViewController.m */,
 				FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */,
 				FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */,
+				FC5C85021ACB54A000AF91A8 /* WebViewController.h */,
+				FC5C85031ACB54A000AF91A8 /* WebViewController.m */,
+				FC5C85051ACB821800AF91A8 /* RutaViewController.h */,
+				FC5C85061ACB821800AF91A8 /* RutaViewController.m */,
 			);
 			path = "Rally Maya";
 			sourceTree = "<group>";
@@ -344,6 +358,11 @@
 				TargetAttributes = {
 					FCC2C4D11A9B8E4200A6AA89 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FCC2C4EA1A9B8E4200A6AA89 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -434,6 +453,7 @@
 			files = (
 				FCC2D6031A9CECF200A6AA89 /* KMAccordionTableViewController.m in Sources */,
 				FCC2D6071A9CECF200A6AA89 /* KMSectionHeaderView.m in Sources */,
+				FC5C85071ACB821800AF91A8 /* RutaViewController.m in Sources */,
 				FCA6B0721AA7CB6200F2A945 /* PGViewController.m in Sources */,
 				FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */,
 				FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */,
@@ -454,6 +474,7 @@
 				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
 				6574216A1AA9060D00F94CD4 /* DiabetesViewController.m in Sources */,
 				FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */,
+				FC5C85041ACB54A000AF91A8 /* WebViewController.m in Sources */,
 				FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
 				FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */,

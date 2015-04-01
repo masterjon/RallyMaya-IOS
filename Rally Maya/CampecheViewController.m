@@ -324,7 +324,7 @@
                       @"name":@"Plaza Campeche",
                       @"date":@"04 al 05 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"981 811 9900"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Calle 10 # 126 Esq. Circuito Baluartes Col. Centro. C.P 24000, San francisco de Campeche, Campeche"
                       },
@@ -333,28 +333,28 @@
                       @"name":@"Plaza Colonial",
                       @"date":@"04 al 05 de Mayo",
                       @"emails":@[],
-                      @"phones":@[],
+                      @"phones":@[@"981 811 9900"],
                       @"desayuno":@"Desayuno: Si",
                       @"address":@"Calle 10 x 51, Centro Histórico, 24000 San Francisco de Campeche, Campeche"
                       },
-                  @{
-                      @"location":@"Campeche",
-                      @"name":@"Ocean View",
-                      @"date":@"04 al 05 de Mayo",
-                      @"emails":@[@"reservaciones@oceanview.com.mx"],
-                      @"phones":@[@"01 981 811 9991"],
-                      @"desayuno":@"",
-                      @"address":@"Pedro Sainz de Baranda o Av. Costera S/N, San Francisco de Campeche, 24010 Campeche, CAMP"
-                      },
-                  @{
-                      @"location":@"Campeche",
-                      @"name":@"Hotel Best Wester del Mar",
-                      @"date":@"04 al 05 de Mayo",
-                      @"emails":@[@"info@delmarhotel.com.mx"],
-                      @"phones":@[@"01 981 811 9191"],
-                      @"desayuno":@"",
-                      @"address":@"Av. Ruiz Cortines #51, Centro, 24000 Campeche, Campeche"
-                      },
+//                  @{
+//                      @"location":@"Campeche",
+//                      @"name":@"Ocean View",
+//                      @"date":@"04 al 05 de Mayo",
+//                      @"emails":@[@"reservaciones@oceanview.com.mx"],
+//                      @"phones":@[@"01 981 811 9991"],
+//                      @"desayuno":@"",
+//                      @"address":@"Pedro Sainz de Baranda o Av. Costera S/N, San Francisco de Campeche, 24010 Campeche, CAMP"
+//                      },
+//                  @{
+//                      @"location":@"Campeche",
+//                      @"name":@"Hotel Best Wester del Mar",
+//                      @"date":@"04 al 05 de Mayo",
+//                      @"emails":@[@"info@delmarhotel.com.mx"],
+//                      @"phones":@[@"01 981 811 9191"],
+//                      @"desayuno":@"",
+//                      @"address":@"Av. Ruiz Cortines #51, Centro, 24000 Campeche, Campeche"
+//                      },
                   
                   ]
           },

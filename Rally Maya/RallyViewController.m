@@ -7,6 +7,7 @@
 //
 
 #import "RallyViewController.h"
+#import "WebViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 #define MAX_HEIGHT 2000
@@ -58,5 +59,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([segue.identifier isEqualToString:@"pdfSegue"]) {
+        [segue.destinationViewController setTitle:NSLocalizedString(@"REGLAMENTO",nil)];
+        [segue.destinationViewController setUrl: @"http://punklabs.ninja/rallymaya/static/REGLAMENTO-OFICIAL-DEFINITIVO-RALLY-MAYA-2015.pdf"];
+    }
+}
 
+
+//- (IBAction)ReglamentoButton:(id)sender {
+//    NSString *pdfLink = @"";
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:pdfLink]];
+//    
+//}
 @end

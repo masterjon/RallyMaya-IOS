@@ -59,22 +59,22 @@
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RallyViewNavigation"];
             break;
         case 2:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ParticipantesViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProgramaViewNavigation"];
             break;
         case 3:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TipsViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ParticipantesViewNavigation"];
             break;
         case 4:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TipsViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RutaViewNavigation"];
             break;
         case 5:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatrocinadoresViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TipsViewNavigation"];
             break;
         case 6:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectoriosViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatrocinadoresViewNavigation"];
             break;
         case 7:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DiabetesViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectoriosViewNavigation"];
             break;
         case 8:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CronometroViewNavigation"];

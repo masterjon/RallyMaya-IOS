@@ -101,7 +101,7 @@
         <!--PROGRAMA GENERAL-->
         <scene sceneID="pBb-gG-Znd">
             <objects>
-                <tableViewController storyboardIdentifier="ProgramaView" title="PROGRAMA GENERAL" id="phr-ZQ-vW8" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ProgramaView" title="PROGRAMA GENERAL" id="phr-ZQ-vW8" customClass="ProgramaViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6qp-OZ-CEG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2008,10 +2008,48 @@
                             <outlet property="delegate" destination="phr-ZQ-vW8" id="eyd-DU-MOD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="c8y-XV-Jck"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvo-iK-Xg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="2706"/>
+            <point key="canvasLocation" x="-290" y="5038"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9xi-T4-OgJ">
+            <objects>
+                <viewController id="94W-jq-Fv4" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRj-4G-fV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="8r4-cs-UZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6M5-bI-Pyd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-QF-hZe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="94W-jq-Fv4" id="f9Y-3M-90p"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ofO-QF-hZe" secondAttribute="trailing" constant="-16" id="7ZZ-YN-2Vq"/>
+                            <constraint firstItem="ofO-QF-hZe" firstAttribute="leading" secondItem="6M5-bI-Pyd" secondAttribute="leadingMargin" constant="-16" id="Cmm-Gp-mqT"/>
+                            <constraint firstItem="ofO-QF-hZe" firstAttribute="top" secondItem="6M5-bI-Pyd" secondAttribute="topMargin" id="PAT-Ye-YcH"/>
+                            <constraint firstItem="8r4-cs-UZl" firstAttribute="top" secondItem="ofO-QF-hZe" secondAttribute="bottom" id="ar0-mY-J0I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cv5-0f-339"/>
+                    <connections>
+                        <outlet property="WebView" destination="ofO-QF-hZe" id="qWm-Gm-8GL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12g-PB-9Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="3496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MfT-jt-4Tq">
@@ -2036,6 +2074,29 @@
             </objects>
             <point key="canvasLocation" x="-1110" y="4257"/>
         </scene>
+        <!--PROGRAMA GENERAL-->
+        <scene sceneID="dVO-20-7vV">
+            <objects>
+                <navigationController storyboardIdentifier="ProgramaViewNavigation" title="PROGRAMA GENERAL" id="FUk-vq-9Sy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="v7p-OA-LlO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.85490196080000003" green="0.69411764710000001" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="phr-ZQ-vW8" kind="relationship" relationship="rootViewController" id="E6A-JB-ioV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewg-9Z-bOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1094" y="5038"/>
+        </scene>
         <!--PARTICIPANTES-->
         <scene sceneID="0xC-Ad-yGy">
             <objects>
@@ -2057,7 +2118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ9-Z0-BbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="5003"/>
+            <point key="canvasLocation" x="-1094" y="5875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mIV-Dh-cNF">
@@ -2080,7 +2141,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOb-6I-sV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="5741"/>
+            <point key="canvasLocation" x="-1094" y="6613"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3XO-kV-qPS">
@@ -2103,7 +2164,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncz-A3-cAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="6468"/>
+            <point key="canvasLocation" x="-1094" y="7340"/>
         </scene>
         <!--RALLY MAYA-->
         <scene sceneID="k6B-GB-8o1">
@@ -2117,24 +2178,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-ji-LVX">
-                                <rect key="frame" x="-4" y="-60" width="608" height="226"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" id="yXV-dh-s2y"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="yXV-dh-s2y"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="yXV-dh-s2y"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3F-vV-ROr">
-                                <rect key="frame" x="3" y="136" width="593" height="400"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3F-vV-ROr">
+                                <rect key="frame" x="3" y="108" width="593" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Información General Rally Maya México 2015 ">
@@ -2332,31 +2377,51 @@ Tiene TRES misiones fundamentales:
                                     <rect key="frame" x="3" y="186" width="593" height="150"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHf-M5-lPD">
+                                <rect key="frame" x="180" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BUT-vt-aaW"/>
+                                    <constraint firstAttribute="width" constant="100" id="VA5-nu-f49"/>
+                                </constraints>
+                                <state key="normal" image="causa">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8kj-3C-IYd" kind="push" id="PMx-y1-ebX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKW-ee-5l8">
+                                <rect key="frame" x="320" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eA2-B7-ESL"/>
+                                    <constraint firstAttribute="height" constant="100" id="pMw-xx-ePD"/>
+                                </constraints>
+                                <state key="normal" image="reglamento">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="94W-jq-Fv4" kind="push" identifier="pdfSegue" id="dtm-pe-nCC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n3F-vV-ROr" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-13" id="446-gr-sCs"/>
                             <constraint firstItem="x16-JQ-AiL" firstAttribute="top" secondItem="n3F-vV-ROr" secondAttribute="bottom" id="4v7-Wj-cCP"/>
-                            <constraint firstItem="n3F-vV-ROr" firstAttribute="top" secondItem="l9w-ji-LVX" secondAttribute="bottom" constant="10" id="7F5-gG-AkQ"/>
-                            <constraint firstItem="l9w-ji-LVX" firstAttribute="top" secondItem="faH-zj-EQH" secondAttribute="topMargin" id="7mR-e1-7av"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n3F-vV-ROr" secondAttribute="trailing" constant="-12" id="8Hg-C3-uec"/>
-                            <constraint firstItem="l9w-ji-LVX" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-20" id="8bA-9N-wSw"/>
-                            <constraint firstItem="n3F-vV-ROr" firstAttribute="top" secondItem="l9w-ji-LVX" secondAttribute="bottom" constant="-30" id="ByW-4c-0cq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l9w-ji-LVX" secondAttribute="trailing" constant="-20" id="TH6-qp-jwE"/>
-                            <constraint firstItem="l9w-ji-LVX" firstAttribute="top" secondItem="Foc-XO-0nL" secondAttribute="bottom" constant="-60" id="gqA-8O-lfX"/>
+                            <constraint firstAttribute="centerX" secondItem="mKW-ee-5l8" secondAttribute="centerX" constant="-70" id="J3F-dM-MeT"/>
+                            <constraint firstItem="EHf-M5-lPD" firstAttribute="top" secondItem="faH-zj-EQH" secondAttribute="topMargin" id="MFI-uN-RPe"/>
+                            <constraint firstAttribute="centerX" secondItem="EHf-M5-lPD" secondAttribute="centerX" constant="70" id="PqV-ic-vE7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mKW-ee-5l8" secondAttribute="trailing" constant="-16" id="SJF-lC-k32"/>
+                            <constraint firstItem="n3F-vV-ROr" firstAttribute="top" secondItem="EHf-M5-lPD" secondAttribute="bottom" constant="8" id="hWd-En-x86"/>
+                            <constraint firstItem="n3F-vV-ROr" firstAttribute="top" secondItem="mKW-ee-5l8" secondAttribute="bottom" constant="8" id="mFN-VX-auZ"/>
+                            <constraint firstItem="EHf-M5-lPD" firstAttribute="leading" secondItem="faH-zj-EQH" secondAttribute="leadingMargin" constant="-16" id="txB-Bi-8Mu"/>
+                            <constraint firstItem="mKW-ee-5l8" firstAttribute="top" secondItem="faH-zj-EQH" secondAttribute="topMargin" id="xCd-gf-x4f"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="7mR-e1-7av"/>
-                                <exclude reference="7F5-gG-AkQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <include reference="7mR-e1-7av"/>
-                                <exclude reference="gqA-8O-lfX"/>
-                                <include reference="7F5-gG-AkQ"/>
-                                <exclude reference="ByW-4c-0cq"/>
+                                <exclude reference="txB-Bi-8Mu"/>
+                                <exclude reference="SJF-lC-k32"/>
                             </mask>
                         </variation>
                     </view>
@@ -2384,7 +2449,7 @@ Tiene TRES misiones fundamentales:
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohz-Az-uBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="5741"/>
+            <point key="canvasLocation" x="530" y="6613"/>
         </scene>
         <!--PARTICIPANTES-->
         <scene sceneID="BRm-23-CtC">
@@ -2450,7 +2515,7 @@ Tiene TRES misiones fundamentales:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7Q-yn-kpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="5003"/>
+            <point key="canvasLocation" x="-274" y="5875"/>
         </scene>
         <!--TIPS-->
         <scene sceneID="7ga-1m-sbN">
@@ -2481,17 +2546,58 @@ Tiene TRES misiones fundamentales:
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-uK-Qhu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-uK-Qhu">
                                 <rect key="frame" x="0.0" y="50" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Durante el recorrido del Rally Maya 2015, se visitarán más de 20 lugares fabulosos de la Península de Yucatán que seguramente le dejarán una inolvidable experiencia de viaje, por lo que le recomendamos lo siguiente:</string>
+                                        <string key="content">Durante el recorrido del Rally Maya 2015, se visitarán más de 20 lugares fabulosos de la Península de Yucatán que seguramente le dejarán una inolvidable experiencia de viaje</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="15" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">En el mes de Mayo en la península de Yucatán se pronostica un clima: Seco-Caluroso.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="La temperatura media anual del Estado de Yucatán está entre 25 y 26°C,">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" defaultTabInterval="35.399999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" en el mes de Abril y Mayo, sin embargo podría llegar a 40° a la sombra,">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" defaultTabInterval="35.399999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" por lo que le recomendamos lo siguiente:">
                                         <attributes>
                                             <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
                                             <font key="NSOriginalFont" size="15" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" defaultTabInterval="35.399999999999999"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -2501,7 +2607,7 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="15" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="15" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="8" defaultTabInterval="35.399999999999999"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" ">
@@ -2951,6 +3057,24 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
+                                    <fragment content="  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
 Cg
@@ -2980,7 +3104,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEz-jt-AmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="6316"/>
+            <point key="canvasLocation" x="1529" y="7188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8tc-dd-5Sh">
@@ -3112,6 +3236,35 @@ Cg
                                                 <constraint firstAttribute="centerY" secondItem="KP9-yT-WwY" secondAttribute="centerY" id="aYJ-LM-i5r"/>
                                                 <constraint firstItem="V5T-58-AKi" firstAttribute="leading" secondItem="KP9-yT-WwY" secondAttribute="trailing" constant="8" id="ufD-Qt-RXF"/>
                                                 <constraint firstAttribute="centerY" secondItem="V5T-58-AKi" secondAttribute="centerY" id="z9P-br-rV8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="1WD-Vk-8xY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1WD-Vk-8xY" id="ePl-mv-Dei">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-programa" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-iq-uib">
+                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="AmC-2p-fXg"/>
+                                                        <constraint firstAttribute="height" constant="32" id="dMH-1Y-kHl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROGRAMA GENERAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovx-Xs-5fz">
+                                                    <rect key="frame" x="48" y="11" width="181" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ovx-Xs-5fz" firstAttribute="leading" secondItem="WAb-iq-uib" secondAttribute="trailing" constant="8" id="F8y-hr-ZCs"/>
+                                                <constraint firstItem="WAb-iq-uib" firstAttribute="leading" secondItem="ePl-mv-Dei" secondAttribute="leadingMargin" id="FUU-6H-hh7"/>
+                                                <constraint firstAttribute="centerY" secondItem="Ovx-Xs-5fz" secondAttribute="centerY" id="Ofy-3A-rtB"/>
+                                                <constraint firstAttribute="centerY" secondItem="WAb-iq-uib" secondAttribute="centerY" id="Xgl-L8-ftU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3268,35 +3421,6 @@ Cg
                                         <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="1WD-Vk-8xY">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1WD-Vk-8xY" id="ePl-mv-Dei">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-diabetes" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-iq-uib">
-                                                    <rect key="frame" x="8" y="6" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="AmC-2p-fXg"/>
-                                                        <constraint firstAttribute="height" constant="32" id="dMH-1Y-kHl"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIABETES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovx-Xs-5fz">
-                                                    <rect key="frame" x="48" y="11" width="82" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Ovx-Xs-5fz" firstAttribute="leading" secondItem="WAb-iq-uib" secondAttribute="trailing" constant="8" id="F8y-hr-ZCs"/>
-                                                <constraint firstItem="WAb-iq-uib" firstAttribute="leading" secondItem="ePl-mv-Dei" secondAttribute="leadingMargin" id="FUU-6H-hh7"/>
-                                                <constraint firstAttribute="centerY" secondItem="Ovx-Xs-5fz" secondAttribute="centerY" id="Ofy-3A-rtB"/>
-                                                <constraint firstAttribute="centerY" secondItem="WAb-iq-uib" secondAttribute="centerY" id="Xgl-L8-ftU"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="tDd-5D-Ua8">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tDd-5D-Ua8" id="Mda-PA-L6t">
@@ -3417,7 +3541,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCg-RG-V3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="5657"/>
+            <point key="canvasLocation" x="1529" y="6529"/>
         </scene>
         <!--DICCIONARIO MAYA-->
         <scene sceneID="Hrn-la-b3U">
@@ -3448,7 +3572,7 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-Hi-grs">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-Hi-grs">
                                 <rect key="frame" x="0.0" y="50" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -5661,7 +5785,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htb-TI-Zo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="4998"/>
+            <point key="canvasLocation" x="1529" y="5870"/>
         </scene>
         <!--DIABETES-->
         <scene sceneID="Hxf-eW-UNF">
@@ -5714,7 +5838,7 @@ Cg
                                     <constraint firstItem="3Ye-g0-Z2K" firstAttribute="top" secondItem="Ztp-Ng-vC4" secondAttribute="top" id="w31-vL-HTm"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YY-Pi-qEc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YY-Pi-qEc">
                                 <rect key="frame" x="10" y="0.0" width="580" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -5759,7 +5883,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5d-P7-HiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="8110"/>
+            <point key="canvasLocation" x="516" y="4257"/>
         </scene>
         <!--CRONÓMETRO-->
         <scene sceneID="N9E-3a-8X0">
@@ -5804,7 +5928,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bId-Gr-3h5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="8948"/>
+            <point key="canvasLocation" x="-223" y="9820"/>
         </scene>
         <!--Participante View Controller-->
         <scene sceneID="u6k-R3-rSP">
@@ -5844,7 +5968,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dT3-Og-yU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="5003"/>
+            <point key="canvasLocation" x="532" y="5875"/>
         </scene>
         <!--PATROCINADORES-->
         <scene sceneID="OHH-Af-Z42">
@@ -5904,7 +6028,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WY-0u-gbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="6468"/>
+            <point key="canvasLocation" x="-239" y="7340"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iDr-a0-BAn">
@@ -5927,7 +6051,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="041-QV-NMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="7330"/>
+            <point key="canvasLocation" x="-1094" y="8202"/>
         </scene>
         <!--DIRECTORIO-->
         <scene sceneID="UZ8-Ec-k7Z">
@@ -5947,7 +6071,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVf-gM-ggR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="7330"/>
+            <point key="canvasLocation" x="-223" y="8202"/>
         </scene>
         <!--CAMPECHE-->
         <scene sceneID="acY-UC-yWK">
@@ -5966,7 +6090,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lz-XW-Opo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="6612"/>
+            <point key="canvasLocation" x="697" y="7484"/>
         </scene>
         <!--YUCATÁN-->
         <scene sceneID="Kp6-mF-vbk">
@@ -5988,30 +6112,43 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Si0-Nk-wmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="7922"/>
+            <point key="canvasLocation" x="697" y="8794"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9pc-gl-ebs">
+        <!--RUTA-->
+        <scene sceneID="L4r-fV-X5P">
             <objects>
-                <navigationController storyboardIdentifier="DiabetesViewNavigation" id="Kcb-yX-Ti7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="p5a-1U-k3p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.85490196080000003" green="0.69411764710000001" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
+                <viewController storyboardIdentifier="RutaView" title="RUTA" id="W2Y-uk-t2P" customClass="RutaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cum-cd-oZY"/>
+                        <viewControllerLayoutGuide type="bottom" id="AsT-3A-nGe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L4F-IK-m5d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fyx-YH-ba5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <connections>
+                                    <outlet property="delegate" destination="W2Y-uk-t2P" id="Msj-9I-zik"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AsT-3A-nGe" firstAttribute="top" secondItem="fyx-YH-ba5" secondAttribute="bottom" id="3hJ-KG-8Ks"/>
+                            <constraint firstItem="fyx-YH-ba5" firstAttribute="top" secondItem="L4F-IK-m5d" secondAttribute="topMargin" id="VgN-Xc-5V9"/>
+                            <constraint firstItem="fyx-YH-ba5" firstAttribute="leading" secondItem="L4F-IK-m5d" secondAttribute="leadingMargin" constant="-16" id="lFu-5d-nG6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fyx-YH-ba5" secondAttribute="trailing" constant="-16" id="xNb-if-xZt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8GB-7O-0pB"/>
                     <connections>
-                        <segue destination="8kj-3C-IYd" kind="relationship" relationship="rootViewController" id="JxR-TF-Q0X"/>
+                        <outlet property="mapView" destination="fyx-YH-ba5" id="B1J-rV-SrV"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4D4-Jw-znR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIC-bW-83h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="8110"/>
+            <point key="canvasLocation" x="-2263" y="6952"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BXR-wV-gLT">
@@ -6034,7 +6171,7 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXd-Yj-O1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1110" y="8948"/>
+            <point key="canvasLocation" x="-1094" y="9820"/>
         </scene>
         <!--QUINTANA ROO-->
         <scene sceneID="7Ix-dx-nE5">
@@ -6056,27 +6193,51 @@ En su segunda edición Rally Maya México pretende causar un impacto notable a e
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Op-pz-BvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="7272"/>
+            <point key="canvasLocation" x="697" y="8144"/>
+        </scene>
+        <!--RUTA-->
+        <scene sceneID="pJ8-dd-8AS">
+            <objects>
+                <navigationController storyboardIdentifier="RutaViewNavigation" title="RUTA" id="Rhs-fL-ZVb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="x9h-qe-pFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.85490196080000003" green="0.69411764710000001" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W2Y-uk-t2P" kind="relationship" relationship="rootViewController" id="cXL-Of-Aib"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c80-vi-Wlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2062" y="6117"/>
         </scene>
     </scenes>
     <resources>
         <image name="campeche-tab" width="32" height="32"/>
+        <image name="causa" width="144" height="144"/>
         <image name="descarga_app" width="190" height="190"/>
         <image name="diabetes1" width="180" height="180"/>
         <image name="diabetes2" width="180" height="180"/>
         <image name="diabetes3" width="180" height="180"/>
         <image name="diccionario-tab" width="32" height="32"/>
         <image name="fondo" width="640" height="960"/>
-        <image name="foto" width="640" height="226"/>
         <image name="lugares-tab" width="32" height="32"/>
         <image name="qroo-tab" width="32" height="32"/>
+        <image name="reglamento" width="144" height="144"/>
         <image name="side-cronometro" width="70" height="70"/>
-        <image name="side-diabetes" width="70" height="70"/>
         <image name="side-directorio" width="70" height="70"/>
         <image name="side-facebook" width="70" height="70"/>
         <image name="side-home" width="70" height="70"/>
         <image name="side-participantes" width="70" height="70"/>
         <image name="side-patrocinadores" width="70" height="70"/>
+        <image name="side-programa" width="70" height="70"/>
         <image name="side-rally-maya" width="70" height="70"/>
         <image name="side-ruta" width="70" height="70"/>
         <image name="side-tips" width="70" height="70"/>
