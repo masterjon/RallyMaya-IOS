@@ -10,7 +10,9 @@
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 #import <AddressBook/AddressBook.h>
-@interface RutaViewController ()
+@import CoreLocation;
+@interface RutaViewController () <CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -18,6 +20,18 @@
 
 - (void)viewDidLoad {
     //NavigatrionDrawer
+    [super viewDidLoad];
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager = [[CLLocationManager alloc] init];
+    if(IS_OS_8_OR_LATER) {
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+ 
+    
+    self.mapView.showsUserLocation = YES;
     self.navigationItem.title = @"RUTA";
     NSArray *viewControllers = self.navigationController.viewControllers;
     UIViewController *vc = [viewControllers objectAtIndex:0];
@@ -74,98 +88,228 @@
     
     NSArray *_coordinates =[[NSArray alloc]init];
     _coordinates =  @[
+                      //A-B
+                      @{
+                          @"title":@"Mérida",
+                          @"coords":@"21.034063, -89.629751",
+                          @"showMarker":@true
+                          },
                       @{
                           @"title":@"Merida",
-                          @"coords":@"20.9627063, -89.6282379"
+                          @"coords":@"20.997342, -89.623576"
                           },
                       @{
-                          @"title":@"Cancun",
-                          @"coords":@"20.9578743, -86.9253269"
+                          @"title":@"Merida",
+                          @"coords":@"20.822885, -89.742599"
+                          },
+                     
+                      @{
+                          @"title":@"Hacienda Yaxcopoil",
+                          @"coords":@"20.745267, -89.721391",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"Uman",
-                          @"coords":@"20.9013842, -89.725542"
+                          @"title":@"Muna",
+                          @"coords":@"20.489867, -89.732904"
                           },
                       @{
-                          @"title":@"HACIENDA YAXCOPOIL",
-                          @"coords":@"20.74578, -89.7222305"
+                          @"title":@"Hecelchakan",
+                          @"coords":@"20.211763, -90.104163"
                           },
                       @{
-                          @"title":@"CALKINÍ",
-                          @"coords":@"20.3666355, -90.0485722"
+                          @"title":@"Pomuch",
+                          @"coords":@"20.129829, -90.1695713"
+                          },
+                      
+                      @{
+                          @"title":@"Campeche",
+                          @"coords":@"19.846212, -90.540779",
+                          @"showMarker":@true
+                          },
+                      
+                      
+                      
+                     //B-C
+                      @{
+                          @"title":@"Campeche",
+                          @"coords":@"19.848929, -90.531689"
                           },
                       @{
-                          @"title":@"HECELCHAKAN",
-                          @"coords":@"20.4593239, -89.7592358"
+                          @"title":@"Campeche2",
+                          @"coords":@"19.854094, -90.523104"
+                          },
+                      
+                      @{
+                          @"title":@"Holpechen",
+                          @"coords":@"19.748210, -89.851839",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"POMUCH",
-                          @"coords":@"20.1361321, -90.174441"
+                          @"title":@"Holpechen2",
+                          @"coords":@"19.753445, -89.841121"
+                          },
+                      
+                      @{
+                          @"title":@"Santa Rosa Xtampak",
+                          @"coords":@"19.775156, -89.596288",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"CAMPECHE",
-                          @"coords":@"19.8254249, -90.5548053"
+                          @"title":@"Grutas de Xtacumbilxunaan",
+                          @"coords":@"20.006424, -89.842898",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"HOPELCHEN",
-                          @"coords":@"19.7475659, -89.8427386"
+                          @"title":@"Uxmal",
+                          @"coords":@"20.360130, -89.769430",
+                          @"showMarker":@true
+                          },
+                      
+                      
+                      //C-D
+                      
+                      @{
+                          @"title":@"Santa Elena",
+                          @"coords":@"20.325754, -89.641965"
                           },
                       @{
-                          @"title":@"UXMAL",
-                          @"coords":@"20.3888822, -89.6859027"
+                          @"title":@"Ticul",
+                          @"coords":@"20.395289, -89.540020",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"MUNA",
-                          @"coords":@"20.4886998,-89.7090447"
+                          @"title":@"Ticul",
+                          @"coords":@"20.397859, -89.535846"
+                          },
+                      
+                      @{
+                          @"title":@"Ticul",
+                          @"coords":@"20.397248, -89.535449"
                           },
                       @{
-                          @"title":@"TICUL",
-                          @"coords":@"20.4098456,-89.5443497"
+                          @"title":@"Maní",
+                          @"coords":@"20.386730, -89.392054",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"MANI",
-                          @"coords":@"21.2386449,-89.2108244"
+                          @"title":@"Mayapan",
+                          @"coords":@"20.632594, -89.458469",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"MAYAPAN",
-                          @"coords":@"20.9790703,-89.5922433"
+                          @"title":@"Acanceh",
+                          @"coords":@"20.813236, -89.453061",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"DZIBILCHALTUN",
-                          @"coords":@"21.0982572,-89.7417512"
-                          },
-                      @{
-                          @"title":@"PROGRESO",
-                          @"coords":@"21.2500219,-89.649646"
+                          @"title":@"Progreso",
+                          @"coords":@"21.285345, -89.661917",
                           },
                       @{
                           @"title":@"Telchac Puerto",
-                          @"coords":@"21.3274647,-89.2987983"
+                          @"coords":@"21.337578, -89.315342",
+                          @"showMarker":@true
+                          },
+                      
+                      
+                      //D-E
+                     
+                      @{
+                          @"title":@"",
+                          @"coords":@"21.393030, -88.891646"
                           },
                       @{
-                          @"title":@"xcambo",
-                          @"coords":@"21.313508,-89.3541"
+                          @"title":@"Dzilam Gonzalez",
+                          @"coords":@"21.280416, -88.931591",
+                           @"showMarker":@true
                           },
                       @{
-                          @"title":@"Dzilam González",
-                          @"coords":@"21.3294724,-89.0277729"
+                          @"title":@"Dzidzantun",
+                          @"coords":@"21.241901, -89.046411",
+                           @"showMarker":@true
                           },
                       @{
-                          @"title":@"Tizimín",
-                          @"coords":@"21.0050939,-88.0464464"
+                          @"title":@"",
+                          @"coords":@"21.141256, -89.111939"
                           },
                       @{
-                          @"title":@"Chichén Itzá, Tinum, Yuc.",
-                          @"coords":@"20.6875138,-88.5659138"
+                          @"title":@"",
+                          @"coords":@"21.198097, -88.810170"
                           },
                       @{
-                          @"title":@"Playa del Carmen",
-                          @"coords":@"20.6335355,-87.0796316"
+                          @"title":@"",
+                          @"coords":@"21.152583, -88.171573"
+                          
                           },
+                      @{
+                          @"title":@"Tizimin",
+                          @"coords":@"21.140176, -88.163162",
+                          @"showMarker":@true
+                          
+                          },
+                      @{
+                          @"title":@"",
+                          @"coords":@"20.742540, -88.212842"
+                          },
+                      
+                      //E-F
+                      @{
+                          @"title":@"Chichen Itzá",
+                          @"coords":@"20.677660,-88.568201",
+                           @"showMarker":@true
+                          },
+                      @{
+                          @"title":@"",
+                          @"coords":@"20.690885, -88.219442"
+                          },
+                      @{
+                          @"title":@"",
+                          @"coords":@"20.658443, -87.956542"
+                          },
+                      @{
+                          @"title":@"",
+                          @"coords":@"20.214318, -87.453574"
+                          },
+                      @{
+                          @"title":@"Grans Oasis Cancun",
+                          @"coords":@"21.086005, -86.773757",
+                           @"showMarker":@true
+                          },
+                      
+                      
                       
                       
                       
                      ];
+    
+    
+        MKPlacemark *p1 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.9627063, -89.6282379)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
+        MKMapItem *p1MapItem = [[MKMapItem alloc]initWithPlacemark:p1];
+        [p1MapItem setName:@"XXX"];
+    
+    
+//    MKPlacemark *p2 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.9578743, -86.9253269)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
+//    MKMapItem *p2MapItem = [[MKMapItem alloc]initWithPlacemark:p2];
+//    [p2MapItem setName:@""];
+//    [self.mapView addAnnotation:p2];
+//    
+//    MKPlacemark *p3 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.209833, -87.467061)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
+//    MKMapItem *p3MapItem = [[MKMapItem alloc]initWithPlacemark:p3];
+//    [p3MapItem setName:@""];
+//    [self.mapView addAnnotation:p3];
+//    
+//        [self.mapView addAnnotation:p3];
+//    
+//    [self findDirectionsFrom:p1MapItem to:p2MapItem];
+//    [self findDirectionsFrom:p1MapItem to:p2MapItem];
+    
+    
+    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance(p1.coordinate, 400000, 400000);
+    [self.mapView setRegion: [self.mapView regionThatFits:reg] animated:YES];
+    
+    
+    
+    
     
     CLLocationCoordinate2D points[[_coordinates count]];
     
@@ -180,7 +324,29 @@
         MKPointAnnotation *_destination = [[MKPointAnnotation   alloc] init ];
         _destination.coordinate=_coord;
         _destination.title=_coordDict[@"title"];
-        [self.mapView addAnnotation:_destination];
+        
+        if (_coordDict[@"showMarker"]) {
+            [self.mapView addAnnotation:_destination];
+        }
+
+        
+        //agregamos los placemarks y los mapitems para trazar la ruta
+        if(i>0){
+        MKPlacemark *start = [[MKPlacemark   alloc]initWithCoordinate:points[i-1]   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
+        MKMapItem *startMapItem = [[MKMapItem alloc]initWithPlacemark:start];
+        [startMapItem setName:@""];
+        
+        MKPlacemark *end = [[MKPlacemark   alloc]initWithCoordinate:points[i]   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
+        MKMapItem *endMapItem = [[MKMapItem alloc]initWithPlacemark:end];
+        [endMapItem setName:@""];
+            //[self.mapView addAnnotation:start];
+            
+            [self findDirectionsFrom:startMapItem to:endMapItem];
+        }
+        
+        
+        
+        
         
         i++;
     }
@@ -188,7 +354,7 @@
     //Create custom polyline to draw overlay
     MKGeodesicPolyline *publicTransportPolyline = [MKGeodesicPolyline polylineWithCoordinates:points count:[_coordinates count]];
     //Add the polyline as overlay
-    [self.mapView addOverlay: publicTransportPolyline level:MKOverlayLevelAboveRoads];
+   // [self.mapView addOverlay: publicTransportPolyline level:MKOverlayLevelAboveRoads];
     
     
     
@@ -196,8 +362,8 @@
     
     
     
-   // MKMapItem *_srcItem = [MKMapItem mapItemForCurrentLocation];
-    //[self displayRegionCenteredOnMapItem: _srcItem];
+  // MKMapItem *_srcItem = [MKMapItem mapItemForCurrentLocation];
+  //  [self displayRegionCenteredOnMapItem: _srcItem];
  
 }
 

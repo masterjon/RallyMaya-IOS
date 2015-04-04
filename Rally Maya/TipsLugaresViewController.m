@@ -155,13 +155,13 @@
                  
                  ]
           },
-      @{
-          @"section":@"DZIBILCHALTUN",
-          @"content":
-              @[ NSLocalizedString(@"Su estructura más famosa es la Casa de las siete Muñecas, en los equinoccios de primavera y otoño, la orientación  del edificio hace que el sol pueda verse a través de las puertas  este y oeste, otro ejemplo de la precisión matemática de los mayas, también cuenta con el museo del pueblo maya y un cenote para nadar.",nil),
-                 
-                 ]
-          },
+//      @{
+//          @"section":@"DZIBILCHALTUN",
+//          @"content":
+//              @[ NSLocalizedString(@"Su estructura más famosa es la Casa de las siete Muñecas, en los equinoccios de primavera y otoño, la orientación  del edificio hace que el sol pueda verse a través de las puertas  este y oeste, otro ejemplo de la precisión matemática de los mayas, también cuenta con el museo del pueblo maya y un cenote para nadar.",nil),
+//                 
+//                 ]
+//          },
       @{
           @"section":@"PUERTO PROGRESO",
           @"content":
@@ -191,13 +191,6 @@
                  ]
           },
       @{
-          @"section":@"VALLADOLID",
-          @"content":
-              @[ NSLocalizedString(@"Valladolid, donde sucedieron dos grandes pasajes de la historia de México: “La Guerra de Castas” en 1847 y “La Primera chispa de la Revolución Mexicana” en 1910: es conocida actualmente como “La Capital del Oriente Maya”, título merecido no sólo por la belleza arquitectónica de sus edificaciones coloniales ancestrales como el Convento de San Bernardino de Siena, el Palacio Municipal, la Iglesia de San Servacio, el Ex Telar de la Aurora, el Museo de San Roque, así como otros no menos importantes.",nil),
-                 
-                 ]
-          },
-      @{
           @"section":@"CHICHEN ITZÁ",
           @"content":
               @[ NSLocalizedString(@"Una de las 7 maravillas del Mundo; se puede admirar el Castillo, el Templo de los Guerreros, el Grupo de las mil Columnas, la Plataforma de Venus, el Tzompantli, el Juego de Pelota, el Caracol, antiguo Observatorio y la Iglesia. Es la más impresionante de las ruinas de la civilización Maya. El edificio más conocido es el Castillo, tiene una altura de poco más de 30 metros y en la parte superior hay un templo dedicado a Kukulkán.",nil),
@@ -205,12 +198,20 @@
                  ]
           },
       @{
-          @"section":@"XCARET",
+          @"section":@"VALLADOLID",
           @"content":
-              @[ NSLocalizedString(@"'Xcaret' significa en maya pequeña caleta, pues cuenta con una ensenada de extraordinaria belleza. La ubicación geográficamente conveniente de esta caleta la hizo atractiva para los mayas, quienes construyeron ahí un puerto y centro mercantil.",nil)
+              @[ NSLocalizedString(@"Valladolid, donde sucedieron dos grandes pasajes de la historia de México: “La Guerra de Castas” en 1847 y “La Primera chispa de la Revolución Mexicana” en 1910: es conocida actualmente como “La Capital del Oriente Maya”, título merecido no sólo por la belleza arquitectónica de sus edificaciones coloniales ancestrales como el Convento de San Bernardino de Siena, el Palacio Municipal, la Iglesia de San Servacio, el Ex Telar de la Aurora, el Museo de San Roque, así como otros no menos importantes.",nil),
                  
                  ]
           },
+
+//      @{
+//          @"section":@"XCARET",
+//          @"content":
+//              @[ NSLocalizedString(@"'Xcaret' significa en maya pequeña caleta, pues cuenta con una ensenada de extraordinaria belleza. La ubicación geográficamente conveniente de esta caleta la hizo atractiva para los mayas, quienes construyeron ahí un puerto y centro mercantil.",nil)
+//                 
+//                 ]
+//          },
       @{
           @"section":@"PLAYA DEL CARMEN",
           @"content":
