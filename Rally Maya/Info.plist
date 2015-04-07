@@ -26,8 +26,6 @@
 	<string>Activar guía</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Activar guía</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

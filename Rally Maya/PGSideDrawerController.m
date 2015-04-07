@@ -79,12 +79,26 @@
         case 8:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CronometroViewNavigation"];
             break;
-        case 9:
-            NSLog(@"FACEBOOK");
+        case 9: {
+            NSString *fbLink = @"fb://profile/132058193656387";
+            if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbLink]]) {
+               fbLink = @"https://www.facebook.com/RallyMayaMexico";
+            }
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbLink]];
             break;
-        case 10:
-            NSLog(@"TWITTER");
+        }
+        case 10:{
+            NSString *twLink = @"twitter://user?screen_name=rallymayamexico";
+
+            if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:twLink]]) {
+                twLink = @"https://twitter.com/rallymayamexico";
+
+            }
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twLink]];
             break;
+            
+            break;
+        }
         default:
             break;
             

@@ -16,6 +16,7 @@
 		FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */; };
 		FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */; };
 		FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */; };
+		FC57FCB31AD33011002E045B /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57FCB21AD33011002E045B /* Images-2.xcassets */; };
 		FC5C84FE1AC9F37600AF91A8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */; };
 		FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */; };
 		FC5C85041ACB54A000AF91A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85031ACB54A000AF91A8 /* WebViewController.m */; };
@@ -74,6 +75,7 @@
 		FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		FC4B68161A9D481F009FDEB2 /* PatrocinadoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrocinadoresViewController.h; sourceTree = "<group>"; };
 		FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrocinadoresViewController.m; sourceTree = "<group>"; };
+		FC57FCB21AD33011002E045B /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FC5C84FD1AC9F37600AF91A8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramaViewController.h; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				FC5C85031ACB54A000AF91A8 /* WebViewController.m */,
 				FC5C85051ACB821800AF91A8 /* RutaViewController.h */,
 				FC5C85061ACB821800AF91A8 /* RutaViewController.m */,
+				FC57FCB21AD33011002E045B /* Images-2.xcassets */,
 			);
 			path = "Rally Maya";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				TargetAttributes = {
 					FCC2C4D11A9B8E4200A6AA89 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 76325T78K7;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -400,6 +404,7 @@
 				FCC2C4E11A9B8E4200A6AA89 /* Main.storyboard in Resources */,
 				FCC2D6081A9CECF200A6AA89 /* KMSectionHeaderView.xib in Resources */,
 				FCC2C4E61A9B8E4200A6AA89 /* LaunchScreen.xib in Resources */,
+				FC57FCB31AD33011002E045B /* Images-2.xcassets in Resources */,
 				FCC2C4E31A9B8E4200A6AA89 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,11 +608,14 @@
 			baseConfigurationReference = 6902086B8BFB5B535481A67D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jon/Punk/MAC/KMAccordionTableViewController/Pods/Reveal-iOS-SDK/Reveal-Framework-1.0.4",
 				);
 				INFOPLIST_FILE = "Rally Maya/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -618,11 +626,14 @@
 			baseConfigurationReference = 5BFB734E0B7F4A90E94E2AA5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jon/Punk/MAC/KMAccordionTableViewController/Pods/Reveal-iOS-SDK/Reveal-Framework-1.0.4",
 				);
 				INFOPLIST_FILE = "Rally Maya/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

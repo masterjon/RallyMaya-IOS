@@ -41,48 +41,8 @@
         
         [self setupLeftMenuButton];
     }
-    NSDictionary *address = @{
-                              (NSString *)kABPersonAddressStreetKey: @"Kinik",
-                              (NSString *)kABPersonAddressCityKey: @"Cancun",
-                              (NSString *)kABPersonAddressStateKey: @"Quintana Roo",
-                              (NSString *)kABPersonAddressZIPKey: @"7533"
-                              };
+  
 
-    MKPlacemark *place = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(21.132893,-86.747208) addressDictionary:address];
-    
-   // [self.mapView addAnnotation:place];
-    
-    
-    //self.mapitem = [[MKMapItem alloc] initWithPlacemark:place];
-   // [self displayRegionCenteredOnMapItem: self.mapitem];
-    
-    
-//    MKPlacemark *source = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.62811903364482,-87.07241714000702)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
-//    MKMapItem *srcMapItem = [[MKMapItem alloc]initWithPlacemark:source];
-//    [srcMapItem setName:@""];
-//    MKPlacemark *destination = [[MKPlacemark alloc]initWithCoordinate:CLLocationCoordinate2DMake(21.132893,-86.747208) addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
-//
-//    
-//    MKMapItem *distMapItem = [[MKMapItem alloc]initWithPlacemark:destination];
-//    [distMapItem setName:@""];
-//    
-//    [self findDirectionsFrom:srcMapItem to:distMapItem];
-//    
-    
-    
-//    MKPointAnnotation *_source = [[MKPointAnnotation   alloc] init ];
-//    
-//    _source.coordinate=CLLocationCoordinate2DMake(21.132893,-86.747208);
-//    _source.title = @"Playa";
-//    
-//    MKPointAnnotation *_destination = [[MKPointAnnotation   alloc] init ];
-//    
-//    _destination.coordinate=CLLocationCoordinate2DMake(20.62811903364482,-87.07241714000702);
-//    _destination.title = @"Playa";
-//    
-//    [self.mapView addAnnotation:_source];
-//    [self.mapView addAnnotation:_destination];
-    
     
     
     
@@ -271,7 +231,13 @@
                           @"coords":@"20.214318, -87.453574"
                           },
                       @{
-                          @"title":@"Grans Oasis Cancun",
+                          @"title":@"Playa del Carmen",
+                          @"coords":@"20.634971, -87.078022",
+                          @"showMarker":@true
+                          },
+                      
+                      @{
+                          @"title":@"Grans Oasis Cancún",
                           @"coords":@"21.086005, -86.773757",
                            @"showMarker":@true
                           },
@@ -288,22 +254,7 @@
         [p1MapItem setName:@"XXX"];
     
     
-//    MKPlacemark *p2 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.9578743, -86.9253269)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
-//    MKMapItem *p2MapItem = [[MKMapItem alloc]initWithPlacemark:p2];
-//    [p2MapItem setName:@""];
-//    [self.mapView addAnnotation:p2];
-//    
-//    MKPlacemark *p3 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.209833, -87.467061)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
-//    MKMapItem *p3MapItem = [[MKMapItem alloc]initWithPlacemark:p3];
-//    [p3MapItem setName:@""];
-//    [self.mapView addAnnotation:p3];
-//    
-//        [self.mapView addAnnotation:p3];
-//    
-//    [self findDirectionsFrom:p1MapItem to:p2MapItem];
-//    [self findDirectionsFrom:p1MapItem to:p2MapItem];
-    
-    
+
     MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance(p1.coordinate, 400000, 400000);
     [self.mapView setRegion: [self.mapView regionThatFits:reg] animated:YES];
     
@@ -352,7 +303,7 @@
     }
     
     //Create custom polyline to draw overlay
-    MKGeodesicPolyline *publicTransportPolyline = [MKGeodesicPolyline polylineWithCoordinates:points count:[_coordinates count]];
+    //MKGeodesicPolyline *publicTransportPolyline = [MKGeodesicPolyline polylineWithCoordinates:points count:[_coordinates count]];
     //Add the polyline as overlay
    // [self.mapView addOverlay: publicTransportPolyline level:MKOverlayLevelAboveRoads];
     

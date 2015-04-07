@@ -100,7 +100,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     UIImageView *menuImage = (UIImageView *) [cell viewWithTag:10];
     if([self.menuItems count] >0){
         NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
-        NSString *imageItem =[cellDictionary objectForKey:@"picture"];
+        NSString *imageItem =[cellDictionary objectForKey:@"thumbnail"];
         NSURL *imageUrl = [NSURL URLWithString:imageItem];
         NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
         //menuImage.image = [UIImage imageNamed:@"fondofotos"];
