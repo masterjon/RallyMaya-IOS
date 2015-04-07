@@ -19,7 +19,13 @@
     [super viewDidLoad];
     UILabel *viewTitle = [[UILabel alloc] init];
     viewTitle.textColor = [UIColor whiteColor];
-    viewTitle.text=[NSString stringWithFormat:@"%@-%@",self.name,self.year] ;
+    if (self.year == (id)[NSNull null]){
+        viewTitle.text=[NSString stringWithFormat:@"%@",self.name] ;
+    }
+    else{
+        viewTitle.text=[NSString stringWithFormat:@"%@-%@",self.name,self.year] ;
+    }
+    
     self.navigationItem.titleView=viewTitle;
     [viewTitle sizeToFit];
     

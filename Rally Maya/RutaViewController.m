@@ -17,7 +17,9 @@
 @end
 
 @implementation RutaViewController
-
+//-(BOOL)prefersStatusBarHidden{
+//    return YES;
+//}
 - (void)viewDidLoad {
     //NavigatrionDrawer
     [super viewDidLoad];
@@ -249,13 +251,12 @@
                      ];
     
     
-        MKPlacemark *p1 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.9627063, -89.6282379)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
-        MKMapItem *p1MapItem = [[MKMapItem alloc]initWithPlacemark:p1];
-        [p1MapItem setName:@"XXX"];
+        MKPlacemark *p1 = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(20.0,-88.704814)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:nil] ];
+    
     
     
 
-    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance(p1.coordinate, 400000, 400000);
+    MKCoordinateRegion reg = MKCoordinateRegionMakeWithDistance(p1.coordinate, 750000, 750000);
     [self.mapView setRegion: [self.mapView regionThatFits:reg] animated:YES];
     
     

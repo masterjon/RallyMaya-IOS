@@ -18,7 +18,9 @@
 @end
 
 @implementation ParticipantesViewController
-
+//-(BOOL)prefersStatusBarHidden{
+//    return YES;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,7 +42,7 @@
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSURL *url = [NSURL URLWithString:@"http://punklabs.ninja/rallymaya/api/v1/cars/?format=json"];
+    NSURL *url = [NSURL URLWithString:@"http://punklabs.ninja/rallymaya/api/v1/cars/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
     self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
@@ -103,7 +105,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         NSString *imageItem =[cellDictionary objectForKey:@"thumbnail"];
         NSURL *imageUrl = [NSURL URLWithString:imageItem];
         NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-        //menuImage.image = [UIImage imageNamed:@"fondofotos"];
+        menuImage.image = [UIImage imageNamed:@"fondofotos"];
         
         menuImage.image = [UIImage imageNamed:imageItem];
         NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

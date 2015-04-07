@@ -14,8 +14,7 @@
 @end
 
 @implementation TipsLugaresViewController
-
-
+    
 - (NSInteger)numberOfSectionsInAccordionTableViewController:(KMAccordionTableViewController *)accordionTableView {
     return [self.sections count];
 }

@@ -866,6 +866,222 @@
                   
                   ]
           },
+      @{
+          @"section":@"Contactos De Comité",
+          @"content":
+              @[
+                  @{
+                      @"location":@"",
+                      @"name":@"Benjamin de la Peña Mora",
+                      @"date":@"Presidente Fundador",
+                      @"emails":@[@"benjamindelapenamora@gmail.com"],
+                      @"phones":@[@"998 845 7563"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Cecilia Torres Allier",
+                      @"date":@"Coordinador General",
+                      @"emails":@[@"pr@rallymayamexico.com",@"direcccion@showtvmedia.com"],
+                      @"phones":@[@"998 110 0405"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Wilmer Sotomayor Sanchez",
+                      @"date":@"Coordinador General",
+                      @"emails":@[@"wilmer3820@hotmail.com"],
+                      @"phones":@[@"998 196 3681"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Nayeli Canul Chi",
+                      @"date":@"Asistente de Cordinación General",
+                      @"emails":@[@"informacion@rallymayamexico.com",@"ventas@showtvmedia.com"],
+                      @"phones":@[@"998 115 1148"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Kenneth Betancour Rodriguez",
+                      @"date":@"Diseño",
+                      @"emails":@[@"design@rallymayamexico.com "],
+                      @"phones":@[@"998 135 4961"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Mauricio Maya Oliva",
+                      @"date":@"Coordinador Legal",
+                      @"emails":@[@"mauriciomaya55@hotmail.com"],
+                      @"phones":@[@"998 842 0635"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Rafael Machado ",
+                      @"date":@"Responsable del Rally Maya",
+                      @"emails":@[@"ramazumx@yahoo.com"],
+                      @"phones":@[@"552 563 9317"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Jaime Novelo Montalvo",
+                      @"date":@"Coordinador de Cultura Maya",
+                      @"emails":@[@"jaimenovelo@prodigy.net.mx"],
+                      @"phones":@[@"998 842 0031"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Héctor González Valdepeña",
+                      @"date":@"Comisario PF",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Adan Rosario Jimenez Solano",
+                      @"date":@"Subinspector PF",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Juan Armin Hernandez Ortiz",
+                      @"date":@"Oficial PF",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Eduardo Artigas Coba",
+                      @"date":@"Oficial PF",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Miguel Anehl Niri Buen",
+                      @"date":@"Suboficial PF",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Juan Alberto Paredes Altamirano",
+                      @"date":@"Suboficial PF",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Rafael Pacheco Coronel",
+                      @"date":@"Coordinador de Seguridad",
+                      @"emails":@[@"rpcgeneral@hotmail.com"],
+                      @"phones":@[@"998 109 9880"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Lorenzo Orozco de la Barquera",
+                      @"date":@"Apoyo Logistica",
+                      @"emails":@[@"orozcodelabarquera@prodigy.net.mx"],
+                      @"phones":@[@"998 109 8128"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Horacio Chousal ",
+                      @"date":@"Director de Cronometraje y Control",
+                      @"emails":@[@"chousal1953@gmail.com"],
+                      @"phones":@[@"722 389 0231"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Rosario Escamilla",
+                      @"date":@"Asistente de Cronometraje",
+                      @"emails":@[@"rosarioescamilla58@gmail.com"],
+                      @"phones":@[@"722 7117072"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Victor Hugo Sánchez Camacho",
+                      @"date":@"Director de Prensa",
+                      @"emails":@[@"hijodevecino@gmail.com"],
+                      @"phones":@[@"553 999 3035"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Luis Berumen García",
+                      @"date":@"Apoyo Logistica",
+                      @"emails":@[@"lgberumen@yahoo.com.mx"],
+                      @"phones":@[@"555 102 0406"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Dennis Rodriguez",
+                      @"date":@"Responsable Médico",
+                      @"emails":@[],
+                      @"phones":@[@"555 437 5972"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Jorge Fuentes Amezcua",
+                      @"date":@"Jefe de Vallas",
+                      @"emails":@[@"letygro60@gmail.com"],
+                      @"phones":@[@"998 577 8727"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Marcos Noe Oliver Mosqueda",
+                      @"date":@"Responsable de equipaje",
+                      @"emails":@[@"travel-cancun@hotmail.com"],
+                      @"phones":@[@"998 841 3559"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Marco Antonio Cureño Herrera",
+                      @"date":@"Coordinador Mecanico y Barredora",
+                      @"emails":@[@"marcu666@hotmail.com"],
+                      @"phones":@[@"998 262 0303"],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Edgardo Sierra Larrieu",
+                      @"date":@"Responsable de Bienvenida",
+                      @"emails":@[@"walloxtreme@hotmail.com"],
+                      @"phones":@[],
+                      @"address":@""
+                      },
+                  @{
+                      @"location":@"",
+                      @"name":@"Juan Jose Ortiz Jasso",
+                      @"date":@"Responsable de Acomodo de Autos",
+                      @"emails":@[@"fox_juanjo@hotmail.com"],
+                      @"phones":@[@"998 844 9803"],
+                      @"address":@""
+                      },
+                  
+                  
+                  ]
+          },
       
       
       ];

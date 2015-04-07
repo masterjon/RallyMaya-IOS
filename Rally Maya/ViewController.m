@@ -14,9 +14,9 @@
 @end
 
 @implementation ViewController
--(BOOL)prefersStatusBarHidden{
-    return YES;
-}
+//-(BOOL)prefersStatusBarHidden{
+//    return YES;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupLeftMenuButton];
