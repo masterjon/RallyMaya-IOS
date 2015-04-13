@@ -850,11 +850,117 @@
                   ]
           },
       @{
+          @"section":@"Gasolineras Full Gas",
+          @"content":
+              @[
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Chuburná",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"C. 20 #111 x 25 Colonia Chuburná de Hidalgo."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Umán",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Calle 16-A x Calle S/N TAB. CAT. 14177 Municipio de Umán, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Kopomá",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Carretera Federal Mérida- Campeche km 57 Municipio de Kopomá, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Muna",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Calle 25 No. 127 Col. San Pastor. C.P. 97840 Municipio de Muna, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Kanasín",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Tablaje 14431-A localidad y municipio de Kanasín, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio San Pedro",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Carretera Mérida-Valladolid km 9.5 Kanasín Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Pisté",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Carretera Mérida- Valladolid km 115 Tablaje Catastral 4097. C.P. 97780, Municipio Pisté, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Ebtún",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Carretera Valladolid-Mérida, tablaje Catastral 9545 C.P. 97780, Municipio Valladolid, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Zací",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Calle 42 No. 140 Fracc. Campestre del Pedregal, Municipio Valladolid, Yucatán."
+                      },
+                  @{
+                      
+                      @"location":@"",
+                      @"name":@"Estación de Servicio Chan Yaxché",
+                      @"date":@"",
+                      @"emails":@[],
+                      @"phones":@[],
+                      @"desayuno":@"",
+                      @"address":@"Calle 41 Salida Carretera Valladolid-Cancún. Tablaje Catastral 4088, Col. Chan Yaxché. C.P.97780, Valladolid, Yucatán."
+                      },
+                ]
+          },
+        @{
           @"section":@"Centro de Convenciones",
           @"content":
               @[
                   @{
-                      @"location":@"Mérida",
+                      @"location":@"",
                       @"name":@"Centro de Convenciones",
                       @"date":@"Lic. Carlos Ariel Franco Osorno",
                       @"emails":@[],

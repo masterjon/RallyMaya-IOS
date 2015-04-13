@@ -135,6 +135,8 @@
             top = 50;
             break;
         default:
+            left = 5;
+            right = 5;
             break;
             
     }
