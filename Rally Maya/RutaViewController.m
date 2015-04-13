@@ -53,39 +53,53 @@
                       //A-B
                       @{
                           @"title":@"Mérida",
-                          @"coords":@"21.034063, -89.629751",
+                          @"coords":@"21.032591, -89.629652",
                           @"showMarker":@true
                           },
+                      
+                      
                       @{
                           @"title":@"Merida",
-                          @"coords":@"20.997342, -89.623576"
+                          @"coords":@"21.030547, -89.633892"
                           },
                       @{
                           @"title":@"Merida",
-                          @"coords":@"20.822885, -89.742599"
+                          @"coords":@"21.034661, -89.654309"
+                          },
+                      @{
+                          @"title":@"Umán",
+                          @"coords":@"20.881648, -89.748006",
+                          @"showMarker":@true
                           },
                      
                       @{
                           @"title":@"Hacienda Yaxcopoil",
-                          @"coords":@"20.745267, -89.721391",
-                          @"showMarker":@true
+                          @"coords":@"20.743058, -89.715522",
+                          
                           },
                       @{
                           @"title":@"Muna",
-                          @"coords":@"20.489867, -89.732904"
+                          @"coords":@"20.486824, -89.713388",
+                          @"showMarker":@true
                           },
                       @{
-                          @"title":@"Hecelchakan",
-                          @"coords":@"20.211763, -90.104163"
+                          @"title":@"Bécal",
+                          @"coords":@"20.441434, -90.027737",
+                          @"showMarker":@true
+                          },
+                      @{
+                          @"title":@"",
+                          @"coords":@"20.237072, -90.093613"
                           },
                       @{
                           @"title":@"Pomuch",
                           @"coords":@"20.129829, -90.1695713"
                           },
                       
+                      
                       @{
                           @"title":@"Campeche",
-                          @"coords":@"19.846212, -90.540779",
+                          @"coords":@"19.836682, -90.551432",
                           @"showMarker":@true
                           },
                       
@@ -94,21 +108,17 @@
                      //B-C
                       @{
                           @"title":@"Campeche",
-                          @"coords":@"19.848929, -90.531689"
+                          @"coords":@"19.844005, -90.541094"
                           },
                       @{
                           @"title":@"Campeche2",
-                          @"coords":@"19.854094, -90.523104"
+                          @"coords":@"19.844847, -90.485110"
                           },
                       
                       @{
                           @"title":@"Holpechen",
-                          @"coords":@"19.748210, -89.851839",
+                          @"coords":@"19.747334, -89.844123",
                           @"showMarker":@true
-                          },
-                      @{
-                          @"title":@"Holpechen2",
-                          @"coords":@"19.753445, -89.841121"
                           },
                       
                       @{
@@ -116,11 +126,11 @@
                           @"coords":@"19.775156, -89.596288",
                           @"showMarker":@true
                           },
-                      @{
-                          @"title":@"Grutas de Xtacumbilxunaan",
-                          @"coords":@"20.006424, -89.842898",
-                          @"showMarker":@true
-                          },
+//                      @{
+//                          @"title":@"Grutas de Xtacumbilxunaan",
+//                          @"coords":@"20.006424, -89.842898",
+//                          @"showMarker":@true
+//                          },
                       @{
                           @"title":@"Uxmal",
                           @"coords":@"20.360130, -89.769430",
@@ -134,42 +144,55 @@
                           @"title":@"Santa Elena",
                           @"coords":@"20.325754, -89.641965"
                           },
-                      @{
-                          @"title":@"Ticul",
-                          @"coords":@"20.395289, -89.540020",
-                          @"showMarker":@true
-                          },
-                      @{
-                          @"title":@"Ticul",
-                          @"coords":@"20.397859, -89.535846"
-                          },
-                      
-                      @{
-                          @"title":@"Ticul",
-                          @"coords":@"20.397248, -89.535449"
-                          },
+//                      @{
+//                          @"title":@"Ticul",
+//                          @"coords":@"20.395289, -89.540020",
+//                          @"showMarker":@true
+//                          },
+//                      @{
+//                          @"title":@"Ticul",
+//                          @"coords":@"20.397859, -89.535846"
+//                          },
+//                      
+//                      @{
+//                          @"title":@"Ticul",
+//                          @"coords":@"20.397248, -89.535449"
+//                          },
                       @{
                           @"title":@"Maní",
                           @"coords":@"20.386730, -89.392054",
                           @"showMarker":@true
                           },
                       @{
-                          @"title":@"Mayapan",
+                          @"title":@"Maní",
+                          @"coords":@"20.415267, -89.342106",
+                          
+                          },
+                      
+                      @{
+                          @"title":@"Z. A. Mayapan",
                           @"coords":@"20.632594, -89.458469",
                           @"showMarker":@true
                           },
                       @{
                           @"title":@"Acanceh",
                           @"coords":@"20.813236, -89.453061",
+                          
+                          },
+                      @{
+                          @"title":@"Mérida",
+                          @"coords":@"20.986008, -89.619788",
                           @"showMarker":@true
                           },
+                      
+
                       @{
                           @"title":@"Progreso",
                           @"coords":@"21.285345, -89.661917",
                           },
                       @{
-                          @"title":@"Telchac Puerto",
-                          @"coords":@"21.337578, -89.315342",
+                          @"title":@"Z. A. Xcambo",
+                          @"coords":@"21.314082, -89.353918",
                           @"showMarker":@true
                           },
                       
@@ -182,27 +205,27 @@
                           },
                       @{
                           @"title":@"Dzilam Gonzalez",
-                          @"coords":@"21.280416, -88.931591",
+                          @"coords":@"21.280829, -88.928671",
                            @"showMarker":@true
                           },
-                      @{
-                          @"title":@"Dzidzantun",
-                          @"coords":@"21.241901, -89.046411",
-                           @"showMarker":@true
-                          },
-                      @{
-                          @"title":@"",
-                          @"coords":@"21.141256, -89.111939"
-                          },
-                      @{
-                          @"title":@"",
-                          @"coords":@"21.198097, -88.810170"
-                          },
-                      @{
-                          @"title":@"",
-                          @"coords":@"21.152583, -88.171573"
-                          
-                          },
+//                      @{
+//                          @"title":@"Dzidzantun",
+//                          @"coords":@"21.241901, -89.046411",
+//                           @"showMarker":@true
+//                          },
+//                      @{
+//                          @"title":@"",
+//                          @"coords":@"21.141256, -89.111939"
+//                          },
+//                      @{
+//                          @"title":@"",
+//                          @"coords":@"21.198097, -88.810170"
+//                          },
+//                      @{
+//                          @"title":@"",
+//                          @"coords":@"21.152583, -88.171573"
+//                          
+//                          },
                       @{
                           @"title":@"Tizimin",
                           @"coords":@"21.140176, -88.163162",
@@ -221,16 +244,17 @@
                            @"showMarker":@true
                           },
                       @{
-                          @"title":@"",
-                          @"coords":@"20.690885, -88.219442"
+                          @"title":@"Valladolid",
+                          @"coords":@"20.689625, -88.201762",
+                          @"showMarker":@true
                           },
                       @{
                           @"title":@"",
-                          @"coords":@"20.658443, -87.956542"
+                          @"coords":@"20.691899, -88.203566"
                           },
                       @{
                           @"title":@"",
-                          @"coords":@"20.214318, -87.453574"
+                          @"coords":@"20.703302, -88.202590"
                           },
                       @{
                           @"title":@"Playa del Carmen",
