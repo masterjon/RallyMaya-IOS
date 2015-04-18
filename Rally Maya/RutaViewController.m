@@ -263,7 +263,7 @@
                           },
                       
                       @{
-                          @"title":@"Grans Oasis Cancún",
+                          @"title":@"Grand Oasis Cancún",
                           @"coords":@"21.086005, -86.773757",
                            @"showMarker":@true
                           },
