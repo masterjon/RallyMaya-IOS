@@ -14,11 +14,11 @@
 		<string>https://github.com/masterjon/RallyMaya-IOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Rally Maya.xcworkspace</string>
+	<string>RallyMaya-IOS/Rally Maya.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>549F97C34676E97C42D1B15683628919E36747A8</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/masterjon/RallyMaya-IOS.git</string>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>549F97C34676E97C42D1B15683628919E36747A8</string>
 			<key>IDESourceControlWCCName</key>
-			<string>RallyMaya-IOS</string>
+			<string>XcodeProjects</string>
 		</dict>
 	</array>
 </dict>
