@@ -112,7 +112,11 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
             if(urlResponse.statusCode==200){
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    menuImage.image=[UIImage imageWithData:data];
+                    UICollectionViewCell *updateCell = (id)[collectionView cellForItemAtIndexPath:indexPath];
+                    if (updateCell){
+                         menuImage.image=[UIImage imageWithData:data];
+                    }
+                   
                     
                 });
             }

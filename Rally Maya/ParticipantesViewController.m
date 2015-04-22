@@ -100,19 +100,24 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menuCell" forIndexPath:indexPath];
     
     UIImageView *menuImage = (UIImageView *) [cell viewWithTag:10];
+    menuImage.image = [UIImage imageNamed:@"fondofotos"];
     if([self.menuItems count] >0){
         NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
         NSString *imageItem =[cellDictionary objectForKey:@"thumbnail"];
         NSURL *imageUrl = [NSURL URLWithString:imageItem];
         NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-        menuImage.image = [UIImage imageNamed:@"fondofotos"];
         
-        menuImage.image = [UIImage imageNamed:imageItem];
+        
+        //menuImage.image = [UIImage imageNamed:imageItem];
         NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
             if(urlResponse.statusCode==200){
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    menuImage.image=[UIImage imageWithData:data];
+                    UICollectionViewCell *updateCell = (id)[collectionView cellForItemAtIndexPath:indexPath];
+                    if (updateCell){
+                         menuImage.image=[UIImage imageWithData:data];
+                    }
+                   
                     
                 });
             }

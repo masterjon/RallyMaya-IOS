@@ -219,6 +219,25 @@
                   ]
           },
       @{
+          @"section":@"Hospitales",
+          @"content":
+              @[
+                  @{
+                      @"location":@"Mérida",
+                      @"name":@"Hospital Star Médica",
+                      @"date":@"",
+                      @"emails":@[@"www.starmedica.com"],
+                      @"phones":@[@"999 930 2880"],
+                      @"desayuno":@"",
+                      @"address":@"Calle 26 #199, por 15 y 7, Col. Altabrisa, Mérida, Yuc. C.P. 97133"
+                      },
+                  
+                  
+                  ]
+          },
+
+
+      @{
           @"section":@"Vulcanizadoras",
           @"content":
               @[
@@ -956,12 +975,12 @@
                 ]
           },
         @{
-          @"section":@"Centro de Convenciones",
+          @"section":@"Centro de Convenciones Siglo XXI",
           @"content":
               @[
                   @{
                       @"location":@"",
-                      @"name":@"Centro de Convenciones",
+                      @"name":@"Centro de Convenciones Siglo XXI",
                       @"date":@"Lic. Carlos Ariel Franco Osorno",
                       @"emails":@[],
                       @"phones":@[@"(999) 9-42-19-00 ext 106"],
@@ -1032,22 +1051,7 @@
                       @"phones":@[@"998 109 9880"],
                       @"address":@""
                       },
-                  @{
-                      @"location":@"",
-                      @"name":@"CMDT. JOSE CORAL MALDONADO",
-                      @"date":@"DIRECTOR DE OPERACIONES Y VIALIDADES DE YUCATAN",
-                      @"emails":@[],
-                      @"phones":@[@"999 351 4024"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
-                      @"name":@"CMDT. JUAN CARLOS GUDENO HERRERA",
-                      @"date":@"VIALIDADES MUNICIPALES YUCATAN",
-                      @"emails":@[],
-                      @"phones":@[@"999 177 4063"],
-                      @"address":@""
-                      },
+
                   @{
                       @"location":@"",
                       @"name":@"CP. LORENZO OROZCO DE LA BARQUERA ",
@@ -1305,7 +1309,7 @@
                 cDate.editable = NO;
                 cDate.scrollEnabled = NO;
                 [cDate setText:[myitems[@"date"] uppercaseString]];
-                [cDate setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+                [cDate setFont:[UIFont fontWithName:@"Helvetica" size:12]];
                 [cDate setTextColor:[UIColor grayColor]];
                 //[cDate.layer setBorderColor: [[UIColor grayColor] CGColor]];
                 //[cDate.layer setBorderWidth: 1.0];
@@ -1398,7 +1402,7 @@
         viewOfSection.frame = CGRectMake(0, 0, self.view.frame.size.width-40, i );
         KMSection *section3 = [[KMSection alloc] init];
         section3.view = viewOfSection;
-        section3.title = [section[@"section"] capitalizedString];
+        section3.title = section[@"section"];
         section3.colorForBackground = self.rowColor;
         [listArray  addObject:section3];
         

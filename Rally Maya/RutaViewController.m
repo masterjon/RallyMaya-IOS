@@ -326,7 +326,11 @@
         
         i++;
     }
-    
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(21.227841, -86.735816);
+    MKPointAnnotation *isla = [[MKPointAnnotation   alloc] init ];
+    isla.coordinate=coordinate;
+    isla.title=@"Isla Mujeres";
+    [self.mapView addAnnotation:isla];
     //Create custom polyline to draw overlay
     //MKGeodesicPolyline *publicTransportPolyline = [MKGeodesicPolyline polylineWithCoordinates:points count:[_coordinates count]];
     //Add the polyline as overlay

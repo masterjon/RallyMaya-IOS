@@ -64,35 +64,18 @@
                   ]
           },
       
-      
       @{
-          @"section":@"HACIENDA YAXCOPOIL",
+          @"section":@"MUNA",
           @"content":
-              @[ NSLocalizedString(@"Yaxcopoil que fue considerada una de las fincas rústicas más importantes por su tamaño y magnificencia y actualmente es un museo. Desde el siglo XVI, las haciendas en Yucatán funcionaban como el sistema Feudal europea. Eran eficientes granjas y centros de manufacturación que producían carne y productos agrícolas para la exportación.",nil),
+              @[ NSLocalizedString(@"Lugar de agua suave o tierna, por derivarse de las voces mun (tierno, suave) y á o há agua. En la época prehispánica perteneció al cacicazgo de Tutul xiu y después de la conquista permaneció bajo el régimen de las encomiendas entre las que se puede mencionar la de Don Alonzo Rosado en 1700.",nil),
                  
                  ]
           },
-      
-      
       @{
-          @"section":@"CALKINÍ",
+          @"section":@"BÉCAL",
           @"content":
-              @[ NSLocalizedString(@"En lengua Maya significa “Garganta de Sol”, conocida como la “Atenas del Camino Real” y llamada “Cuna de las Artesanías Campechanas”; cuenta con una gran riqueza Cultural, Natural, y Artesanal y Servicios indispensables para disfrutar en Familia.",nil),
-                 ]
-          },
-      
-      @{
-          @"section":@"HECELCHAKAN",
-          @"content":
-              @[ NSLocalizedString(@"El nombre de Hecelchakán está ligado desde siempre al descanso del viajero. En lengua maya significa “Sabana del Descanso” siendo muy descriptivo de lo que aún es su paisaje. Fundada entre 1500 y 1600, se dice que en tiempos antiguos los viajeros en sus largos recorridos se detenían aquí para proveerse del agua de su gran cenote, cuyos frondosos árboles les daban también sombra y fruta.",nil),
-                 ]
-          },
-      
-      
-      @{
-          @"section":@"POMUCH",
-          @"content":
-              @[ NSLocalizedString(@"Pueblo mágico con olor a pan, donde la cultura refleja el pasado y el presente, en donde las tradiciones y costumbres siguen vivas a pesar del paso del tiempo. Es famoso nacional e internacionalmente por una particular tradición de sus habitantes para el día de muertos, según la cual los familiares del fallecido, desentierran sus huesos, los limpian y los envuelven en servilletas nuevas y bordadas especialmente para la ocasión, volviendo a depositarlos entonces en su tumba y se le realiza la tradicional ofrenda con alimentos y bebidas.",nil),
+              @[ NSLocalizedString(@"El pueblo de Bécal fue fundado en 1450, aproximadamente. Se dice que su nombre proviene de Bé-akal (camino al aguaje o jagüey) o de Bel-cá (camino de pueblo); otra acepción es Bel-há (camino de agua). Encierra una de las tradiciones más fascinantes de esta tierra: la confección de sombreros de una fibra llamada jipi y palma de huano. Los mundialmente famosos panamás.",nil),
+                 
                  ]
           },
       
@@ -126,20 +109,7 @@
               @[ NSLocalizedString(@"Uno de los sitios  arqueológicos  de todo Mesoamericana y declarado Patrimonio de la Humanidad por la Unesco. Las edificaciones más sobresalientes son: el cuadrángulo de las monjas, el Juego de Pelota, el templo de los Monumentos, la casa de las Tortugas, el Palacio del Gobernador, y la casa del Adivino, pirámide de 35 metros de altura, cuenta con el museo de sitio en el cual se exhiben bellas e interesantes piezas de piedra tallada y cerámica.",nil),
                  ]
           },
-      @{
-          @"section":@"MUNA",
-          @"content":
-              @[ NSLocalizedString(@"Lugar de agua suave o tierna, por derivarse de las voces mun (tierno, suave) y á o há agua. En la época prehispánica perteneció al cacicazgo de Tutul xiu y después de la conquista permaneció bajo el régimen de las encomiendas entre las que se puede mencionar la de Don Alonzo Rosado en 1700.",nil),
-                 
-                 ]
-          },
-      @{
-          @"section":@"TICUL",
-          @"content":
-              @[ NSLocalizedString(@"Es también llamado la Perla del Sur, famoso por su manufactura de zapatos para mujeres y también es un centro de producción de cerámica a gran escala, de hecho, se pueden visitar diversos talleres de los alfareros para comprar piezas terminadas. Ahí encontrará una mezcla de cultura, con grandes edificios coloniales que contrastan con casas mayas de techo de paja.",nil),
-                 
-                 ]
-          },
+
       @{
           @"section":@"MANÍ",
           @"content":
@@ -148,7 +118,7 @@
                  ]
           },
       @{
-          @"section":@"MAYAPAN",
+          @"section":@"Z. A. MAYAPAN",
           @"content":
               @[ NSLocalizedString(@"Llegó a ser el centro más importante de la civilización maya durante el siglo XIII de nuestra era. Fue construida de forma muy similar a Chichen Itzá. Cuenta con más de 4 mil estructuras rodeadas por una gran muralla y decenas de cenotes. Se destaca el castillo de Kukulkán, en donde  tiene lugar un interesante fenómeno de luz y sombra durante el solsticio de invierno, similar al de Chichen Itzá.",nil),
                  
@@ -161,15 +131,9 @@
 //                 
 //                 ]
 //          },
+
       @{
-          @"section":@"PUERTO PROGRESO",
-          @"content":
-              @[ NSLocalizedString(@"Progreso de Castro, el puerto más importante del estado es, al mismo tiempo la población, con categoría de ciudad, más joven de Yucatán. La fundación del puerto de Progreso surgió como una necesidad: el traslado de la aduana de Sisal a un sitio más cercano a la capital del Estado. Progreso es actualmente, un punto de enlace turístico y una frontera abierta al intercambio comercial con el golfo de México y el Mar Caribe.",nil),
-                 
-                 ]
-          },
-      @{
-          @"section":@"XCAMBÓ",
+          @"section":@"Z. A. XCAMBÓ",
           @"content":
               @[ NSLocalizedString(@"'Cocodrilo celestial' o 'Lugar donde se realizan trueques' Espléndido escaparate natural que combina apacibles playas y una zona arqueológica.  Es un yacimiento arqueológico que se encuentra ubicado en el municipio de Dzemul Es considerada por los expertos como una de los yacimientos de mayor extensión en la costa norte peninsular, contando con edificios de grandes dimensiones.",nil),
                  
@@ -219,7 +183,7 @@
                  ]
           },
       @{
-          @"section":@"CANCUN",
+          @"section":@"CANCÚN",
           @"content":
               @[ NSLocalizedString(@"Cancún forma parte del territorio de la antigua civilización maya y aún es considerado la entrada al Mundo Maya. Cancún se distingue por contar con infraestructura, modernos centros de entretenimiento y filosofía de servicio que rivalizan con destinos vacacionales en todo el mundo. Este destino ofrece a los viajeros lo mejor de muchos mundos: del Caribe y de México; de los tiempos modernos y los antiguos; de la aventura y la tranquilidad.",nil),
                  
@@ -282,14 +246,11 @@
             cSubsection.lineBreakMode = NSLineBreakByWordWrapping;
             cSubsection.numberOfLines = 0;
             [cSubsection setText:myitems];
-            if(index==0 && subIndex==0 ){
-                [cSubsection setFont:[UIFont boldSystemFontOfSize:15]];
-                
-            }
-            else{
+            
+            
                 [cSubsection setFont:[UIFont systemFontOfSize:15]];
                 
-            }
+             
             
             [cSubsection setTextColor:[UIColor colorWithRed:0.439 green:0.439 blue:0.439 alpha:1]];
             //[cSubsection.layer setBorderWidth: 1.0];

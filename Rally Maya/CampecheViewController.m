@@ -118,6 +118,23 @@
                   ]
           },
       @{
+          @"section":@"Hospitales",
+          @"content":
+              @[
+                  @{
+                      @"location":@"Campeche",
+                      @"name":@"Hospital Manuel Campos y Hospital de Especialidades",
+                      @"date":@"",
+                      @"emails":@[@"www.campeche.salud.gob.mx/index.php/campeche/9-hospital-qdr-manuel-camposq"],
+                      @"phones":@[@"01 981 811 17 09"],
+                      @"desayuno":@"",
+                      @"address":@"Av. Boulevard s/n Col. Centro, Campeche, Campeche, C.P. 24000"
+                      },
+                  
+                  
+                  ]
+          },
+            @{
           @"section":@"Vulcanizadoras",
           @"content":
               @[
@@ -420,22 +437,6 @@
                       },
                   @{
                       @"location":@"",
-                      @"name":@"CMDT. JOSE CORAL MALDONADO",
-                      @"date":@"DIRECTOR DE OPERACIONES Y VIALIDADES DE YUCATAN",
-                      @"emails":@[],
-                      @"phones":@[@"999 351 4024"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
-                      @"name":@"CMDT. JUAN CARLOS GUDENO HERRERA",
-                      @"date":@"VIALIDADES MUNICIPALES YUCATAN",
-                      @"emails":@[],
-                      @"phones":@[@"999 177 4063"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
                       @"name":@"CP. LORENZO OROZCO DE LA BARQUERA ",
                       @"date":@"COORDINADOR DEL PARQUE VEHICULAR",
                       @"emails":@[],
@@ -596,6 +597,7 @@
                       },
                   
                   
+                  
                   ]
           },
       
@@ -692,7 +694,7 @@
                 cDate.editable = NO;
                 cDate.scrollEnabled = NO;
                 [cDate setText:[myitems[@"date"] uppercaseString]];
-                [cDate setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+                [cDate setFont:[UIFont fontWithName:@"Helvetica" size:12]];
                 [cDate setTextColor:[UIColor grayColor]];
                 //[cDate.layer setBorderColor: [[UIColor grayColor] CGColor]];
                 //[cDate.layer setBorderWidth: 1.0];

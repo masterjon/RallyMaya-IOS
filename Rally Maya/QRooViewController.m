@@ -91,14 +91,6 @@
                       },
                   @{
                       @"location":@"",
-                      @"name":@"Incendios Forestales en Estado de Quintana Roo",
-                      @"date":@"",
-                      @"emails":@[],
-                      @"phones":@[@"01 998 206 82 36"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
                       @"name":@"Policía Judicial del Estado",
                       @"date":@"",
                       @"emails":@[],
@@ -139,44 +131,13 @@
                       },
                   @{
                       @"location":@"",
-                      @"name":@"Incendios Forestales en Estado de Quintana Roo",
-                      @"date":@"",
-                      @"emails":@[],
-                      @"phones":@[@"01 998 206 82 36"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
-                      @"name":@"Policía Judicial del Estado",
-                      @"date":@"",
-                      @"emails":@[],
-                      @"phones":@[@"884 11 71",@"881 71 50"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
                       @"name":@"Policía Federal de Caminos",
                       @"date":@"",
                       @"emails":@[],
                       @"phones":@[@"884 11 07",@"884 15 42"],
                       @"address":@""
                       },
-                  @{
-                      @"location":@"",
-                      @"name":@"Protección Civil ",
-                      @"date":@"",
-                      @"emails":@[],
-                      @"phones":@[@"887 34 35"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
-                      @"name":@"Policía Turística",
-                      @"date":@"",
-                      @"emails":@[],
-                      @"phones":@[@"885 22 77"],
-                      @"address":@""
-                      },
+
                   @{
                       @"location":@"",
                       @"name":@"Incendios Forestales en Estado de Quintana Roo",
@@ -369,6 +330,23 @@
                       @"phones":@[@"01 998 267 8644"],
                       @"address":@""
                       },
+                  ]
+          },
+      @{
+          @"section":@"Hospitales",
+          @"content":
+              @[
+                  @{
+                      @"location":@"Cancún",
+                      @"name":@"Hospital Galenia",
+                      @"date":@"",
+                      @"emails":@[@"www.hospitalgalenia.com"],
+                      @"phones":@[@"998 891 5200"],
+                      @"desayuno":@"",
+                      @"address":@"Av. Tulúm, Esq. Nizuc, Mz. 01, Lote 01, Smza. 12, Cancún, Benito Juárez, Quintana Roo, C.P. 77505"
+                      },
+                  
+                  
                   ]
           },
       @{
@@ -655,6 +633,7 @@
                       },
                   ]
           },
+      
       @{
           @"section":@"Hoteles",
           @"content":
@@ -741,22 +720,7 @@
                       @"phones":@[@"998 109 9880"],
                       @"address":@""
                       },
-                  @{
-                      @"location":@"",
-                      @"name":@"CMDT. JOSE CORAL MALDONADO",
-                      @"date":@"DIRECTOR DE OPERACIONES Y VIALIDADES DE YUCATAN",
-                      @"emails":@[],
-                      @"phones":@[@"999 351 4024"],
-                      @"address":@""
-                      },
-                  @{
-                      @"location":@"",
-                      @"name":@"CMDT. JUAN CARLOS GUDENO HERRERA",
-                      @"date":@"VIALIDADES MUNICIPALES YUCATAN",
-                      @"emails":@[],
-                      @"phones":@[@"999 177 4063"],
-                      @"address":@""
-                      },
+
                   @{
                       @"location":@"",
                       @"name":@"CP. LORENZO OROZCO DE LA BARQUERA ",
@@ -1015,7 +979,7 @@
                 cDate.editable = NO;
                 cDate.scrollEnabled = NO;
                 [cDate setText:[myitems[@"date"] uppercaseString]];
-                [cDate setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+                [cDate setFont:[UIFont fontWithName:@"Helvetica" size:12]];
                 [cDate setTextColor:[UIColor grayColor]];
                 //[cDate.layer setBorderColor: [[UIColor grayColor] CGColor]];
                 //[cDate.layer setBorderWidth: 1.0];
