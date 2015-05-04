@@ -20,15 +20,13 @@
     UILabel *viewTitle = [[UILabel alloc] init];
     viewTitle.textColor = [UIColor whiteColor];
     if (self.year == (id)[NSNull null]){
-        viewTitle.text=[NSString stringWithFormat:@"%@",self.name] ;
+            viewTitle.text=[NSString stringWithFormat:@"%@",self.name] ;
     }
     else{
         viewTitle.text=[NSString stringWithFormat:@"%@-%@",self.name,self.year] ;
     }
-    
     self.navigationItem.titleView=viewTitle;
     [viewTitle sizeToFit];
-    
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
                                                       message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
                                                      delegate:self
