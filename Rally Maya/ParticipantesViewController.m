@@ -85,7 +85,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             
             [self.menuItems addObject:dataDictionary];
         }
-        
+        NSLog(@"%lu************",(unsigned long)[self.menuItems count]);
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             
@@ -133,16 +133,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     }
     return cell;
 }
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    ParticipanteViewController *View = [[ParticipanteViewController alloc] init];
-    View = [segue destinationViewController];
-    NSArray *arrayOfIndexPaths = [self.menuCollectionView  indexPathsForSelectedItems];
-    NSIndexPath *path = [arrayOfIndexPaths firstObject];
-    NSDictionary *itemdictionary = [self.menuItems objectAtIndex:path.row];
-    View.imagenUrl = itemdictionary[@"picture"];
-    View.name = itemdictionary[@"name"];
-    View.year = itemdictionary[@"year"];
-}
+
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     int top = 10;
