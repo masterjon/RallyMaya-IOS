@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "32x32-diccionario.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "64x64-diccionario.png",
+      "filename" : "header-logotipo-rally-maya.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "96x96-diccionario.png",
       "scale" : "3x"
     }
   ],

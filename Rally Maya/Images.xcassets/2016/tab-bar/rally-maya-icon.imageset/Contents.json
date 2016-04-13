@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "32x32-rally-maya.png",
+      "filename" : "48x32-rally-maya.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "64x64-rally-maya.png",
+      "filename" : "96x64-rally-maya.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "96x96-rally-maya.png",
+      "filename" : "144x96-rally-maya.png",
       "scale" : "3x"
     }
   ],

@@ -10,5 +10,7 @@
 
 @interface SocialHubViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) IBOutlet UILabel *alertLabel;
 
 @end

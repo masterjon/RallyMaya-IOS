@@ -10,7 +10,7 @@
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 #import "PostalDetalleViewController.h"
-
+#import "Utils.h"
 @interface PostalesViewController ()
 
 @end
@@ -19,14 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"POSTALES";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
+    self.navigationItem.titleView = [Utils getNavLabel:@"POSTALES"];
+
     NSArray *viewControllers = self.navigationController.viewControllers;
     if([viewControllers count] <= 1){
         
@@ -34,6 +28,11 @@
     }
     self.collectionItems = [[NSMutableArray alloc] init];
     NSArray *ecardsMenu  = @[
+                             @{
+                                 @"image":@"postal-rally-maya.jpg",
+                                 @"imageDetail":@"postal-rally-maya-bg",
+                                 @"hashtag":@"#---"
+                                 },
                              @{
                                  @"image":@"postal-merida.jpg",
                                  @"imageDetail":@"postal-merida-bg",

@@ -35,7 +35,7 @@
     
     
     // Change StateSelected
-    UIColor *titleHighlightedColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1]; /*#ffdb7b*/
+    UIColor *titleHighlightedColor = [UIColor colorWithRed:0.906 green:0.714 blue:0.196 alpha:1];/*#e7b632*/
     
     [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : titleHighlightedColor} forState:UIControlStateSelected];
     

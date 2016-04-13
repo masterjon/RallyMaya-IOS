@@ -9,35 +9,55 @@
 #import "SocialHubViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-
+#import "Utils.h"
 @interface SocialHubViewController ()
-
+@property (strong, nonatomic) NSURLSession *session;
+@property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
 @end
 
 @implementation SocialHubViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"REDES SOCIALES";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
+    self.navigationItem.titleView = [Utils getNavLabel:@"REDES SOCIALES"];
+    
     NSArray *viewControllers = self.navigationController.viewControllers;
     if([viewControllers count] <= 1){
         
         [self setupLeftMenuButton];
     }
+    [self.spinner setHidesWhenStopped:TRUE];
+    [self.spinner startAnimating];
     
     NSString *fullURL = @"http://rallymaya.punklabs.ninja/socialhub";
     NSURL *url = [NSURL URLWithString:fullURL];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [_webView loadRequest:requestObj];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
+    self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
+    
+    NSURLSessionDataTask * task = [self.session dataTaskWithRequest:request  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+        
+        if(urlResponse.statusCode==200){
+            NSLog(@"It Came to 200 status");
+            
+            
+        }else{
+            [self.alertLabel setHidden:NO];
+        }
+    }];
+    [task resume];
+
+    
+    [_webView loadRequest:request];
 
 }
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.spinner stopAnimating];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -62,34 +82,32 @@
         NSString *twLink = @"twitter://user?screen_name=rallymayamexico";
         if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:twLink]]) {
             twLink = @"https://twitter.com/rallymayamexico";
-    
         }
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twLink]];
 }
 
 -(IBAction) openInstagram{
-    NSString *twLink = @"twitter://user?screen_name=rallymayamexico";
-    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:twLink]]) {
-        twLink = @"https://twitter.com/rallymayamexico";
-        
+    
+    NSString *instagramURL = @"instagram://user?username=rallymayamexico";
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:instagramURL]]) {
+        instagramURL = @"https://www.instagram.com/rallymayamexico/";
     }
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twLink]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:instagramURL]];
+    
 }
 -(IBAction) openPeriscope{
-    NSString *twLink = @"twitter://user?screen_name=rallymayamexico";
-    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:twLink]]) {
-        twLink = @"https://twitter.com/rallymayamexico";
-        
+    NSString *periscopeLink = @"pscp://user/RallyMAyaMexico";
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:periscopeLink]]) {
+        periscopeLink = @"https://www.periscope.tv/RallyMayaMexico";
     }
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twLink]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:periscopeLink]];
 }
 -(IBAction) openYoutube{
-    NSString *twLink = @"twitter://user?screen_name=rallymayamexico";
-    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:twLink]]) {
-        twLink = @"https://twitter.com/rallymayamexico";
-        
+    NSString *ytLink = @"youtube://user/RallyMayaMexico";
+    if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:ytLink]]) {
+        ytLink = @"https://www.youtube.com/user/RallyMayaMexico";
     }
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twLink]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ytLink]];
 }
 
 @end

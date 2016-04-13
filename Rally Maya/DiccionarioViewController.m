@@ -32,21 +32,29 @@
     self.collectionItems = [[NSMutableArray alloc] init];
 
 
-    animals = @{@"A" : @[@"Agua: Ja’",@"Aire: Lik’"],
-                @"B" : @[@"Bear", @"Black Swan", @"Buffalo"],
-                @"C" : @[@"Camel", @"Cockatoo"],
-                @"D" : @[@"Dog", @"Donkey"],
-                @"E" : @[@"Emu"],
-                @"G" : @[@"Giraffe", @"Greater Rhea"],
-                @"H" : @[@"Hippopotamus", @"Horse"],
-                @"K" : @[@"Koala"],
-                @"L" : @[@"Lion", @"Llama"],
-                @"M" : @[@"Manatus", @"Meerkat"],
-                @"P" : @[@"Panda", @"Peacock", @"Pig", @"Platypus", @"Polar Bear"],
-                @"R" : @[@"Rhinoceros"],
-                @"S" : @[@"Seagull"],
-                @"T" : @[@"Tasmania Devil"],
-                @"W" : @[@"Whale", @"Whale Shark", @"Wombat"]};
+    
+   animals = @{@"A" : @[@"Agua: Ja’",@"Aire: Lik’", @"Alcalde: Nojchil Kaaj", @"Apetito: Taakil Jaanal", @"Apasionar: Uts Tu Yich", @"Aplauso: Papax K’ab", @"Asiento: K’aanché", @"Ayudar: Aantaj", @"Alegría: Ki’imk Óol", @"Abrazo: Lóoch"],
+      @"B" : @[@"Baile: Óok’ot",@"Bañar O Baño: Ichkíil",@"Barriga: Nak",@"Belleza: Ki’ichpanil Jats’utsil",@"Besar: Ts’u’uts’",@"Bigote: Me’ex",@"Bikini: Kul Eex",@"Boca: Chi’",@"Bostezar: Jaayab",@"Bromear: Báaxal"],
+      @"C" : @[@"Caballo: Tsíimin",@"Cabello: Tso’otsel Pool",@"Cabeza: Pool",@"Cachete: P’u’uk",@"Café: Káapej",@"Calambre: Lot’",@"Caliente: Chokoj",@"Calor: Ooxol",@"Calvo: K’olis T’ooroch",@"Calzón: Eex",@"Calle: Beel",@"Canción: K’aay",@"Cara: Ich",@"Cena: Ook’in Janal",@"Cenote: Ts’ono’ot",@"Ciudad: Noj Kaaj Nojoch Kaaj",@"Coche Antiguo: Úuchben Kis Bu’ts",@"Comprar: Maan",@"Chiflar: Xuuxub",@"Chile: Ik",@"Chiste: Báaxal T’aan"],
+      @"D" : @[@"Dama: Xunáan Ko’olel",@"Desayuno: Uk’ul",@"Despacio: Chaanbéel",@"Despeinar: Xa’axak’ Pool",@"Día: K’iin",@"Diabetes: Ch’ujuk K’i’ik",@"Dormir: Wenel Wenej",@"Dulce: Ch’ujuk"],
+      @"E" : @[@"Elote: Bot: Nal",@"Entrevistar: K’áat Chi’",@"Escribir: Ts’íib",@"Este: Lak’in",@"Estómago: Tsuuk",@"Estrella: Eek’"],
+      @"F" : @[@"Familia: Ch’i’ibalil Láak’tsilil",@"Fiesta: Cha’an",@"Final: Ts’ook Xuul"],
+      @"G" : @[@"Ganado: Wakax",@"Gente: Máako’ob Wíiniko’ob",@"Grupo: Múuch’",@"Ganar: Náajal",@"Gastar: Xuup"],
+      @"H" : @[@"Habitación: Naj Otoch Taanaj",@"Hablar: T’aan",@"Hamaca: K’áan",@"Hermano: Láak’",@"Hombre: Xiib",@"Hotel: Naj Tu’ux Ku K’uchul U’ulabo’ob",@"Huésped: U’ulab"],
+      @"I" : @[@"Inaugurar: Chúunpajal",@"Inteligencia: Na’at"],
+      @"J" : @[@"Jarana: Síit’ Óok’ot",@"Jícara: Luuch",@"Joven: Xi’ipal"],
+      @"K" : @[@"Kilómetro: U P’iisil Mil Meetroso’ob"],
+      @"L" : @[@"Lengua: Aak’",@"Líder: Jalachil",@"Luna: Uj",@"Luz: Sáas Sáasil",@"Llave: Ch’otob",@"Lluvia: Cháak",@"Llevar: Biis",@"Llenar: Chuup"],
+      @"M" : @[@"Maíz: Ixi’im",@"Mamá: Na’",@"Mar: K’áak’náab",@"Médico: Ts’ak Máak Ts’ak Yaj",@"Meta: Xuul",@"Mosquito: K’oxol Box K’oxol",@"Mujer: Ch’up Ko’olel",@"Música: Paax"],
+      @"N" : @[@"Nadar: Báab",@"Nombre: K’aaba’",@"Norte: Xaman",@"Número: Xook"],
+      @"O" : @[@"Obedecer: U’uy T’aan",@"Oeste: Chik’in",@"Oir: U’uy",@"Ojo: Ich",@"Ombligo: Tuuch",@"Orden: Tsool",@"Oriente: Lak’in"],
+      @"P" : @[@"Padre: Yuum Taat Taatáa",@"Pasear: Ximbal Máan",@"Perro: Peek’",@"Playa: Jáal Ja’",@"Población: Kaaj Kajtalil",@"Poniente: Chik’in",@"Precio: Tojol"],
+      @"Q" : @[@"¿Qué?: Ba’ax"],
+      @"R" : @[@"Ruta: Bej Beel Bejil"],
+      @"S" : @[@"Sed: Uk’aj",@"Sentar: Kutal",@"Señor: Yuum Taat Nojoch Máak",@"Señorita: Ch’úupal",@"Sí: Beey Beyo’",@"Sol: K’iin",@"Sombrero: P’óok",@"Sonrisa: Sak Che’ej",@"Sur: Nojol"],
+      @"T" : @[@"Tabaco: K’úuts",@"Tarde: Chúunk’in",@"Tortilla: Waaj",@"Trabajar: Meyaj",@"Tramo: Xóot’"],
+      @"V" : @[@"Veloz: Séeb Péekla’an Séeba’an",@"Visitar: Xíimbaj"]};
+
     
     animalSectionTitles = [[animals allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     

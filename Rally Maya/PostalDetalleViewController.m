@@ -7,7 +7,7 @@
 //
 
 #import "PostalDetalleViewController.h"
-
+#import "Utils.h"
 @interface PostalDetalleViewController ()
 
 @end
@@ -16,14 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"POSTALES";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
+    self.navigationItem.titleView = [Utils getNavLabel:@"POSTALES"];
     
     NSLog(@"%@",self.selectedImg);
     UIImage *img = [UIImage imageNamed:self.selectedImg];
@@ -123,9 +116,9 @@
 }
 
 - (IBAction)shareBtn:(UIButton *)sender {
-    NSString *hashtag = [NSString stringWithFormat:@" %@",self.hashtag];
-    NSString *shareText = @"En *** disfrutando el #RALLYMAYAMEXICO";
-    NSString *finalText = [shareText stringByAppendingString:hashtag];
+    //NSString *hashtag = [NSString stringWithFormat:@" %@",self.hashtag];
+    //NSString *shareText = @"En *** disfrutando el #RALLYMAYAMEXICO";
+    NSString *finalText = @"#RALLYMAYAMEXICO";
     UIImage *mergedImage = [self mergeImages];
     NSArray *items2Share= @[finalText,mergedImage];
     UIActivityViewController *activityViewC = [[UIActivityViewController alloc] initWithActivityItems:items2Share applicationActivities:nil];

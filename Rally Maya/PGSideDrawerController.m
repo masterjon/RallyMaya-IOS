@@ -42,6 +42,14 @@
     }
     UIImage *pattern = [UIImage imageNamed:@"fondo_row.png"];
     [cell setBackgroundColor:[UIColor colorWithPatternImage:pattern]];
+    UIView *backgroundSelectedCell = [[UIView alloc] init];
+    [backgroundSelectedCell setBackgroundColor:[UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:0.5]];
+     
+
+    
+    [cell setSelectedBackgroundView:backgroundSelectedCell];
+
+
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.currentIndex == indexPath.row) {

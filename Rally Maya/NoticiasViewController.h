@@ -22,5 +22,6 @@
 @property (strong,nonatomic) NSString *fFullText;
 @property (strong,nonatomic) NSString *fDate;
 @property (strong,nonatomic) NSString *fImg;
+@property (strong,nonatomic) NSString *fImgDes;
 
 @end

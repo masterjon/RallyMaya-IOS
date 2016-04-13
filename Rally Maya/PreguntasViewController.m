@@ -9,7 +9,7 @@
 #import "PreguntasViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-
+#import "Utils.h"
 @interface PreguntasViewController () <KMAccordionTableViewControllerDataSource,KMAccordionTableViewControllerDelegate>
 
 @end
@@ -31,14 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"PREGUNTAS FRECUENTES";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
+    self.navigationItem.titleView = [Utils getNavLabel:@"PREGUNTAS FRECUENTES"];
+
     NSArray *viewControllers = self.navigationController.viewControllers;
     if([viewControllers count] <= 1){
         

@@ -7,7 +7,7 @@
 //
 
 #import "NoticiaViewController.h"
-
+#import "Utils.h"
 @interface NoticiaViewController ()
     @property (strong, nonatomic) NSURLSession *session;
     @property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
@@ -18,44 +18,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"NOTICIAS";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
+    self.navigationItem.titleView = [Utils getNavLabel:@"NOTICIAS"];
     
     [self.tituloLabel setText: [self.titulo uppercaseString]];
     [self.fechaLabel setText:self.fecha];
     [self.bodyText setHidden:YES];
     [self.bodyText setText:self.noticiaBody];
     NSString *imageUrlString = self.imageUrl;
-    NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
-    NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-    self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
-    self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
-    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
-        if(urlResponse.statusCode==200){
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //NSLog(@"image width: %f",image.size.width);
-                //NSLog(@"image height: %f",image.size.height);
-                
-                [self.mainImage setImage:[UIImage imageWithData:data]];
-                
-            });
-        }
-        else{
-            //[message show];
-        }
+    if (imageUrlString != (id)[NSNull null]){
+
+        NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
+        NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
+        self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
+        self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
+        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+            if(urlResponse.statusCode==200){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //NSLog(@"image width: %f",image.size.width);
+                    //NSLog(@"image height: %f",image.size.height);
+                    
+                    [self.mainImage setImage:[UIImage imageWithData:data]];
+                    
+                });
+            }
+            else{
+                //[message show];
+            }
+            
+            
+        }];
         
         
-    }];
-    
-    
-    [task resume];
+        [task resume];
+    }
     // Do any additional setup after loading the view.
 }
 

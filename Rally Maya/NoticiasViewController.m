@@ -10,7 +10,7 @@
 #import "NoticiaViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-
+#import "Utils.h"
 @interface NoticiasViewController ()
     @property (strong, nonatomic) NSURLSession *session;
     @property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
@@ -20,15 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"NOTICIAS";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
-    
+    self.navigationItem.titleView = [Utils getNavLabel:@"NOTICIAS"];
+
     NSArray *viewControllers = self.navigationController.viewControllers;
     if([viewControllers count] <= 1){
         
@@ -87,6 +80,7 @@
         if(response[@"count"]>0){
             self.fTitle = response[@"results"][0][@"title"];
             self.fText = response[@"results"][0][@"short_description"];
+            self.fImgDes = response[@"results"][0][@"picture_featured"];
             self.fImg = response[@"results"][0][@"picture"];
             self.fFullText = response[@"results"][0][@"description"];
             NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
@@ -98,24 +92,27 @@
             NSLog(@"%@",[dateFormatter stringFromDate:yourDate]);
         }
 
-        NSURL *imageUrl = [NSURL URLWithString:self.fImg];
-        NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-        self.featuredImage.image = [UIImage imageNamed:@"placeholder"];
-        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
-            if(urlResponse.statusCode==200){
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    self.featuredImage.image=[UIImage imageWithData:data];
-                    [self.featuredText setText:self.fText];
-                });
-            }
-            else{
-                //NSLog(@"Error fetching remote data");
-            }
-            
-            
-        }];
-        [task resume];
+        if (self.fImgDes != (id)[NSNull null]){
+
+            NSURL *imageUrl = [NSURL URLWithString:self.fImgDes];
+            NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
+            self.featuredImage.image = [UIImage imageNamed:@"placeholder"];
+            NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+                if(urlResponse.statusCode==200){
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        self.featuredImage.image=[UIImage imageWithData:data];
+                        [self.featuredText setText:self.fText];
+                    });
+                }
+                else{
+                    //NSLog(@"Error fetching remote data");
+                }
+                
+                
+            }];
+            [task resume];
+        }
 
     }
 
