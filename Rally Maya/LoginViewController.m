@@ -10,6 +10,7 @@
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 #import "SocialHubViewController.h"
+#import "MBProgressHUD.h"
 
 @interface LoginViewController ()
 
@@ -41,6 +42,9 @@
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     [super viewDidLoad];
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 -(void)dismissKeyboard {
@@ -55,10 +59,27 @@
 
 
 - (IBAction)btnLogin:(id)sender {
-    NSLog(@"%@",@"Login");
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Por favor, intenta de nuevo"
+                                                      message:NSLocalizedString(@"Este nombre de usuario y contraseña no coinciden",nil)
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    UIAlertView *message2 = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                       message:NSLocalizedString(@"Debes de ingresar usuario y contraseña",nil)
+                                                      delegate:self
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil];
+    
+    UIAlertView *message3 = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                       message:NSLocalizedString(@"Hubo un error en la conexión intenta de nuevo",nil)
+                                                      delegate:self
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil];
+    
     if (self.txtUsername.text.length>0 && self.txtPassword.text.length>0 ){
         
-        
+      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 //     NSString *authStr = [NSString stringWithFormat:@"%@:%@",username,password];
         
    
@@ -113,13 +134,21 @@
            
                        
 //
-        } else {
-            //if (error) NSLog(@"Error: %@", error);
-           // [self alertStatus:@"Connection Failed" :@"Sign in Failed!" :0];
+        } else if([response statusCode]>300){
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [message show];
+            
+        }
+        else{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [message3 show];
         }
         
         
         
+    }
+    else{
+        [message2 show];
     }
 }
 

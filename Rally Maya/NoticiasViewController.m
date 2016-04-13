@@ -89,7 +89,13 @@
             self.fText = response[@"results"][0][@"short_description"];
             self.fImg = response[@"results"][0][@"picture"];
             self.fFullText = response[@"results"][0][@"description"];
-            self.fDate = response[@"results"][0][@"date"];   
+            NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+            
+            self.fDate = response[@"results"][0][@"date"];
+            NSDate *yourDate = [dateFormatter dateFromString:@"2012-11-22 10:19:04"];
+            dateFormatter.dateFormat = @"dd-MMM-yyyy";
+            NSLog(@"%@",[dateFormatter stringFromDate:yourDate]);
         }
 
         NSURL *imageUrl = [NSURL URLWithString:self.fImg];
@@ -210,7 +216,7 @@
         NSDictionary *itemdictionary = [self.collectionItems objectAtIndex:path.row];
         View.imageUrl = itemdictionary[@"picture"];
         View.titulo = itemdictionary[@"title"];
-        View.fecha = @"25/01/16";
+        View.fecha = self.fDate;
         View.noticiaBody = itemdictionary[@"description"];
         
     }
@@ -238,6 +244,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeBezelPanningCenterView];
+    [self.mm_drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
 }
 
 /*

@@ -15,7 +15,7 @@
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
     label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
+    label.textColor = [UIColor colorWithRed:0.976 green:0.961 blue:0.718 alpha:1];
     label.text = title;
     [label sizeToFit];
     return label;

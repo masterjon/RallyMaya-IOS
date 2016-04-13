@@ -11,4 +11,6 @@
 @interface PatrocinadoresViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *menuCollectionView;
 @property (strong,nonatomic) NSMutableArray *menuItems;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) IBOutlet UILabel *alertLabel;
 @end

@@ -81,7 +81,7 @@
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ParticipantesViewNavigation"];
             break;
         case 6:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatrocinadoresViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ResultadosViewNavigation"];
             break;
         case 7:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatrocinadoresViewNavigation"];

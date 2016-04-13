@@ -144,7 +144,7 @@
     [self setHeaderHeight:60];
     [self setHeaderArrowImageClosed:[UIImage imageNamed:@"flecha-arriba"]];
     [self setHeaderArrowImageOpened:[UIImage imageNamed:@"flecha-abajo"]];
-    [self setHeaderFont:[UIFont fontWithName:@"TrebuchetMS-Bold" size:10]];
+    [self setHeaderFont:[UIFont fontWithName:@"TrebuchetMS-Bold" size:12]];
     [self setHeaderTitleColor:[UIColor blackColor]];
     [self setHeaderSeparatorColor:[UIColor colorWithRed:0.914 green:0.906 blue:0.906 alpha:1] /*#e9e7e7*/];
     [self setHeaderColor:[UIColor colorWithRed:12.0/255.0 green:12.0/255.0 blue:10.0/255.0 alpha:1]]; //general background color for all of the sections
@@ -167,7 +167,7 @@
                 cRespuesta.lineBreakMode = NSLineBreakByWordWrapping;
                 cRespuesta.numberOfLines = 0;
                 
-                [cRespuesta setFont:[UIFont fontWithName:@"TrebuchetMS" size:10]];
+                [cRespuesta setFont:[UIFont fontWithName:@"TrebuchetMS" size:12]];
                 [cRespuesta setTextColor:[UIColor colorWithRed:0.545 green:0.545 blue:0.545 alpha:1] /*#8b8b8b*/];
                 //[cRespuesta.layer setBorderColor: [[UIColor redColor] CGColor]];
                 //[cRespuesta.layer setBorderWidth: 1.0];
@@ -175,7 +175,7 @@
                 [viewOfSection addSubview:cRespuesta];
                 NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
                 CGSize labelSize = (CGSize){self.view.frame.size.width, 999};
-                CGRect r = [cRespuesta.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:10]} context:context];
+                CGRect r = [cRespuesta.text boundingRectWithSize:labelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:12]} context:context];
                 cRespuesta.frame = CGRectMake(ident, i, self.view.frame.size.width-30, r.size.height+textHeight);
                 i=i+r.size.height+textHeight;
                 //ident = 15;

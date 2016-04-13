@@ -9,7 +9,8 @@
 #import "PatrocinadoresViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-#import "MBProgressHUD.h"
+#import "Utils.h"
+//#import "MBProgressHUD.h"
 
 @interface PatrocinadoresViewController ()
 @property (strong, nonatomic) NSURLSession *session;
@@ -22,14 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //NavigatrionDrawer
-    UILabel *label = [[UILabel alloc] init];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
-    label.text = @"PATROCINADORES";
-    self.navigationItem.titleView = label;
-    [label sizeToFit];
+    self.navigationItem.titleView = [Utils getNavLabel:@"PATROCINADORES"];
+
     
     NSArray *viewControllers = self.navigationController.viewControllers;
     UIViewController *vc = [viewControllers objectAtIndex:0];
@@ -41,12 +36,16 @@
     
     self.menuItems = [[NSMutableArray alloc] init];
     
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+//                                                     delegate:self
+//                                            cancelButtonTitle:@"OK"
+//                                            otherButtonTitles:nil];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    [self.spinner setHidesWhenStopped:TRUE];
+    [self.spinner startAnimating];
+    
     NSURL *url = [NSURL URLWithString:@"http://rallymaya.punklabs.ninja/api/elrally/patrocinadores"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
@@ -60,7 +59,9 @@
             [self handleResults:data];
         }
         else{
-            [message show];
+            [self.spinner stopAnimating];
+            [self.alertLabel setHidden:FALSE];
+//            [message show];
         }
     }];
     [task resume];
@@ -78,10 +79,10 @@
 - (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
-- (void)alertView:(UIAlertView *)alertView
-clickedButtonAtIndex:(NSInteger)buttonIndex{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
+//- (void)alertView:(UIAlertView *)alertView
+//clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//}
 - (void) handleResults:(NSData *)data{
     
     //la respuesta viene serializada en json por lo tanto lo tenemos que deserializar
@@ -94,7 +95,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.spinner stopAnimating];
+//            [MBProgressHUD hideHUDForView:self.view animated:YES];
             
             [self.menuCollectionView reloadData];
         });

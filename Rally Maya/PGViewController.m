@@ -9,6 +9,7 @@
 #import "PGViewController.h"
 #import "MMDrawerController.h"
 #import "MMDrawerVisualState.h"
+#import <float.h>
 
 @interface PGViewController ()
 
@@ -27,12 +28,13 @@
 
         // Instantitate and set the center view controller.
         UIViewController *centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"InicioViewNavigation"];
+        destinationViewController.maximumLeftDrawerWidth = 154;
         [destinationViewController setCenterViewController:centerViewController];
 
         // Instantiate and set the left drawer controller.
         UIViewController *leftDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SIDE_DRAWER_CONTROLLER"];
         [destinationViewController setLeftDrawerViewController:leftDrawerViewController];
-        [destinationViewController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+        [destinationViewController setDrawerVisualStateBlock:[MMDrawerVisualState slideAndScaleVisualStateBlock]];
         
 
     }

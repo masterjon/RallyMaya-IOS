@@ -32,12 +32,9 @@
     [self.spinner setHidesWhenStopped:TRUE];
     [self.spinner startAnimating];
     
-    NSString *imageUrlString = self.imagenUrl;
-    NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
-    NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
+
     
-    
-    //[self.nameLbl setText:[self.name uppercaseString]];
+    [self.nameLbl setText:[self.name uppercaseString]];
     [self.brandLbl setText:self.brand];
     [self.modelLbl setText:self.model];
     [self.countryLbl setText:self.country];
@@ -48,33 +45,37 @@
     if (![self.position isKindOfClass:[NSNull class]]){
         [self.positionLbl setText:self.position.stringValue];
     }
-
     
+    NSString *imageUrlString = self.imagenUrl;
+    if (imageUrlString != (id)[NSNull null]){
+        NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
+        NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
 
-    self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
-    self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
-    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
-        if(urlResponse.statusCode==200){
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //NSLog(@"image width: %f",image.size.width);
-                //NSLog(@"image height: %f",image.size.height);
-                
-                [_imageView setImage:[UIImage imageWithData:data]];
+        self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
+        self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
+        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+            if(urlResponse.statusCode==200){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //NSLog(@"image width: %f",image.size.width);
+                    //NSLog(@"image height: %f",image.size.height);
+                    
+                    [_imageView setImage:[UIImage imageWithData:data]];
+                    [self.spinner stopAnimating];
+                    //[MBProgressHUD hideHUDForView:self.view animated:YES];
+                    
+                });
+            }
+            else{
                 [self.spinner stopAnimating];
-                //[MBProgressHUD hideHUDForView:self.view animated:YES];
-                
-            });
-        }
-        else{
-            [self.spinner stopAnimating];
-            [self.alertLabel setHidden:FALSE];
-            //[message show];
-        }
-        
-        
-    }];
-    [task resume];
+                [self.alertLabel setHidden:FALSE];
+                //[message show];
+            }
+            
+            
+        }];
+        [task resume];
+    }
     //_imageView.image = [UIImage imageNamed:self.imagenUrl];
     
     // Do any additional setup after loading the view.
