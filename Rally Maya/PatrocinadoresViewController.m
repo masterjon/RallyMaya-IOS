@@ -22,11 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //NavigatrionDrawer
-    self.navigationItem.title = @"PATROCINADORES";
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:17];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1];/*#ffdb7b*/
+    label.text = @"PATROCINADORES";
+    self.navigationItem.titleView = label;
+    [label sizeToFit];
+    
     NSArray *viewControllers = self.navigationController.viewControllers;
     UIViewController *vc = [viewControllers objectAtIndex:0];
-    NSLog(@"%@",vc.title);
-    //If there are not other views it show the menu button, else the defalut back button is shown
     if([viewControllers count] <= 1){
         
         [self setupLeftMenuButton];
@@ -41,7 +47,7 @@
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSURL *url = [NSURL URLWithString:@"http://punklabs.ninja/rallymaya/api/v1/sponsors/?format=json"];
+    NSURL *url = [NSURL URLWithString:@"http://rallymaya.punklabs.ninja/api/elrally/patrocinadores"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
     self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
@@ -82,7 +88,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSError *jsonError;
     NSDictionary *response= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
     if (response){
-        for (NSDictionary *dataDictionary in response[@"objects"]){
+        for (NSDictionary *dataDictionary in response[@"results"]){
             
             [self.menuItems addObject:dataDictionary];
         }

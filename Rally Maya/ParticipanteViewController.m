@@ -7,7 +7,8 @@
 //
 
 #import "ParticipanteViewController.h"
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
+#import "Utils.h"
 @interface ParticipanteViewController ()
 @property (strong, nonatomic) NSURLSession *session;
 @property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
@@ -17,28 +18,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *viewTitle = [[UILabel alloc] init];
-    viewTitle.textColor = [UIColor whiteColor];
-    if (self.year == (id)[NSNull null]){
-            viewTitle.text=[NSString stringWithFormat:@"%@",self.name] ;
-    }
-    else{
-        viewTitle.text=[NSString stringWithFormat:@"%@-%@",self.name,self.year] ;
-    }
-    self.navigationItem.titleView=viewTitle;
-    [viewTitle sizeToFit];
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    self.navigationItem.titleView = [Utils getNavLabel:@"PARTICIPANTES"];
+ 
+    
+//    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+//                                                     delegate:self
+//                                            cancelButtonTitle:@"OK"
+//                                            otherButtonTitles:nil];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//
+    [self.spinner setHidesWhenStopped:TRUE];
+    [self.spinner startAnimating];
     
     NSString *imageUrlString = self.imagenUrl;
     NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
     NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-    NSLog(@"%@",self.name);
-    NSLog(@"%@",self.year);
+    
+    
+    //[self.nameLbl setText:[self.name uppercaseString]];
+    [self.brandLbl setText:self.brand];
+    [self.modelLbl setText:self.model];
+    [self.countryLbl setText:self.country];
+    if (![self.year isKindOfClass:[NSNull class]]){
+        [self.yearLbl setText:self.year.stringValue];
+    }
+    
+    if (![self.position isKindOfClass:[NSNull class]]){
+        [self.positionLbl setText:self.position.stringValue];
+    }
+
+    
+
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
     self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -49,12 +61,14 @@
                 //NSLog(@"image height: %f",image.size.height);
                 
                 [_imageView setImage:[UIImage imageWithData:data]];
-                
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [self.spinner stopAnimating];
+                //[MBProgressHUD hideHUDForView:self.view animated:YES];
                 
             });
         }
         else{
+            [self.spinner stopAnimating];
+            [self.alertLabel setHidden:FALSE];
             //[message show];
         }
         
@@ -65,10 +79,10 @@
     
     // Do any additional setup after loading the view.
 }
-- (void)alertView:(UIAlertView *)alertView
-clickedButtonAtIndex:(NSInteger)buttonIndex{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
+//- (void)alertView:(UIAlertView *)alertView
+//clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

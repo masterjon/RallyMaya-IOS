@@ -2,12 +2,12 @@
 //  TipsViewController.h
 //  Rally Maya
 //
-//  Created by Jonathan Horta on 2/24/15.
-//  Copyright (c) 2015 Jonathan Horta. All rights reserved.
+//  Created by Jonathan Horta on 4/6/16.
+//  Copyright © 2016 Jonathan Horta. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface TipsViewController : UITabBarController
+@interface TipsViewController : UIViewController
 
 @end

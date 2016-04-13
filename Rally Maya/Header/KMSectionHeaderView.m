@@ -40,7 +40,11 @@
     self.headerSeparatorView.backgroundColor = headerSectionAppearence.headerSeparatorColor;
     self.backgroundHeaderView.backgroundColor = headerSectionAppearence.headerColor;
     self.titleLabel.font = headerSectionAppearence.headerFont;
+    self.titleLabel.numberOfLines = 0;
+    self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.textColor = headerSectionAppearence.headerTitleColor;
+    [self.titleLabel sizeToFit];
+    
     [self.disclosureButton setImage:headerSectionAppearence.headerArrowImageOpened forState:UIControlStateNormal];
     [self.disclosureButton setImage:headerSectionAppearence.headerArrowImageClosed forState:UIControlStateSelected];
 }

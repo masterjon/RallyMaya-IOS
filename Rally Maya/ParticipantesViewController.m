@@ -10,7 +10,8 @@
 #import "ParticipanteViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-#import "MBProgressHUD.h"
+//#import "MBProgressHUD.h"
+#import "Utils.h"
 
 @interface ParticipantesViewController ()
 @property (strong, nonatomic) NSURLSession *session;
@@ -23,9 +24,11 @@
 //}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.titleView = [Utils getNavLabel:@"PARTICIPANTES"];
+
     
-    //NavigatrionDrawer
-    self.navigationItem.title = @"PARTICIPANTES";
+    
+    
     NSArray *viewControllers = self.navigationController.viewControllers;
     UIViewController *vc = [viewControllers objectAtIndex:0];
     NSLog(@"%@",vc.title);
@@ -34,15 +37,17 @@
         
         [self setupLeftMenuButton];
     }
+    [self.spinner setHidesWhenStopped:TRUE];
+    [self.spinner startAnimating];
     
     self.menuItems = [[NSMutableArray alloc] init];
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSURL *url = [NSURL URLWithString:@"http://punklabs.ninja/rallymaya/api/v1/cars/"];
+//    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                      message:NSLocalizedString(@"Necesitas activar tu conexión a internet.",nil)
+//                                                     delegate:self
+//                                            cancelButtonTitle:@"OK"
+//                                            otherButtonTitles:nil];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSURL *url = [NSURL URLWithString:@"http://rallymaya.punklabs.ninja/api/elrally/participantes/?format=json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
     self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
@@ -55,7 +60,9 @@
             [self handleResults:data];
         }
         else{
-            [message show];
+            //[message show];
+            [self.spinner stopAnimating];
+            [self.alertLabel setHidden:FALSE];
         }
     }];
     [task resume];
@@ -71,24 +78,23 @@
 - (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
-- (void)alertView:(UIAlertView *)alertView
-clickedButtonAtIndex:(NSInteger)buttonIndex{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
+//- (void)alertView:(UIAlertView *)alertView
+//clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//}
 - (void) handleResults:(NSData *)data{
     
     //la respuesta viene serializada en json por lo tanto lo tenemos que deserializar
     NSError *jsonError;
     NSDictionary *response= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
     if (response){
-        for (NSDictionary *dataDictionary in response[@"objects"]){
+        for (NSDictionary *dataDictionary in response[@"results"]){
             
             [self.menuItems addObject:dataDictionary];
         }
-        NSLog(@"%lu************",(unsigned long)[self.menuItems count]);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            
+            //[MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.spinner stopAnimating];
             [self.menuCollectionView reloadData];
         });
     }
@@ -99,39 +105,60 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menuCell" forIndexPath:indexPath];
     
+    UILabel *titulo = (UILabel *) [cell  viewWithTag:5];
     UIImageView *menuImage = (UIImageView *) [cell viewWithTag:10];
     menuImage.image = [UIImage imageNamed:@"fondofotos"];
     if([self.menuItems count] >0){
         NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
+        [titulo setText:[cellDictionary[@"name"] uppercaseString]];
         NSString *imageItem =[cellDictionary objectForKey:@"thumbnail"];
-        NSURL *imageUrl = [NSURL URLWithString:imageItem];
-        NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
-        
-        
-        //menuImage.image = [UIImage imageNamed:imageItem];
-        NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
-            if(urlResponse.statusCode==200){
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    UICollectionViewCell *updateCell = (id)[collectionView cellForItemAtIndexPath:indexPath];
-                    if (updateCell){
-                         menuImage.image=[UIImage imageWithData:data];
-                    }
-                   
-                    
-                });
-            }
-            else{
-                //NSLog(@"Error fetching remote data");
-            }
+        if (imageItem != (id)[NSNull null]){
+            NSURL *imageUrl = [NSURL URLWithString:imageItem];
+            NSURLRequest *imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
             
             
-        }];
-        [task resume];
+            //menuImage.image = [UIImage imageNamed:imageItem];
+            NSURLSessionDataTask *task = [self.session dataTaskWithRequest:imageUrlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+                if(urlResponse.statusCode==200){
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UICollectionViewCell *updateCell = (id)[collectionView cellForItemAtIndexPath:indexPath];
+                        if (updateCell){
+                            menuImage.image=[UIImage imageWithData:data];
+                        }
+                        
+                        
+                    });
+                }
+                else{
+                    //NSLog(@"Error fetching remote data");
+                }
+                
+                
+            }];
+            [task resume];  
+           
+        }
+        
+       
         
         
     }
     return cell;
+}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ParticipanteViewController *View = [[ParticipanteViewController alloc] init];
+    View = [segue destinationViewController];
+    NSArray *arrayOfIndexPaths = [self.menuCollectionView  indexPathsForSelectedItems];
+    NSIndexPath *path = [arrayOfIndexPaths firstObject];
+    NSDictionary *itemdictionary = [self.menuItems objectAtIndex:path.row];
+    View.imagenUrl = itemdictionary[@"picture"];
+    View.name = itemdictionary[@"name"];
+    View.year = itemdictionary[@"year"];
+    View.brand = itemdictionary[@"brand"];
+    View.model = itemdictionary[@"model"];
+    View.country = itemdictionary[@"userprofile"][@"country"];
+    View.position = itemdictionary[@"position"];
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{

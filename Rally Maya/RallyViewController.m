@@ -2,15 +2,15 @@
 //  RallyViewController.m
 //  Rally Maya
 //
-//  Created by Jonathan Horta on 2/23/15.
+//  Created by Jonathan Horta on 2/24/15.
 //  Copyright (c) 2015 Jonathan Horta. All rights reserved.
 //
 
 #import "RallyViewController.h"
-#import "WebViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
-#define MAX_HEIGHT 2000
+#import "Utils.h"
+
 @interface RallyViewController ()
 
 @end
@@ -19,21 +19,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Inside another ViewController
-    
     //NavigatrionDrawer
-    self.navigationItem.title = @"RALLY MAYA";
+    self.navigationItem.titleView = [Utils getNavLabel:@"RALLY MAYA MÉXICO"];
+    
     NSArray *viewControllers = self.navigationController.viewControllers;
     UIViewController *vc = [viewControllers objectAtIndex:0];
     NSLog(@"%@",vc.title);
     //If there are not other views it show the menu button, else the defalut back button is shown
     if([viewControllers count] <= 1){
-    
+        
         [self setupLeftMenuButton];
     }
     
-    _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width,_scrollView.frame.size.height);
+    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateNormal];
+    
+    
+    // Change StateSelected
+    UIColor *titleHighlightedColor = [UIColor colorWithRed:1 green:0.859 blue:0.482 alpha:1]; /*#ffdb7b*/
+    
+    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : titleHighlightedColor} forState:UIControlStateSelected];
+    
+    [[UITabBar appearance] setTintColor:titleHighlightedColor];
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:249.0/255 green:249.0/255 blue:249.0/255 alpha:1]]; /*#e9e7e7*/
+
+    //[[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
     // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 - (void)setupLeftMenuButton {
     MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
@@ -43,13 +58,6 @@
 - (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 /*
 #pragma mark - Navigation
 
@@ -59,20 +67,6 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    
-    if ([segue.identifier isEqualToString:@"pdfSegue"]) {
-        [segue.destinationViewController setTitle:NSLocalizedString(@"REGLAMENTO",nil)];
-        [segue.destinationViewController setUrl: @"http://punklabs.ninja/rallymaya/static/REGLAMENTO-OFICIAL-DEFINITIVO-RALLY-MAYA-2015.pdf"];
-    }
-}
 
 
-//- (IBAction)ReglamentoButton:(id)sender {
-//    NSString *pdfLink = @"";
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:pdfLink]];
-//    
-//}
 @end

@@ -58,45 +58,47 @@
         case 1:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RallyViewNavigation"];
             break;
-        case 2:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProgramaViewNavigation"];
+        case 2:{
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            NSString *key = [defaults stringForKey:@"token"];
+            NSLog(@"%@",key);
+            if (key==NULL) {
+                centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewNavigation"];
+            }
+            else{
+                centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PerfilViewNavigation"];
+            }
+            
             break;
+        }
         case 3:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ParticipantesViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProgramaViewNavigation"];
             break;
         case 4:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RutaViewNavigation"];
             break;
         case 5:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TipsViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ParticipantesViewNavigation"];
             break;
         case 6:
             centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatrocinadoresViewNavigation"];
             break;
         case 7:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectoriosViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatrocinadoresViewNavigation"];
             break;
         case 8:
-            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CronometroViewNavigation"];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PostalesViewNavigation"];
             break;
         case 9: {
-            NSString *fbLink = @"fb://profile/132058193656387";
-            if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:fbLink]]) {
-               fbLink = @"https://www.facebook.com/RallyMayaMexico";
-            }
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbLink]];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PreguntasViewNavigation"];
             break;
         }
         case 10:{
-            NSString *twLink = @"twitter://user?screen_name=rallymayamexico";
-
-            if (![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:twLink]]) {
-                twLink = @"https://twitter.com/rallymayamexico";
-
-            }
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twLink]];
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NoticiasViewNavigation"];
             break;
-            
+        }
+        case 11:{
+            centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SocialHubViewNavigation"];
             break;
         }
         default:

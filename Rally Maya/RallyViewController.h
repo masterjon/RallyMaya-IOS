@@ -2,14 +2,12 @@
 //  RallyViewController.h
 //  Rally Maya
 //
-//  Created by Jonathan Horta on 2/23/15.
+//  Created by Jonathan Horta on 2/24/15.
 //  Copyright (c) 2015 Jonathan Horta. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface RallyViewController : UIViewController
+@interface RallyViewController : UITabBarController
 
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end

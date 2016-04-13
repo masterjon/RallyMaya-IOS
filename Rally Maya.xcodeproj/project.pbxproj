@@ -7,26 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6574216A1AA9060D00F94CD4 /* DiabetesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657421691AA9060D00F94CD4 /* DiabetesViewController.m */; };
 		D4F161FC634554CB72FC9FDB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B067FA1E09EAACDF3BEA3F8C /* libPods.a */; };
-		FC43EA3C1A9E5E9800F414DB /* CampecheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */; };
-		FC43EA3F1AA01CFB00F414DB /* YucatanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */; };
-		FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA411AA01D6700F414DB /* QRooViewController.m */; };
-		FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43EA441AA02F3000F414DB /* CronometroViewController.m */; };
-		FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */; };
-		FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */; };
+		FC0A54461CB5C98C00401148 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A54451CB5C98C00401148 /* TipsViewController.m */; };
+		FC0A54491CB7143600401148 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0A54481CB7143600401148 /* LoginViewController.m */; };
+		FC4B68151A9D43DE009FDEB2 /* RallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68141A9D43DE009FDEB2 /* RallyViewController.m */; };
 		FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */; };
 		FC57FCB31AD33011002E045B /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC57FCB21AD33011002E045B /* Images-2.xcassets */; };
 		FC5C84FE1AC9F37600AF91A8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */; };
-		FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */; };
-		FC5C85041ACB54A000AF91A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85031ACB54A000AF91A8 /* WebViewController.m */; };
 		FC5C85071ACB821800AF91A8 /* RutaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5C85061ACB821800AF91A8 /* RutaViewController.m */; };
 		FC5C85091ACB832700AF91A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5C85081ACB832700AF91A8 /* MapKit.framework */; };
+		FC94B7A91CB76C0C00FA5233 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7A81CB76C0C00FA5233 /* Utils.m */; };
+		FC94B7B51CB7819F00FA5233 /* MiRallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7B41CB7819F00FA5233 /* MiRallyViewController.m */; };
+		FC94B7B81CBB2B1400FA5233 /* DirectorioCatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7B71CBB2B1400FA5233 /* DirectorioCatViewController.m */; };
+		FC94B7BB1CBB586000FA5233 /* DirectorioItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7BA1CBB586000FA5233 /* DirectorioItemViewController.m */; };
+		FC94B7C11CBBFEE400FA5233 /* DiccionarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7C01CBBFEE400FA5233 /* DiccionarioViewController.m */; };
+		FC94B7C41CBC10A500FA5233 /* BoletinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7C31CBC10A500FA5233 /* BoletinViewController.m */; };
+		FC94B7C71CBC1B1200FA5233 /* BoletinDetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7C61CBC1B1200FA5233 /* BoletinDetalleViewController.m */; };
+		FC94B7CB1CBC438900FA5233 /* PerfilTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94B7CA1CBC438900FA5233 /* PerfilTabController.m */; };
+		FC9C30771CA313AC0095C9A1 /* PostalesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C30761CA313AC0095C9A1 /* PostalesViewController.m */; };
+		FC9C307A1CA4A1600095C9A1 /* PostalDetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C30791CA4A1600095C9A1 /* PostalDetalleViewController.m */; };
+		FC9C307D1CA9B8000095C9A1 /* SocialHubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C307C1CA9B8000095C9A1 /* SocialHubViewController.m */; };
 		FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA27E221AA5030300B16B1B /* DirectorioViewController.m */; };
 		FCA6B06F1AA7CB6200F2A945 /* PGFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B0681AA7CB6200F2A945 /* PGFirstViewController.m */; };
 		FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06A1AA7CB6200F2A945 /* PGSecondViewController.m */; };
 		FCA6B0711AA7CB6200F2A945 /* PGSideDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06C1AA7CB6200F2A945 /* PGSideDrawerController.m */; };
 		FCA6B0721AA7CB6200F2A945 /* PGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA6B06E1AA7CB6200F2A945 /* PGViewController.m */; };
+		FCC1ADEF1CB3151800CFDE79 /* NoticiasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1ADEE1CB3151800CFDE79 /* NoticiasViewController.m */; };
+		FCC1ADF21CB35B6000CFDE79 /* NoticiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1ADF11CB35B6000CFDE79 /* NoticiaViewController.m */; };
 		FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4D71A9B8E4200A6AA89 /* main.m */; };
 		FCC2C4DB1A9B8E4200A6AA89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4DA1A9B8E4200A6AA89 /* AppDelegate.m */; };
 		FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4DD1A9B8E4200A6AA89 /* ViewController.m */; };
@@ -36,13 +43,15 @@
 		FCC2C4F21A9B8E4200A6AA89 /* Rally_MayaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4F11A9B8E4200A6AA89 /* Rally_MayaTests.m */; };
 		FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */; };
 		FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */; };
-		FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */; };
 		FCC2D6031A9CECF200A6AA89 /* KMAccordionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5F71A9CECF200A6AA89 /* KMAccordionTableViewController.m */; };
 		FCC2D6041A9CECF200A6AA89 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5F91A9CECF200A6AA89 /* MyViewController.m */; };
 		FCC2D6051A9CECF200A6AA89 /* KMAppearence.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5FC1A9CECF200A6AA89 /* KMAppearence.m */; };
 		FCC2D6061A9CECF200A6AA89 /* KMSection.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D5FE1A9CECF200A6AA89 /* KMSection.m */; };
 		FCC2D6071A9CECF200A6AA89 /* KMSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC2D6011A9CECF200A6AA89 /* KMSectionHeaderView.m */; };
 		FCC2D6081A9CECF200A6AA89 /* KMSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC2D6021A9CECF200A6AA89 /* KMSectionHeaderView.xib */; };
+		FCEBA0291CBDB829002C1042 /* RutaTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEBA0281CBDB829002C1042 /* RutaTabBarViewController.m */; };
+		FCFCEDFC1CAAE3FA0049F698 /* PreguntasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFCEDFB1CAAE3FA0049F698 /* PreguntasViewController.m */; };
+		FCFCEDFF1CAD93870049F698 /* ProgramaGralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFCEDFE1CAD93870049F698 /* ProgramaGralViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,34 +66,44 @@
 
 /* Begin PBXFileReference section */
 		5BFB734E0B7F4A90E94E2AA5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		657421681AA9060D00F94CD4 /* DiabetesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiabetesViewController.h; sourceTree = "<group>"; };
-		657421691AA9060D00F94CD4 /* DiabetesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiabetesViewController.m; sourceTree = "<group>"; };
 		6902086B8BFB5B535481A67D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B067FA1E09EAACDF3BEA3F8C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC43EA3A1A9E5E9800F414DB /* CampecheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampecheViewController.h; sourceTree = "<group>"; };
-		FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampecheViewController.m; sourceTree = "<group>"; };
-		FC43EA3D1AA01CFB00F414DB /* YucatanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YucatanViewController.h; sourceTree = "<group>"; };
-		FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YucatanViewController.m; sourceTree = "<group>"; };
-		FC43EA401AA01D6700F414DB /* QRooViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRooViewController.h; sourceTree = "<group>"; };
-		FC43EA411AA01D6700F414DB /* QRooViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRooViewController.m; sourceTree = "<group>"; };
-		FC43EA431AA02F3000F414DB /* CronometroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CronometroViewController.h; sourceTree = "<group>"; };
-		FC43EA441AA02F3000F414DB /* CronometroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CronometroViewController.m; sourceTree = "<group>"; };
-		FC4B68101A9CFE2D009FDEB2 /* TipsLugaresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsLugaresViewController.h; sourceTree = "<group>"; };
-		FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsLugaresViewController.m; sourceTree = "<group>"; };
-		FC4B68131A9D43DE009FDEB2 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
-		FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		FC0A54441CB5C98C00401148 /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
+		FC0A54451CB5C98C00401148 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		FC0A54471CB7143600401148 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		FC0A54481CB7143600401148 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		FC4B68131A9D43DE009FDEB2 /* RallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RallyViewController.h; sourceTree = "<group>"; };
+		FC4B68141A9D43DE009FDEB2 /* RallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RallyViewController.m; sourceTree = "<group>"; };
 		FC4B68161A9D481F009FDEB2 /* PatrocinadoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrocinadoresViewController.h; sourceTree = "<group>"; };
 		FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrocinadoresViewController.m; sourceTree = "<group>"; };
 		FC57FCB21AD33011002E045B /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FC5C84FD1AC9F37600AF91A8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramaViewController.h; sourceTree = "<group>"; };
-		FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramaViewController.m; sourceTree = "<group>"; };
-		FC5C85021ACB54A000AF91A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		FC5C85031ACB54A000AF91A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		FC5C85051ACB821800AF91A8 /* RutaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RutaViewController.h; sourceTree = "<group>"; };
 		FC5C85061ACB821800AF91A8 /* RutaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RutaViewController.m; sourceTree = "<group>"; };
 		FC5C85081ACB832700AF91A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FC94B7A71CB76C0C00FA5233 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		FC94B7A81CB76C0C00FA5233 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		FC94B7B31CB7819F00FA5233 /* MiRallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiRallyViewController.h; sourceTree = "<group>"; };
+		FC94B7B41CB7819F00FA5233 /* MiRallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiRallyViewController.m; sourceTree = "<group>"; };
+		FC94B7B61CBB2B1400FA5233 /* DirectorioCatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioCatViewController.h; sourceTree = "<group>"; };
+		FC94B7B71CBB2B1400FA5233 /* DirectorioCatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioCatViewController.m; sourceTree = "<group>"; };
+		FC94B7B91CBB586000FA5233 /* DirectorioItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioItemViewController.h; sourceTree = "<group>"; };
+		FC94B7BA1CBB586000FA5233 /* DirectorioItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioItemViewController.m; sourceTree = "<group>"; };
+		FC94B7BF1CBBFEE400FA5233 /* DiccionarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiccionarioViewController.h; sourceTree = "<group>"; };
+		FC94B7C01CBBFEE400FA5233 /* DiccionarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiccionarioViewController.m; sourceTree = "<group>"; };
+		FC94B7C21CBC10A500FA5233 /* BoletinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoletinViewController.h; sourceTree = "<group>"; };
+		FC94B7C31CBC10A500FA5233 /* BoletinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoletinViewController.m; sourceTree = "<group>"; };
+		FC94B7C51CBC1B1200FA5233 /* BoletinDetalleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoletinDetalleViewController.h; sourceTree = "<group>"; };
+		FC94B7C61CBC1B1200FA5233 /* BoletinDetalleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoletinDetalleViewController.m; sourceTree = "<group>"; };
+		FC94B7C91CBC438900FA5233 /* PerfilTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerfilTabController.h; sourceTree = "<group>"; };
+		FC94B7CA1CBC438900FA5233 /* PerfilTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfilTabController.m; sourceTree = "<group>"; };
+		FC9C30751CA313AC0095C9A1 /* PostalesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostalesViewController.h; sourceTree = "<group>"; };
+		FC9C30761CA313AC0095C9A1 /* PostalesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostalesViewController.m; sourceTree = "<group>"; };
+		FC9C30781CA4A1600095C9A1 /* PostalDetalleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostalDetalleViewController.h; sourceTree = "<group>"; };
+		FC9C30791CA4A1600095C9A1 /* PostalDetalleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostalDetalleViewController.m; sourceTree = "<group>"; };
+		FC9C307B1CA9B8000095C9A1 /* SocialHubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialHubViewController.h; sourceTree = "<group>"; };
+		FC9C307C1CA9B8000095C9A1 /* SocialHubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialHubViewController.m; sourceTree = "<group>"; };
 		FCA27E211AA5030300B16B1B /* DirectorioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorioViewController.h; sourceTree = "<group>"; };
 		FCA27E221AA5030300B16B1B /* DirectorioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorioViewController.m; sourceTree = "<group>"; };
 		FCA6B0671AA7CB6200F2A945 /* PGFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFirstViewController.h; sourceTree = "<group>"; };
@@ -95,6 +114,10 @@
 		FCA6B06C1AA7CB6200F2A945 /* PGSideDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSideDrawerController.m; sourceTree = "<group>"; };
 		FCA6B06D1AA7CB6200F2A945 /* PGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewController.h; sourceTree = "<group>"; };
 		FCA6B06E1AA7CB6200F2A945 /* PGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewController.m; sourceTree = "<group>"; };
+		FCC1ADED1CB3151800CFDE79 /* NoticiasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiasViewController.h; sourceTree = "<group>"; };
+		FCC1ADEE1CB3151800CFDE79 /* NoticiasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiasViewController.m; sourceTree = "<group>"; };
+		FCC1ADF01CB35B6000CFDE79 /* NoticiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiaViewController.h; sourceTree = "<group>"; };
+		FCC1ADF11CB35B6000CFDE79 /* NoticiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaViewController.m; sourceTree = "<group>"; };
 		FCC2C4D21A9B8E4200A6AA89 /* Rally Maya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rally Maya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2C4D61A9B8E4200A6AA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC2C4D71A9B8E4200A6AA89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,8 +135,6 @@
 		FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantesViewController.m; sourceTree = "<group>"; };
 		FCC2C5011A9BC11800A6AA89 /* ParticipanteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipanteViewController.h; sourceTree = "<group>"; };
 		FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipanteViewController.m; sourceTree = "<group>"; };
-		FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RallyViewController.h; sourceTree = "<group>"; };
-		FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RallyViewController.m; sourceTree = "<group>"; };
 		FCC2D5F61A9CECF200A6AA89 /* KMAccordionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMAccordionTableViewController.h; sourceTree = "<group>"; };
 		FCC2D5F71A9CECF200A6AA89 /* KMAccordionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMAccordionTableViewController.m; sourceTree = "<group>"; };
 		FCC2D5F81A9CECF200A6AA89 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
@@ -125,6 +146,12 @@
 		FCC2D6001A9CECF200A6AA89 /* KMSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSectionHeaderView.h; sourceTree = "<group>"; };
 		FCC2D6011A9CECF200A6AA89 /* KMSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSectionHeaderView.m; sourceTree = "<group>"; };
 		FCC2D6021A9CECF200A6AA89 /* KMSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMSectionHeaderView.xib; sourceTree = "<group>"; };
+		FCEBA0271CBDB829002C1042 /* RutaTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RutaTabBarViewController.h; sourceTree = "<group>"; };
+		FCEBA0281CBDB829002C1042 /* RutaTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RutaTabBarViewController.m; sourceTree = "<group>"; };
+		FCFCEDFA1CAAE3FA0049F698 /* PreguntasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreguntasViewController.h; sourceTree = "<group>"; };
+		FCFCEDFB1CAAE3FA0049F698 /* PreguntasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreguntasViewController.m; sourceTree = "<group>"; };
+		FCFCEDFD1CAD93870049F698 /* ProgramaGralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramaGralViewController.h; sourceTree = "<group>"; };
+		FCFCEDFE1CAD93870049F698 /* ProgramaGralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramaGralViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +207,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		FC94B7A31CB76B7900FA5233 /* HelperFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				FC94B7A71CB76C0C00FA5233 /* Utils.h */,
+				FC94B7A81CB76C0C00FA5233 /* Utils.m */,
+			);
+			name = HelperFunctions;
+			sourceTree = "<group>";
+		};
 		FCC2C4C91A9B8E4200A6AA89 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +239,7 @@
 		FCC2C4D41A9B8E4200A6AA89 /* Rally Maya */ = {
 			isa = PBXGroup;
 			children = (
+				FC94B7A31CB76B7900FA5233 /* HelperFunctions */,
 				FC5C84FC1AC9F37600AF91A8 /* MBProgressHUD.m */,
 				FC5C84FD1AC9F37600AF91A8 /* MBProgressHUD.h */,
 				BCA164401AA7D13D00EFF32E /* Controllers */,
@@ -213,40 +250,56 @@
 				FCC2C4DA1A9B8E4200A6AA89 /* AppDelegate.m */,
 				FCC2C4DC1A9B8E4200A6AA89 /* ViewController.h */,
 				FCC2C4DD1A9B8E4200A6AA89 /* ViewController.m */,
-				FCC2C4DF1A9B8E4200A6AA89 /* Main.storyboard */,
-				FCC2C4E21A9B8E4200A6AA89 /* Images.xcassets */,
-				FCC2C4E41A9B8E4200A6AA89 /* LaunchScreen.xib */,
-				FCC2C4D51A9B8E4200A6AA89 /* Supporting Files */,
-				FCC2C5041A9BC92600A6AA89 /* RallyViewController.h */,
-				FCC2C5051A9BC92600A6AA89 /* RallyViewController.m */,
+				FC4B68131A9D43DE009FDEB2 /* RallyViewController.h */,
+				FC4B68141A9D43DE009FDEB2 /* RallyViewController.m */,
+				FCFCEDFD1CAD93870049F698 /* ProgramaGralViewController.h */,
+				FCFCEDFE1CAD93870049F698 /* ProgramaGralViewController.m */,
+				FCEBA0271CBDB829002C1042 /* RutaTabBarViewController.h */,
+				FCEBA0281CBDB829002C1042 /* RutaTabBarViewController.m */,
+				FC5C85051ACB821800AF91A8 /* RutaViewController.h */,
+				FC5C85061ACB821800AF91A8 /* RutaViewController.m */,
 				FCC2C4FE1A9BAC5700A6AA89 /* ParticipantesViewController.h */,
 				FCC2C4FF1A9BAC5700A6AA89 /* ParticipantesViewController.m */,
 				FCC2C5011A9BC11800A6AA89 /* ParticipanteViewController.h */,
 				FCC2C5021A9BC11800A6AA89 /* ParticipanteViewController.m */,
-				FC4B68131A9D43DE009FDEB2 /* TipsViewController.h */,
-				FC4B68141A9D43DE009FDEB2 /* TipsViewController.m */,
-				FC4B68101A9CFE2D009FDEB2 /* TipsLugaresViewController.h */,
-				FC4B68111A9CFE2D009FDEB2 /* TipsLugaresViewController.m */,
 				FC4B68161A9D481F009FDEB2 /* PatrocinadoresViewController.h */,
 				FC4B68171A9D481F009FDEB2 /* PatrocinadoresViewController.m */,
+				FC9C30751CA313AC0095C9A1 /* PostalesViewController.h */,
+				FC9C30761CA313AC0095C9A1 /* PostalesViewController.m */,
+				FC9C30781CA4A1600095C9A1 /* PostalDetalleViewController.h */,
+				FC9C30791CA4A1600095C9A1 /* PostalDetalleViewController.m */,
+				FCFCEDFA1CAAE3FA0049F698 /* PreguntasViewController.h */,
+				FCFCEDFB1CAAE3FA0049F698 /* PreguntasViewController.m */,
+				FCC1ADED1CB3151800CFDE79 /* NoticiasViewController.h */,
+				FCC1ADEE1CB3151800CFDE79 /* NoticiasViewController.m */,
+				FCC1ADF01CB35B6000CFDE79 /* NoticiaViewController.h */,
+				FCC1ADF11CB35B6000CFDE79 /* NoticiaViewController.m */,
+				FC9C307B1CA9B8000095C9A1 /* SocialHubViewController.h */,
+				FC9C307C1CA9B8000095C9A1 /* SocialHubViewController.m */,
+				FC0A54471CB7143600401148 /* LoginViewController.h */,
+				FC0A54481CB7143600401148 /* LoginViewController.m */,
+				FC94B7C91CBC438900FA5233 /* PerfilTabController.h */,
+				FC94B7CA1CBC438900FA5233 /* PerfilTabController.m */,
+				FC94B7B31CB7819F00FA5233 /* MiRallyViewController.h */,
+				FC94B7B41CB7819F00FA5233 /* MiRallyViewController.m */,
+				FC94B7C21CBC10A500FA5233 /* BoletinViewController.h */,
+				FC94B7C31CBC10A500FA5233 /* BoletinViewController.m */,
+				FC94B7C51CBC1B1200FA5233 /* BoletinDetalleViewController.h */,
+				FC94B7C61CBC1B1200FA5233 /* BoletinDetalleViewController.m */,
 				FCA27E211AA5030300B16B1B /* DirectorioViewController.h */,
 				FCA27E221AA5030300B16B1B /* DirectorioViewController.m */,
-				FC43EA3A1A9E5E9800F414DB /* CampecheViewController.h */,
-				FC43EA3B1A9E5E9800F414DB /* CampecheViewController.m */,
-				FC43EA3D1AA01CFB00F414DB /* YucatanViewController.h */,
-				FC43EA3E1AA01CFB00F414DB /* YucatanViewController.m */,
-				FC43EA401AA01D6700F414DB /* QRooViewController.h */,
-				FC43EA411AA01D6700F414DB /* QRooViewController.m */,
-				657421681AA9060D00F94CD4 /* DiabetesViewController.h */,
-				657421691AA9060D00F94CD4 /* DiabetesViewController.m */,
-				FC43EA431AA02F3000F414DB /* CronometroViewController.h */,
-				FC43EA441AA02F3000F414DB /* CronometroViewController.m */,
-				FC5C84FF1ACB264F00AF91A8 /* ProgramaViewController.h */,
-				FC5C85001ACB264F00AF91A8 /* ProgramaViewController.m */,
-				FC5C85021ACB54A000AF91A8 /* WebViewController.h */,
-				FC5C85031ACB54A000AF91A8 /* WebViewController.m */,
-				FC5C85051ACB821800AF91A8 /* RutaViewController.h */,
-				FC5C85061ACB821800AF91A8 /* RutaViewController.m */,
+				FC94B7B61CBB2B1400FA5233 /* DirectorioCatViewController.h */,
+				FC94B7B71CBB2B1400FA5233 /* DirectorioCatViewController.m */,
+				FC94B7B91CBB586000FA5233 /* DirectorioItemViewController.h */,
+				FC94B7BA1CBB586000FA5233 /* DirectorioItemViewController.m */,
+				FC94B7BF1CBBFEE400FA5233 /* DiccionarioViewController.h */,
+				FC94B7C01CBBFEE400FA5233 /* DiccionarioViewController.m */,
+				FC0A54441CB5C98C00401148 /* TipsViewController.h */,
+				FC0A54451CB5C98C00401148 /* TipsViewController.m */,
+				FCC2C4DF1A9B8E4200A6AA89 /* Main.storyboard */,
+				FCC2C4E21A9B8E4200A6AA89 /* Images.xcassets */,
+				FCC2C4E41A9B8E4200A6AA89 /* LaunchScreen.xib */,
+				FCC2C4D51A9B8E4200A6AA89 /* Supporting Files */,
 				FC57FCB21AD33011002E045B /* Images-2.xcassets */,
 			);
 			path = "Rally Maya";
@@ -456,33 +509,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0A54491CB7143600401148 /* LoginViewController.m in Sources */,
 				FCC2D6031A9CECF200A6AA89 /* KMAccordionTableViewController.m in Sources */,
+				FC9C307D1CA9B8000095C9A1 /* SocialHubViewController.m in Sources */,
 				FCC2D6071A9CECF200A6AA89 /* KMSectionHeaderView.m in Sources */,
 				FC5C85071ACB821800AF91A8 /* RutaViewController.m in Sources */,
+				FC94B7C41CBC10A500FA5233 /* BoletinViewController.m in Sources */,
+				FCEBA0291CBDB829002C1042 /* RutaTabBarViewController.m in Sources */,
+				FCC1ADEF1CB3151800CFDE79 /* NoticiasViewController.m in Sources */,
 				FCA6B0721AA7CB6200F2A945 /* PGViewController.m in Sources */,
+				FC0A54461CB5C98C00401148 /* TipsViewController.m in Sources */,
 				FC4B68181A9D481F009FDEB2 /* PatrocinadoresViewController.m in Sources */,
 				FCC2C5031A9BC11800A6AA89 /* ParticipanteViewController.m in Sources */,
+				FC94B7B51CB7819F00FA5233 /* MiRallyViewController.m in Sources */,
+				FC94B7C71CBC1B1200FA5233 /* BoletinDetalleViewController.m in Sources */,
+				FC94B7B81CBB2B1400FA5233 /* DirectorioCatViewController.m in Sources */,
+				FC9C30771CA313AC0095C9A1 /* PostalesViewController.m in Sources */,
 				FCC2D6041A9CECF200A6AA89 /* MyViewController.m in Sources */,
-				FCC2C5061A9BC92600A6AA89 /* RallyViewController.m in Sources */,
 				FCA27E231AA5030300B16B1B /* DirectorioViewController.m in Sources */,
-				FC43EA3F1AA01CFB00F414DB /* YucatanViewController.m in Sources */,
+				FC94B7CB1CBC438900FA5233 /* PerfilTabController.m in Sources */,
+				FCFCEDFF1CAD93870049F698 /* ProgramaGralViewController.m in Sources */,
+				FCFCEDFC1CAAE3FA0049F698 /* PreguntasViewController.m in Sources */,
 				FCA6B06F1AA7CB6200F2A945 /* PGFirstViewController.m in Sources */,
+				FCC1ADF21CB35B6000CFDE79 /* NoticiaViewController.m in Sources */,
 				FCC2C4DE1A9B8E4200A6AA89 /* ViewController.m in Sources */,
 				FCA6B0711AA7CB6200F2A945 /* PGSideDrawerController.m in Sources */,
-				FC4B68151A9D43DE009FDEB2 /* TipsViewController.m in Sources */,
+				FC94B7C11CBBFEE400FA5233 /* DiccionarioViewController.m in Sources */,
+				FC4B68151A9D43DE009FDEB2 /* RallyViewController.m in Sources */,
+				FC9C307A1CA4A1600095C9A1 /* PostalDetalleViewController.m in Sources */,
 				FCC2D6061A9CECF200A6AA89 /* KMSection.m in Sources */,
-				FC43EA3C1A9E5E9800F414DB /* CampecheViewController.m in Sources */,
 				FCC2C4DB1A9B8E4200A6AA89 /* AppDelegate.m in Sources */,
-				FC4B68121A9CFE2D009FDEB2 /* TipsLugaresViewController.m in Sources */,
 				FC5C84FE1AC9F37600AF91A8 /* MBProgressHUD.m in Sources */,
-				FC43EA421AA01D6700F414DB /* QRooViewController.m in Sources */,
 				FCC2C5001A9BAC5700A6AA89 /* ParticipantesViewController.m in Sources */,
-				6574216A1AA9060D00F94CD4 /* DiabetesViewController.m in Sources */,
-				FC5C85011ACB264F00AF91A8 /* ProgramaViewController.m in Sources */,
-				FC5C85041ACB54A000AF91A8 /* WebViewController.m in Sources */,
+				FC94B7A91CB76C0C00FA5233 /* Utils.m in Sources */,
 				FCA6B0701AA7CB6200F2A945 /* PGSecondViewController.m in Sources */,
+				FC94B7BB1CBB586000FA5233 /* DirectorioItemViewController.m in Sources */,
 				FCC2C4D81A9B8E4200A6AA89 /* main.m in Sources */,
-				FC43EA451AA02F3000F414DB /* CronometroViewController.m in Sources */,
 				FCC2D6051A9CECF200A6AA89 /* KMAppearence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

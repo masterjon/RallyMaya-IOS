@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DirectorioViewController : UITabBarController
-
+@interface DirectorioViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *itemsTable;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) IBOutlet UILabel *alertLabel;
+    @property (strong,nonatomic) NSMutableArray *collectionItems;
 @end

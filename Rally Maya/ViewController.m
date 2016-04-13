@@ -9,9 +9,14 @@
 #import "ViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
+#import "Utils.h"
+
 @interface ViewController ()
 
 @end
+int days,hours, minutes, seconds;
+int secondsLeft;
+NSDate *endTime;
 
 @implementation ViewController
 //-(BOOL)prefersStatusBarHidden{
@@ -20,51 +25,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupLeftMenuButton];
-    self.navigationItem.title = @"INICIO";
-    self.menuItems = [[NSMutableArray alloc] init];
-    NSArray *menu = @[
-                      @{
-                          @"image":@"rally-maya",
-                          @"target":@"RallyView",
-                          },
-                      @{
-                          @"image":@"programa",
-                          @"target":@"ProgramaView",
-                          },
-                      @{
-                          @"image":@"participantes",
-                          @"target":@"ParticipantesView",
-                          },
-                      @{
-                          @"image":@"ruta",
-                          @"target":@"RutaView",
-                          },
-                      @{
-                          @"image":@"tips",
-                          @"target":@"TipsView",
-                          },
-                      @{
-                          @"image":@"patrocinadores",
-                          @"target":@"PatrocinadoresView",
-                          },
-                      
-                      @{
-                          @"image":@"directorio",
-                          @"target":@"DirectoriosView",
-                          },
-                      
-                      @{
-                          @"image":@"cronometro",
-                          @"target":@"CronometroView",
-                          },
-                      
-                      ];
+    self.navigationItem.titleView = [Utils getNavLabel:@"INICIO"];
     
-    for (NSArray *dataDictionary in menu){
-        [self.menuItems addObject:dataDictionary];
-        
-    }
+    
+    NSString *dateString = @"13-5-2016 16:00:00";
+    NSDate *dateFromString = [[NSDate alloc] init];
+    dateFromString = [self parseDate:dateString format:@"dd-MM-yyyy HH:mm:ss"];
+    
+    endTime = dateFromString;
+    secondsLeft = roundf(dateFromString.timeIntervalSinceNow);
+    
+    
+    [self countdownTimer];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (NSDate*)parseDate:(NSString*)inStrDate format:(NSString*)inFormat {
+    NSDateFormatter* dtFormatter = [[NSDateFormatter alloc] init];
+    [dtFormatter setLocale:[NSLocale systemLocale]];
+    [dtFormatter setDateFormat:inFormat];
+    NSDate* dateOutput = [dtFormatter dateFromString:inStrDate];
+    return dateOutput;
+}
+
+- (void)updateCounter:(NSTimer *)theTimer {
+    if(secondsLeft > 0 ) {
+        secondsLeft -- ;
+        //        days = secondsLeft /
+        days = secondsLeft / 86400;
+        hours = (secondsLeft / 3600) % 24;
+        minutes = (secondsLeft / 60) % 60;
+        seconds = secondsLeft % 60;
+        self.myCounterLabel.text = [NSString stringWithFormat:@"%02d   %02d   %02d   %02d",days, hours, minutes, seconds];
+        // NSLog(@"%@ SECONDS",self.myCounterLabel.text);
+    } else {
+        secondsLeft = 0;
+    }
+}
+
+-(void)countdownTimer {
+    hours = minutes = seconds = 0;
+    
+    if([timer isValid]) {
+        [timer invalidate];
+        timer=nil;
+    }
+    //NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+    
+    // [pool release];
 }
 - (void)setupLeftMenuButton {
     MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
@@ -74,90 +82,8 @@
 - (void)leftDrawerButtonPress:(id)leftDrawerButtonPress {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
--(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [self.menuItems count];
-}
--(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"menuCell" forIndexPath:indexPath];
-    
-    UIImageView *menuImage = (UIImageView *) [cell viewWithTag:10];
-    if([self.menuItems count] >0){
-        NSDictionary *cellDictionary = [self.menuItems objectAtIndex:indexPath.row];
-        NSString *imageItem =[cellDictionary objectForKey:@"image"];
-        menuImage.image = [UIImage imageNamed:imageItem];
-        
-    }
-    return cell;
-}
 
--(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSDictionary *menuItemDictionary = [self.menuItems objectAtIndex:indexPath.row];
-    
-    ViewController *viewC = [self.storyboard instantiateViewControllerWithIdentifier:menuItemDictionary[@"target"]];
-    [self.navigationController pushViewController:viewC animated:YES];
-    
-    
-}
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    int top = 10;
-    int left = 0;
-    int bottom = 10;
-    int right = 0;
-    NSLog(@"%i",(int)screenBounds.size.width);
-    switch ((int) screenBounds.size.width) {
-        case 320:
-            NSLog(@"--5--");
-            left = 5;
-            right = 5;
-            break;
-        case 375:
-            NSLog(@"--6--");
-            left = 20;
-            right = 20;
-            break;
-        case 414:
-            NSLog(@"--6+--");
-            left = 30;
-            right = 30;
-            break;
-        case 768:
-            NSLog(@"--Ipad Portrait");
-            left = 50;
-            right = 50;
-            top = 50;
-            break;
-        case 1024:
-            NSLog(@"--Ipad Landscape");
-            left = 50;
-            right = 50;
-            top = 50;
-            break;
-        default:
-            left = 5;
-            right = 5;
-            break;
-            
-    }
-    return UIEdgeInsetsMake(top, left, bottom, right);
-}
-- (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout *)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    // Adjust cell size for orientation
-    int screenSize = (int) screenBounds.size.width;
-    //Size of cells for ipad
-    if(screenSize == 768 || screenSize == 1024){
-        return CGSizeMake(282.f, 282.f);
-    }
-    
-    //Size of cells for iphones
-    return CGSizeMake(150.f,150.f);
-    
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

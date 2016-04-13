@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+NSTimer *timer;
 
-@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UICollectionView *menuCollectionview;
-@property (strong,nonatomic) NSMutableArray *menuItems;
+@interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *myCounterLabel;
 
 
+-(void)updateCounter:(NSTimer *)theTimer;
+-(void)countdownTimer;
 @end
 

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-@interface RutaViewController : UIViewController<MKMapViewDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) MKMapItem *mapitem;
+@interface RutaViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *WebView;
+@property (strong, nonatomic) IBOutlet UILabel *alertLabel;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner2;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner1;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner3;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner4;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner5;
 @end
