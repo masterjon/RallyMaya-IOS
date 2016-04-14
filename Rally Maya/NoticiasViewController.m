@@ -83,14 +83,8 @@
             self.fImgDes = response[@"results"][0][@"picture_featured"];
             self.fImg = response[@"results"][0][@"picture"];
             self.fFullText = response[@"results"][0][@"description"];
-            NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-            
             self.fDate = response[@"results"][0][@"date"];
-            NSDate *yourDate = [dateFormatter dateFromString:@"2012-11-22 10:19:04"];
-            dateFormatter.dateFormat = @"dd-MMM-yyyy";
-            NSLog(@"%@",[dateFormatter stringFromDate:yourDate]);
-        }
+            }
 
         if (self.fImgDes != (id)[NSNull null]){
 
@@ -158,12 +152,14 @@
     UIImageView *bgImage;
     bgImage = (UIImageView *)[cell viewWithTag:1];
     UILabel *titulo = (UILabel *)[cell viewWithTag:2];
+    UILabel *fecha = (UILabel *)[cell viewWithTag:4];
     UILabel *description = (UILabel *)[cell viewWithTag:3];
     
     if ([self.collectionItems count] >0 ){
         NSDictionary *mydict;
         mydict=[self.collectionItems objectAtIndex:indexPath.row];
         [titulo setText:[mydict[@"title"] uppercaseString]];
+        [fecha setText:mydict[@"date"]];
         [description setText:mydict[@"description"]];
         NSString *imageItem =[mydict objectForKey:@"thumbnail"];
         NSURL *imageUrl = [NSURL URLWithString:imageItem];
@@ -213,7 +209,7 @@
         NSDictionary *itemdictionary = [self.collectionItems objectAtIndex:path.row];
         View.imageUrl = itemdictionary[@"picture"];
         View.titulo = itemdictionary[@"title"];
-        View.fecha = self.fDate;
+        View.fecha = itemdictionary[@"date"];
         View.noticiaBody = itemdictionary[@"description"];
         
     }

@@ -4957,7 +4957,7 @@ En su tercera edición Rally Maya México pretende lograr un impacto notable a e
                                                                 <constraint firstAttribute="width" constant="90" id="xnu-gv-DHs"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/01/16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHv-zt-6qY" userLabel="Fecha">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/01/16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHv-zt-6qY" userLabel="Fecha">
                                                             <rect key="frame" x="0.0" y="15" width="455" height="12"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="12" id="NSn-UU-6MC"/>
@@ -7538,12 +7538,12 @@ La temperatura media anual del Estado de Yucatán está entre 25 y 26°C, en el 
         <image name="youtube" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vbm-75-F8g"/>
-        <segue reference="bnd-ox-ILm"/>
-        <segue reference="L3y-IN-7T6"/>
+        <segue reference="lQo-mE-Oua"/>
+        <segue reference="0PU-Lr-3bT"/>
+        <segue reference="Iro-Jj-jKW"/>
+        <segue reference="hKZ-av-ssv"/>
+        <segue reference="cyq-P3-Rdi"/>
+        <segue reference="f6b-Na-XEA"/>
         <segue reference="472-CI-cwR"/>
-        <segue reference="GCI-tD-8en"/>
-        <segue reference="G42-1W-t2g"/>
-        <segue reference="YS8-nO-LUe"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -28,7 +28,7 @@ NSDate *endTime;
     self.navigationItem.titleView = [Utils getNavLabel:@"INICIO"];
     
     
-    NSString *dateString = @"13-5-2016 16:00:00";
+    NSString *dateString = @"13-5-2016 8:00:00";
     NSDate *dateFromString = [[NSDate alloc] init];
     dateFromString = [self parseDate:dateString format:@"dd-MM-yyyy HH:mm:ss"];
     

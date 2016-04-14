@@ -14,7 +14,8 @@
 #import "Utils.h"
 
 @interface LoginViewController ()
-
+@property (strong, nonatomic) NSURLSession *session;
+@property (strong,nonatomic) NSURLSessionConfiguration *sessionConfiguration;
 @end
 
 @implementation LoginViewController
@@ -96,48 +97,63 @@
         NSLog(@"JSS: %@",postData);
         //[NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:[url host]];
         
-        NSError *error = [[NSError alloc] init];
-        NSHTTPURLResponse *response = nil;
-        NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+ 
+        self.sessionConfiguration=[NSURLSessionConfiguration defaultSessionConfiguration];
+        self.session=[NSURLSession sessionWithConfiguration:self.sessionConfiguration];
         
-        NSLog(@"Response code: %ld", (long)[response statusCode]);
+        //NSError *error = [[NSError alloc] init];
+        //NSHTTPURLResponse *response = nil;
+        //NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+        NSURLSessionDataTask * task = [self.session dataTaskWithRequest:request  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
+            
+            
+            NSLog(@"Response code: %ld", (long)[urlResponse statusCode]);
+            
+            if (urlResponse.statusCode >= 200 && urlResponse.statusCode < 300)
+            {
+                NSString *responseData = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+                NSLog(@"Response ==> %@", responseData);
+                
+                NSError *error = nil;
+                NSDictionary *jsonData = [NSJSONSerialization
+                                          JSONObjectWithData:data
+                                          options:NSJSONReadingMutableContainers
+                                          error:&error];
+
+                NSString *key = jsonData[@"key"];
+                NSLog(@"%@",key);
+                
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setObject:[NSString stringWithString:key] forKey:@"token"];
+                [defaults synchronize];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UINavigationController *centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PerfilViewNavigation"];
+                    [self.mm_drawerController setCenterViewController:centerViewController withCloseAnimation:YES completion:nil];
+                    
+                    
+                });
+                
+
+                
+                //
+            } else if(urlResponse.statusCode>300){
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [message show];
+                
+            }
+            else{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [message3 show];
+            }
+            
+
+            
+        }];
+        [task resume];
         
-        if ([response statusCode] >= 200 && [response statusCode] < 300)
-        {
-            NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-            NSLog(@"Response ==> %@", responseData);
-            
-            NSError *error = nil;
-            NSDictionary *jsonData = [NSJSONSerialization
-                                      JSONObjectWithData:urlData
-                                      options:NSJSONReadingMutableContainers
-                                      error:&error];
-            
-            
-            
-            NSString *key = jsonData[@"key"];
-            NSLog(@"%@",key);
-            
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:[NSString stringWithString:key] forKey:@"token"];
-            [defaults synchronize];
-            
-            
-            UINavigationController *centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PerfilViewNavigation"];
-            [self.mm_drawerController setCenterViewController:centerViewController withCloseAnimation:YES completion:nil];
-           
-                       
-//
-        } else if([response statusCode]>300){
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            [message show];
-            
-        }
-        else{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            [message3 show];
-        }
-        
+
         
         
     }
